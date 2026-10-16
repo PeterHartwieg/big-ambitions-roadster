@@ -1,0 +1,14 @@
+bin/
+obj/
+build/
+*.user
+.vs/
+.idea/
+CLAUDE.local.md
+
+# Game and Harmony DLLs must never be committed.
+*.dll
+
+# Fetched at build time by tools/build-mod.sh.
+unity/Roadster/Dependencies/
+unity/Roadster/Dependencies.meta
