@@ -1,5 +1,6 @@
 #nullable enable
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using BAModTemplate.Editor;
@@ -107,6 +108,7 @@ namespace Roadster.BuildEditor
                 var finalGear = LimiterRadPerSecond * wheelRadius / (TopGear * TopSpeed / 3.6f);
                 Set(root, "powertrain.transmission.finalGearRatio", finalGear);
                 Set(root, "brakes.maxTorque", BrakeTorque);
+                LimitedSlip(root);
                 PrefabUtility.SaveAsPrefabAsset(root, prefabPath);
             }
             finally
@@ -156,6 +158,37 @@ namespace Roadster.BuildEditor
 
         // Sets a serialized field on whichever components of the object have it, so the NWH types
         // need no compile-time reference. Fails when none has it, rather than building a wrong car.
+        // The example car drives all four wheels (engine, clutch, transmission, centre differential, then a front and a
+        // rear differential) through open differentials: with 600 kW the inside wheels spun up in corners. All three
+        // become NWH limited-slip differentials; the centre one sends 40% to the front (output A) and 60% to the rear.
+        private const int LimitedSlipType = 2; // NWH DifferentialComponent.Type: Open, Locked, LimitedSlip
+        private const float DifferentialStiffness = 0.5f;
+        private const float CentreFrontShare = 0.4f;
+
+        private static void LimitedSlip(GameObject root)
+        {
+            var found = new List<string>();
+            foreach (var component in root.GetComponents<MonoBehaviour>().Where(c => c != null))
+            {
+                var serialized = new SerializedObject(component);
+                var list = serialized.FindProperty("powertrain.differentials");
+                if (list == null || !list.isArray) continue;
+                for (var i = 0; i < list.arraySize; i++)
+                {
+                    var diff = list.GetArrayElementAtIndex(i);
+                    var name = diff.FindPropertyRelative("name").stringValue;
+                    diff.FindPropertyRelative("_differentialType").intValue = LimitedSlipType;
+                    diff.FindPropertyRelative("stiffness").floatValue = DifferentialStiffness;
+                    if (name == "Center Differential") diff.FindPropertyRelative("biasAB").floatValue = CentreFrontShare;
+                    found.Add(name);
+                }
+                serialized.ApplyModifiedPropertiesWithoutUndo();
+            }
+            if (found.Count != 3 || !found.Contains("Center Differential"))
+                throw new InvalidOperationException($"Expected front, rear and centre differentials, found: {string.Join(", ", found)}.");
+            Debug.Log($"[RoadsterBuild] Limited-slip differentials: {string.Join(", ", found)}.");
+        }
+
         internal static void Set(GameObject owner, string path, Vector3 value) => Apply(owner, path, p => p.vector3Value = value);
 
         internal static void Set(GameObject owner, string path, float value) => Apply(owner, path, p => p.floatValue = value);

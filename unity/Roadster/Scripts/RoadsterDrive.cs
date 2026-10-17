@@ -1,5 +1,6 @@
 #nullable enable
 using System;
+using System.Linq;
 using Helpers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -51,6 +52,13 @@ namespace Roadster
         private float hopBase;
         private float hopPeak;
 
+        // Cornering telemetry: one line every half second while turning at speed, for tuning from Player.log.
+        private const float TelemetrySpeed = 4.5f; // m/s, about 10 mph
+        private const float TelemetrySteer = 0.2f;
+        private float nextTelemetry;
+        private Vector3 lastVelocity;
+        private CarController? described;
+
         private bool lookupFailed;
         private readonly RaycastHit[] hits = new RaycastHit[8];
 
@@ -75,6 +83,7 @@ namespace Roadster
             if (car == null || body == null || body.isKinematic) return;
             Launch();
             Hop();
+            Telemetry();
         }
 
         private void Launch()
@@ -163,6 +172,35 @@ namespace Roadster
                 var thrust = Mathf.Clamp((-LandingSpeed - vy) / Time.fixedDeltaTime + gravity, 0f, MaxThrust);
                 b.AddForce(Vector3.up * thrust, ForceMode.Acceleration);
             }
+        }
+
+        private void Telemetry()
+        {
+            var b = body!;
+            var vehicle = car!.vehicleController;
+            var lateral = Vector3.Dot((b.velocity - lastVelocity) / Time.fixedDeltaTime, b.transform.right) / 9.81f;
+            lastVelocity = b.velocity;
+            if (described != car)
+            {
+                described = car;
+                var setup = string.Join("; ", vehicle.powertrain.wheels.Select(w =>
+                    $"{w.name}: radius {w.wheelUAPI.Radius:F3}, spring {w.wheelUAPI.SpringMaxForce:F0} N over {w.wheelUAPI.SpringMaxLength:F2} m, " +
+                    $"dampers {w.wheelUAPI.DamperBumpRate:F0}/{w.wheelUAPI.DamperReboundRate:F0}, max load {w.wheelUAPI.MaxLoad:F0} N, " +
+                    $"grip {w.wheelUAPI.LongitudinalFrictionGrip:F2}/{w.wheelUAPI.LateralFrictionGrip:F2}"));
+                Log.Info($"Setup: mass {b.mass:F0} kg, centre of mass {b.centerOfMass}, {setup}.");
+            }
+            var speed = vehicle.Speed;
+            var steer = vehicle.input.Steering;
+            if (speed < TelemetrySpeed || Mathf.Abs(steer) < TelemetrySteer || Time.time < nextTelemetry) return;
+            nextTelemetry = Time.time + 0.5f;
+            var wheels = string.Join("; ", vehicle.powertrain.wheels.Select(w =>
+            {
+                var u = w.wheelUAPI;
+                var hit = u.IsGrounded && u.HitCollider != null ? u.HitCollider.name : "-";
+                return $"{w.name.Replace("Wheel", "").Replace("_WheelController", "")} {(u.IsGrounded ? "down" : "UP")} load {u.Load:F0} N " +
+                       $"compressed {u.SpringCompression * 100f:F0}% slip {u.NormalizedLongitudinalSlip:F2}/{u.NormalizedLateralSlip:F2} on {hit}";
+            }));
+            Log.Info($"Corner: {speed * 2.23694f:F0} mph, steer {steer:F2}, lateral {lateral:F2} g, throttle {vehicle.input.Throttle:F2}, brakes {vehicle.input.Brakes:F2}; {wheels}.");
         }
 
         private float GroundDistance(Rigidbody b)
