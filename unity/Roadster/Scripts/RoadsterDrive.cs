@@ -11,12 +11,16 @@ namespace Roadster
     // barrel roll on J. One instance for the whole game; it does nothing in any other vehicle.
     internal sealed class RoadsterDrive : MonoBehaviour
     {
-        // Launch: Tesla's 0-60 mph in 0.81 s from the 15 October 2026 reveal, about 3.4 g. Tyres grip about 1 g, so
-        // the thrusters supply the rest, as Tesla says they do on the real car. The push follows a straight speed
-        // line from the moment the throttle goes down, minus whatever the wheels already add.
+        // Launch, two modes switched with N (Peter, 17 October 2026): the motors alone, 0-60 mph in 1.6 s, and the
+        // nitrogen thrusters, 0.6 s with the rear plumes firing. The push follows a straight speed line from the moment
+        // the throttle goes down, minus whatever the wheels already add.
         private const float SixtyMph = 26.8224f; // m/s
-        private const float LaunchSeconds = 0.81f;
-        private const float LaunchAcceleration = SixtyMph / LaunchSeconds; // 33.1 m/s²
+        private const float MotorSeconds = 1.6f;
+        private const float NitrogenSeconds = 0.6f;
+        private const Key ModeKey = Key.N;
+        private bool nitrogen;
+        private float LaunchSeconds => nitrogen ? NitrogenSeconds : MotorSeconds;
+        private float LaunchAcceleration => SixtyMph / LaunchSeconds; // 16.8 or 44.7 m/s²
         private const float LaunchGain = 8f; // 1/s, pulls the speed back onto the line
         private const float LaunchStartSpeed = 0.5f; // m/s; a launch starts from a standstill only
         private const float LaunchMaxSeconds = 1.5f;
@@ -26,20 +30,21 @@ namespace Roadster
         private const float HoldThrottle = 0.4f;
 
         // Fans: the reveal claims up to 2 g of downforce at a standstill. While three or more wheels are on the road the
-        // fans pull the car down with an extra 1 g along its own down axis, so it grips in corners at any speed; the
+        // fans pull the car down with an extra 2 g along its own down axis, so it grips in corners at any speed; the
         // springs are sized for it (RoadsterModel). Off in the air, and faded back in over FanRamp after a landing.
-        private const float FanDownforce = 1f; // in g
+        private const float FanDownforce = 2f; // in g
         private const float FanRamp = 0.3f; // s
 
-        // Barrel roll (J), as the reveal rolled over the Tesla lineup: thrusters fire the car 6 m up, roll it once
-        // about its own length while it climbs and falls, then hold it level and brake the fall to 3 m/s over the
-        // last 6 m. The roll goes the way the steering points (right when straight). An attitude controller follows a
-        // smooth 0 to 360 degree roll over RollStart to RollEnd after take-off, while the car is still well clear.
+        // Barrel roll (J), as the reveal rolled over the Tesla lineup, in one motion (Peter, 17 October 2026): the
+        // down thrusters lift the car over ThrustTime while it already starts to roll, it rolls once about its own
+        // length on the way up and over the top, then the thrusters hold it level and brake the fall to 3 m/s over the
+        // last 6 m. The roll goes the way the steering points (right when straight). Its rate starts at its fastest and
+        // eases to nothing at RollEnd (rate ~ 1 - x squared), so it leaves the ground already turning and settles level.
         private const Key RollKey = Key.J;
-        private const float JumpHeight = 6f; // m
+        private const float JumpHeight = 6f; // m, top of the climb
+        private const float ThrustTime = 0.35f; // s the lift takes
         private const float JumpCooldown = 2f; // s
-        private const float RollStart = 0.12f; // s after take-off
-        private const float RollEnd = 1.35f; // s; about 5.8 m up on the way down
+        private const float RollEnd = 1.4f; // s after take-off; about 5.5 m up on the way down
         private const float AttitudeGain = 60f; // 1/s²
         private const float AttitudeDamping = 15f; // 1/s, near critical for the gain
         private const float LandingSpeed = 3f; // m/s
@@ -76,6 +81,15 @@ namespace Roadster
         private Vector3 lastVelocity;
         private CarController? described;
 
+        // Plumes on the car (RoadsterPlume adds them to the prefab hidden): the rear ones fire with a nitrogen launch,
+        // the down ones with the lift and the landing brake.
+        private const float PlumeLength = 1.6f; // m at full thrust
+        private CarController? plumesOf;
+        private MeshRenderer[] rearPlumes = Array.Empty<MeshRenderer>();
+        private MeshRenderer[] downPlumes = Array.Empty<MeshRenderer>();
+        private float rearThrust;
+        private float downThrust;
+
         private bool lookupFailed;
         private readonly RaycastHit[] hits = new RaycastHit[8];
 
@@ -86,11 +100,15 @@ namespace Roadster
             if (car == null || body == null || body.isKinematic)
             {
                 launching = airborne = jumpRequested = false;
+                Drive(rearPlumes, 0f);
+                Drive(downPlumes, 0f);
                 return;
             }
             if (body.GetComponent<RoadsterContacts>() == null) body.gameObject.AddComponent<RoadsterContacts>();
+            ShowPlumes();
             if (GameManager.ShouldBlockKeyboardShortcuts() || CityMap.IsOpen) return;
             var keyboard = Keyboard.current;
+            if (keyboard != null && keyboard[ModeKey].wasPressedThisFrame) SwitchLaunchMode();
             if (keyboard != null && keyboard[RollKey].wasPressedThisFrame && !airborne && Time.time >= nextJump && GroundedWheels() >= 2)
             {
                 jumpRequested = true;
@@ -101,6 +119,7 @@ namespace Roadster
         private void FixedUpdate()
         {
             if (car == null || body == null || body.isKinematic) return;
+            rearThrust = downThrust = 0f;
             Launch();
             BarrelRoll();
             Fans();
@@ -122,7 +141,7 @@ namespace Roadster
                 launchStart = now;
                 lastSpeed = speed;
                 lastPush = 0f;
-                Log.Info("Launch started.");
+                Log.Info($"Launch started ({(nitrogen ? "nitrogen" : "motors")}, target 0-60 mph in {LaunchSeconds:F1} s).");
             }
 
             var t = now - launchStart;
@@ -131,7 +150,7 @@ namespace Roadster
                 // The crossing falls between two physics steps; interpolate back from this one.
                 var measured = (speed - lastSpeed) / dt;
                 var crossed = measured > 0f ? t - (speed - SixtyMph) / measured : t;
-                Log.Info($"Launch: 0-60 mph in {crossed:F2} s (target {LaunchSeconds:F2} s).");
+                Log.Info($"Launch ({(nitrogen ? "nitrogen" : "motors")}): 0-60 mph in {crossed:F2} s (target {LaunchSeconds:F2} s).");
                 launching = false;
                 return;
             }
@@ -148,6 +167,7 @@ namespace Roadster
             var push = Mathf.Clamp(LaunchAcceleration - wheels + LaunchGain * (target - speed), 0f, 2f * LaunchAcceleration);
             var forward = Vector3.ProjectOnPlane(body!.transform.forward, Vector3.up).normalized;
             body.AddForce(forward * push, ForceMode.Acceleration);
+            if (nitrogen) rearThrust = Mathf.Clamp01(push / SixtyMph * NitrogenSeconds);
             lastSpeed = speed;
             lastPush = push;
         }
@@ -169,8 +189,6 @@ namespace Roadster
             {
                 jumpRequested = false;
                 launching = false;
-                var up = Mathf.Sqrt(2f * gravity * JumpHeight);
-                b.AddForce(Vector3.up * Mathf.Max(0f, up - b.velocity.y), ForceMode.VelocityChange);
                 airborne = true;
                 jumpStart = now;
                 jumpBase = jumpPeak = b.position.y;
@@ -200,14 +218,25 @@ namespace Roadster
                 return;
             }
 
+            if (t < ThrustTime)
+            {
+                // Lift: the down thrusters push the car up evenly over ThrustTime to the speed that tops out at JumpHeight.
+                // The climb speed at the end of the lift that tops out at JumpHeight: the lift itself covers 0.5 v T, the
+                // coast v^2 / 2g, so v = g (sqrt(T^2/4 + 2H/g) - T/2), 9.3 m/s for 6 m.
+                var climb = gravity * (Mathf.Sqrt(ThrustTime * ThrustTime / 4f + 2f * JumpHeight / gravity) - ThrustTime / 2f);
+                var lift = Mathf.Max(0f, (climb - vy) / Mathf.Max(ThrustTime - t, Time.fixedDeltaTime)) + gravity;
+                b.AddForce(Vector3.up * Mathf.Min(lift, 3f * MaxThrust), ForceMode.Acceleration);
+                downThrust = 1f;
+            }
+
             if (t <= RollEnd)
             {
-                // Follow the roll: target orientation and rate from a smooth 0 to 360 degree profile.
-                var s = Mathf.Clamp01((t - RollStart) / (RollEnd - RollStart));
-                var eased = s * s * (3f - 2f * s);
-                var angle = 360f * eased * rollSign;
+                // Follow the roll: angle 360 * (1.5 x - 0.5 x^3) for x = t / RollEnd, so the rate starts at 1.5 times its
+                // mean and eases to zero.
+                var x = Mathf.Clamp01(t / RollEnd);
+                var angle = 360f * (1.5f * x - 0.5f * x * x * x) * rollSign;
                 rolled = Mathf.Max(rolled, Mathf.Abs(angle));
-                var rate = 360f * 6f * s * (1f - s) / (RollEnd - RollStart) * rollSign * Mathf.Deg2Rad;
+                var rate = 360f * 1.5f * (1f - x * x) / RollEnd * rollSign * Mathf.Deg2Rad;
                 var target = rollBase * Quaternion.AngleAxis(angle, Vector3.forward);
                 var error = target * Quaternion.Inverse(b.rotation);
                 error.ToAngleAxis(out var errorAngle, out var errorAxis);
@@ -230,6 +259,49 @@ namespace Roadster
             {
                 var thrust = Mathf.Clamp((-LandingSpeed - vy) / Time.fixedDeltaTime + gravity, 0f, MaxThrust);
                 b.AddForce(Vector3.up * thrust, ForceMode.Acceleration);
+                downThrust = Mathf.Max(downThrust, thrust / MaxThrust);
+            }
+        }
+
+        private void SwitchLaunchMode()
+        {
+            nitrogen = !nitrogen;
+            Log.Info($"Launch mode: {(nitrogen ? "nitrogen" : "motors")}.");
+            try
+            {
+                UI.Notification.Notifications.Show(UI.Notification.NotificationType.Info,
+                    nitrogen ? "roadster:notification_nitrogen_open" : "roadster:notification_nitrogen_closed",
+                    null, 4f, "roadster-launch-mode", null, notificationSound: true, trackOnSaveGame: false);
+            }
+            catch (Exception ex) { Log.Error("Launch mode notice: " + ex); }
+        }
+
+        // Shows, stretches and flickers the plumes from the thrust the physics step set.
+        private void ShowPlumes()
+        {
+            if (plumesOf != car)
+            {
+                plumesOf = car;
+                var all = car!.GetComponentsInChildren<MeshRenderer>(true);
+                rearPlumes = all.Where(r => r.name.StartsWith("Plume_Rear", StringComparison.Ordinal)).ToArray();
+                downPlumes = all.Where(r => r.name.StartsWith("Plume_Down", StringComparison.Ordinal)).ToArray();
+                Log.Info($"Plumes found: {rearPlumes.Length} rear, {downPlumes.Length} down.");
+            }
+            Drive(rearPlumes, rearThrust);
+            Drive(downPlumes, downThrust);
+        }
+
+        private static void Drive(MeshRenderer[] plumes, float thrust)
+        {
+            foreach (var plume in plumes)
+            {
+                if (plume == null) continue;
+                var on = thrust > 0.03f;
+                if (plume.enabled != on) plume.enabled = on;
+                if (!on) continue;
+                var flicker = UnityEngine.Random.Range(0.85f, 1.15f);
+                var width = Mathf.Lerp(0.2f, 0.4f, thrust) * flicker;
+                plume.transform.localScale = new Vector3(width, width, PlumeLength * Mathf.Lerp(0.35f, 1f, thrust) * flicker);
             }
         }
 

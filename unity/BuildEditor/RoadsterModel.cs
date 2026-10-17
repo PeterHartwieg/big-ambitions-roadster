@@ -35,18 +35,22 @@ namespace Roadster.BuildEditor
 
         // Suspension. The example car's springs (5,000 N over 0.6 m per wheel, dampers 5,000) suit a 120 kW city car; on
         // the Roadster the loaded axle ran near the end of that travel and the body hit the road ("like driving into a
-        // wall", Peter, 17 October 2026). A short, stiff sports set-up sized for the fans' downforce (RoadsterDrive adds
-        // 1 g of suction while the car is on the road): 20,000 N over 0.25 m (80,000 N/m). The static 3,430 N per wheel
-        // uses 17% of the travel, with the suction 34%, and a hard corner's outer wheel at about 10,000 N half; only a
-        // hard landing reaches the stop. Dampers 10,400 N s/m, the 15,000 N set-up's ratio scaled with the spring.
-        private const float SpringMaxForce = 20000f;
+        // wall", Peter, 17 October 2026). A short, stiff set-up sized for the fans (RoadsterDrive adds 2 g of suction
+        // whenever the car is on the road, so a wheel carries three times its share of the weight): 30,000 N over 0.25 m.
+        // The 10,300 N a wheel carries with the fans uses 34% of the travel, a hard corner's outer wheel at about 15,000 N
+        // half; only a hard landing reaches the stop. Dampers 12,700 N s/m, about critical for a 350 kg corner on that
+        // spring.
+        private const float SpringMaxForce = 30000f;
         private const float SpringLength = 0.25f;
-        private const float DamperRate = 10400f;
-        // The example's tyres are rated at 7,000 N and grip no more above it; with the suction a cornering wheel carries
-        // up to about 10,000 N (Corner lines in Player.log, 17 October 2026).
-        private const float TyreLoadRating = 14000f;
-        private const float CornerWeight = 1400f * 9.81f / 4f;
-        // The controller sits the spring's resting length above the hub, so the wheel rests where the model has it.
+        private const float DamperRate = 12700f;
+        // The example's tyres are rated at 7,000 N and grip no more above it; with the fans a cornering wheel carries up
+        // to about 15,000 N.
+        private const float TyreLoadRating = 20000f;
+        // What a wheel carries at rest with the fans on: its share of the weight, three times over.
+        private const float FanLoadFactor = 3f;
+        private const float CornerWeight = 1400f * 9.81f / 4f * FanLoadFactor;
+        // The controller sits the spring's resting length above the hub, so with the fans on the wheel rests where the
+        // model has it (the car stands about 6 cm higher while they are off, in the air).
         private const float ControllerLift = SpringLength * (1f - CornerWeight / SpringMaxForce);
         // The example's wheel shadow casters are a unit shape scaled to the wheel: 1.213 x width, 0.471 x diameter.
 
@@ -134,6 +138,8 @@ namespace Roadster.BuildEditor
                 obstacle.center = (min + max) / 2f;
                 obstacle.size = max - min;
             }
+
+            RoadsterPlume.Add(root, body.transform.parent);
 
             var spoiler = root.transform.Find("Spoiler");
             if (spoiler != null) Object.DestroyImmediate(spoiler.gameObject);

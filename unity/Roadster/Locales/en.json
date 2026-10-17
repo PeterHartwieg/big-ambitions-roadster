@@ -1,3 +1,5 @@
 {
-    "roadster:vehicletype_roadster": "Roadster"
+    "roadster:vehicletype_roadster": "Roadster",
+    "roadster:notification_nitrogen_open": "Nitrogen tanks open: the next launch fires the rear thrusters, 0 to 60 mph in 0.6 seconds.",
+    "roadster:notification_nitrogen_closed": "Nitrogen tanks closed: launches use the motors alone, 0 to 60 mph in 1.6 seconds."
 }

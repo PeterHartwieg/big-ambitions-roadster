@@ -6,9 +6,9 @@ Version 0.0.1, a phase 0 spike with the Roadster model. Not tested in game yet. 
 
 ## Controls
 
-- **Launch:** full throttle from a standstill.
-- **Fans:** always on while the wheels are on the road: an extra 1 g of downforce for grip in corners.
-- **Barrel roll:** J. The car jumps 6 m, rolls once (towards the side you steer, right when straight) and lands level.
+- **Launch:** full throttle from a standstill. N switches between the motors (0-60 mph in 1.6 s) and the nitrogen thrusters (0.6 s, with the rear plumes).
+- **Fans:** always on while the wheels are on the road: an extra 2 g of downforce for grip in corners.
+- **Barrel roll:** J. The car lifts 6 m on its thrusters while already rolling, rolls once (towards the side you steer, right when straight) and lands level.
 
 ## Install
 
