@@ -256,7 +256,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 248889309441228723}
-  - {fileID: 1183590898510184274}
+  - {fileID: 8147140581634931085}
   m_Father: {fileID: 1499047632997086128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1530417630265176988
@@ -390,7 +390,7 @@ MonoBehaviour:
   - {fileID: 5553002730694952493}
   - {fileID: 3251538549616235988}
   - {fileID: 2021319650959782770}
-  - {fileID: 9210895614367332918}
+  - {fileID: 8065883560209928378}
   bodyLOD: {fileID: 0}
   driverRenderer: {fileID: 0}
   lights: {fileID: 6859194767955527425}
@@ -424,7 +424,7 @@ MonoBehaviour:
   - {fileID: 1703286799900791214}
   - {fileID: 7764031962775170524}
   - {fileID: 2638181830368732549}
-  - {fileID: 9210895614367332918}
+  - {fileID: 8065883560209928378}
   navMeshTargets:
   - {fileID: 4336405530762125936}
   - {fileID: 7072898375055149178}
@@ -1458,124 +1458,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3439240449896399639
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6236591940699621887}
-  - component: {fileID: 4044415380779038772}
-  - component: {fileID: 9210895614367332918}
-  m_Layer: 19
-  m_Name: Roadster_Wing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6236591940699621887
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3439240449896399639}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1183590898510184274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4044415380779038772
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3439240449896399639}
-  m_Mesh: {fileID: -5967637423870461438, guid: d9bc38592726149a195232ed10177810, type: 3}
---- !u!23 &9210895614367332918
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3439240449896399639}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 1fa870884b22044f79e5c0ad28983b66, type: 2}
-  - {fileID: 2100000, guid: 6b8ab94d41d3f45a38544554fa68850b, type: 2}
-  - {fileID: 2100000, guid: 72a2cafa6731f4dc4a1749e17dd228e4, type: 2}
-  - {fileID: 2100000, guid: 1cc501fc895764dabb3d3563c2e9e2f7, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3649204001026441853
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1183590898510184274}
-  m_Layer: 0
-  m_Name: WingHinge
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1183590898510184274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3649204001026441853}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.843, z: -1.86}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6236591940699621887}
-  m_Father: {fileID: 4233781417737949920}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4165975636593569710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,6 +2069,124 @@ Transform:
   - {fileID: 8834482684295917451}
   m_Father: {fileID: 1679970095160635817}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8516809500870112464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8147140581634931085}
+  m_Layer: 0
+  m_Name: WingHinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8147140581634931085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516809500870112464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.843, z: -1.86}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3877661032695527308}
+  m_Father: {fileID: 4233781417737949920}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8576454861956801541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3877661032695527308}
+  - component: {fileID: 5183022854811858023}
+  - component: {fileID: 8065883560209928378}
+  m_Layer: 19
+  m_Name: Roadster_Wing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3877661032695527308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576454861956801541}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8147140581634931085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5183022854811858023
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576454861956801541}
+  m_Mesh: {fileID: -5967637423870461438, guid: d9bc38592726149a195232ed10177810, type: 3}
+--- !u!23 &8065883560209928378
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8576454861956801541}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 1fa870884b22044f79e5c0ad28983b66, type: 2}
+  - {fileID: 2100000, guid: 6b8ab94d41d3f45a38544554fa68850b, type: 2}
+  - {fileID: 2100000, guid: 72a2cafa6731f4dc4a1749e17dd228e4, type: 2}
+  - {fileID: 2100000, guid: 1cc501fc895764dabb3d3563c2e9e2f7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8941096726162361295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,7 +2213,7 @@ Transform:
   m_GameObject: {fileID: 8941096726162361295}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.836, y: 0.555775, z: 1.36}
+  m_LocalPosition: {x: -0.836, y: 0.57008123, z: 1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2260,14 +2260,14 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     length: 0
-    maxForce: 15000
+    maxForce: 20000
     maxLength: 0.25
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
   damper:
-    bumpRate: 9000
-    reboundRate: 9000
+    bumpRate: 10400
+    reboundRate: 10400
     slowBump: 1.4
     fastBump: 0.6
     bumpDivisionVelocity: 0.06
@@ -2306,7 +2306,7 @@ MonoBehaviour:
   activeFrictionPreset: {fileID: 11400000, guid: 8fa8a2c6069c00541aa092e84e007c73,
     type: 2}
   camber: 0
-  loadRating: 7000
+  loadRating: 14000
   rollingResistanceTorque: 30
   antiSquat: 0
   frictionCircleStrength: 1
@@ -2348,7 +2348,7 @@ Transform:
   m_GameObject: {fileID: 8941096726163723383}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.862, y: 0.563775, z: -1.43}
+  m_LocalPosition: {x: 0.862, y: 0.57808125, z: -1.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2395,14 +2395,14 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     length: 0
-    maxForce: 15000
+    maxForce: 20000
     maxLength: 0.25
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
   damper:
-    bumpRate: 9000
-    reboundRate: 9000
+    bumpRate: 10400
+    reboundRate: 10400
     slowBump: 1.4
     fastBump: 0.6
     bumpDivisionVelocity: 0.06
@@ -2441,7 +2441,7 @@ MonoBehaviour:
   activeFrictionPreset: {fileID: 11400000, guid: 8fa8a2c6069c00541aa092e84e007c73,
     type: 2}
   camber: 0
-  loadRating: 7000
+  loadRating: 14000
   rollingResistanceTorque: 30
   antiSquat: 0
   frictionCircleStrength: 1
@@ -2483,7 +2483,7 @@ Transform:
   m_GameObject: {fileID: 8941096726999029935}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.862, y: 0.563775, z: -1.43}
+  m_LocalPosition: {x: -0.862, y: 0.57808125, z: -1.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2530,14 +2530,14 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     length: 0
-    maxForce: 15000
+    maxForce: 20000
     maxLength: 0.25
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
   damper:
-    bumpRate: 9000
-    reboundRate: 9000
+    bumpRate: 10400
+    reboundRate: 10400
     slowBump: 1.4
     fastBump: 0.6
     bumpDivisionVelocity: 0.06
@@ -2576,7 +2576,7 @@ MonoBehaviour:
   activeFrictionPreset: {fileID: 11400000, guid: 8fa8a2c6069c00541aa092e84e007c73,
     type: 2}
   camber: 0
-  loadRating: 7000
+  loadRating: 14000
   rollingResistanceTorque: 30
   antiSquat: 0
   frictionCircleStrength: 1
@@ -2618,7 +2618,7 @@ Transform:
   m_GameObject: {fileID: 8941096727253211234}
   serializedVersion: 2
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.836, y: 0.555775, z: 1.36}
+  m_LocalPosition: {x: 0.836, y: 0.57008123, z: 1.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2665,14 +2665,14 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     length: 0
-    maxForce: 15000
+    maxForce: 20000
     maxLength: 0.25
     prevLength: 0
     compressionVelocity: 0
     prevVelocity: 0
   damper:
-    bumpRate: 9000
-    reboundRate: 9000
+    bumpRate: 10400
+    reboundRate: 10400
     slowBump: 1.4
     fastBump: 0.6
     bumpDivisionVelocity: 0.06
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   activeFrictionPreset: {fileID: 11400000, guid: 8fa8a2c6069c00541aa092e84e007c73,
     type: 2}
   camber: 0
-  loadRating: 7000
+  loadRating: 14000
   rollingResistanceTorque: 30
   antiSquat: 0
   frictionCircleStrength: 1

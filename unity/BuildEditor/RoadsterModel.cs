@@ -34,14 +34,17 @@ namespace Roadster.BuildEditor
         };
 
         // Suspension. The example car's springs (5,000 N over 0.6 m per wheel, dampers 5,000) suit a 120 kW city car; on
-        // the Roadster the axle that takes the load under hard acceleration or braking ran near the end of that travel
-        // and the body hit the road ("like driving into a wall", Peter, 17 October 2026). A short, stiff sports set-up:
-        // 15,000 N over 0.25 m (60,000 N/m), so the static 3,430 N per wheel uses 23% of the travel, a 1 g load transfer
-        // about 40%, and only a hard landing reaches the stop. Dampers 9,000 N s/m, about critical for a 350 kg corner on
-        // that spring, as the example's are on its own.
-        private const float SpringMaxForce = 15000f;
+        // the Roadster the loaded axle ran near the end of that travel and the body hit the road ("like driving into a
+        // wall", Peter, 17 October 2026). A short, stiff sports set-up sized for the fans' downforce (RoadsterDrive adds
+        // 1 g of suction while the car is on the road): 20,000 N over 0.25 m (80,000 N/m). The static 3,430 N per wheel
+        // uses 17% of the travel, with the suction 34%, and a hard corner's outer wheel at about 10,000 N half; only a
+        // hard landing reaches the stop. Dampers 10,400 N s/m, the 15,000 N set-up's ratio scaled with the spring.
+        private const float SpringMaxForce = 20000f;
         private const float SpringLength = 0.25f;
-        private const float DamperRate = 9000f;
+        private const float DamperRate = 10400f;
+        // The example's tyres are rated at 7,000 N and grip no more above it; with the suction a cornering wheel carries
+        // up to about 10,000 N (Corner lines in Player.log, 17 October 2026).
+        private const float TyreLoadRating = 14000f;
         private const float CornerWeight = 1400f * 9.81f / 4f;
         // The controller sits the spring's resting length above the hub, so the wheel rests where the model has it.
         private const float ControllerLift = SpringLength * (1f - CornerWeight / SpringMaxForce);
@@ -112,6 +115,7 @@ namespace Roadster.BuildEditor
                 ModAssets.Set(controller, "spring.maxLength", SpringLength);
                 ModAssets.Set(controller, "damper.bumpRate", DamperRate);
                 ModAssets.Set(controller, "damper.reboundRate", DamperRate);
+                ModAssets.Set(controller, "loadRating", TyreLoadRating);
             }
 
             var collider = Find(root, "CarHolder/Colliders/BodyCollider").GetComponent<MeshCollider>();

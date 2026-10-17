@@ -7,8 +7,8 @@ using UnityEngine.InputSystem;
 
 namespace Roadster
 {
-    // The Roadster's thrusters while the player drives one: the launch to 60 mph and the hop. One instance for the
-    // whole game; it does nothing in any other vehicle.
+    // The Roadster's fans and thrusters while the player drives one: the launch to 60 mph, the fans' suction, and the
+    // barrel roll on J. One instance for the whole game; it does nothing in any other vehicle.
     internal sealed class RoadsterDrive : MonoBehaviour
     {
         // Launch: Tesla's 0-60 mph in 0.81 s from the 15 October 2026 reveal, about 3.4 g. Tyres grip about 1 g, so
@@ -25,11 +25,23 @@ namespace Roadster
         private const float StartThrottle = 0.7f;
         private const float HoldThrottle = 0.4f;
 
-        // Hop: straight up 5 m, enough to clear a box truck, as the reveal hopped the Tesla lineup. In the air the
-        // thrusters hold the car level and brake the fall to 3 m/s over the last 6 m.
-        private const Key HopKey = Key.J;
-        private const float HopHeight = 5f; // m
-        private const float HopCooldown = 1.5f; // s
+        // Fans: the reveal claims up to 2 g of downforce at a standstill. While three or more wheels are on the road the
+        // fans pull the car down with an extra 1 g along its own down axis, so it grips in corners at any speed; the
+        // springs are sized for it (RoadsterModel). Off in the air, and faded back in over FanRamp after a landing.
+        private const float FanDownforce = 1f; // in g
+        private const float FanRamp = 0.3f; // s
+
+        // Barrel roll (J), as the reveal rolled over the Tesla lineup: thrusters fire the car 6 m up, roll it once
+        // about its own length while it climbs and falls, then hold it level and brake the fall to 3 m/s over the
+        // last 6 m. The roll goes the way the steering points (right when straight). An attitude controller follows a
+        // smooth 0 to 360 degree roll over RollStart to RollEnd after take-off, while the car is still well clear.
+        private const Key RollKey = Key.J;
+        private const float JumpHeight = 6f; // m
+        private const float JumpCooldown = 2f; // s
+        private const float RollStart = 0.12f; // s after take-off
+        private const float RollEnd = 1.35f; // s; about 5.8 m up on the way down
+        private const float AttitudeGain = 60f; // 1/s²
+        private const float AttitudeDamping = 15f; // 1/s, near critical for the gain
         private const float LandingSpeed = 3f; // m/s
         private const float LandingBrakeHeight = 6f; // m
         private const float MaxThrust = 40f; // m/s², about 4 g
@@ -45,12 +57,17 @@ namespace Roadster
         private float lastSpeed;
         private float lastPush;
 
-        private bool hopRequested;
+        private bool jumpRequested;
+        private float jumpSteer;
         private bool airborne;
-        private float hopStart;
-        private float nextHop;
-        private float hopBase;
-        private float hopPeak;
+        private float jumpStart;
+        private float nextJump;
+        private float jumpBase;
+        private float jumpPeak;
+        private Quaternion rollBase;
+        private float rollSign;
+        private float rolled; // degrees reached, for the log
+        private float lastLanding = -10f;
 
         // Cornering telemetry: one line every half second while turning at speed, for tuning from Player.log.
         private const float TelemetrySpeed = 4.5f; // m/s, about 10 mph
@@ -68,21 +85,25 @@ namespace Roadster
             body = car == null ? null : car.vehicleController.vehicleRigidbody;
             if (car == null || body == null || body.isKinematic)
             {
-                launching = airborne = hopRequested = false;
+                launching = airborne = jumpRequested = false;
                 return;
             }
             if (body.GetComponent<RoadsterContacts>() == null) body.gameObject.AddComponent<RoadsterContacts>();
             if (GameManager.ShouldBlockKeyboardShortcuts() || CityMap.IsOpen) return;
             var keyboard = Keyboard.current;
-            if (keyboard != null && keyboard[HopKey].wasPressedThisFrame && !airborne && Time.time >= nextHop && GroundedWheels() >= 2)
-                hopRequested = true;
+            if (keyboard != null && keyboard[RollKey].wasPressedThisFrame && !airborne && Time.time >= nextJump && GroundedWheels() >= 2)
+            {
+                jumpRequested = true;
+                jumpSteer = car.vehicleController.input.Steering;
+            }
         }
 
         private void FixedUpdate()
         {
             if (car == null || body == null || body.isKinematic) return;
             Launch();
-            Hop();
+            BarrelRoll();
+            Fans();
             Telemetry();
         }
 
@@ -131,40 +152,78 @@ namespace Roadster
             lastPush = push;
         }
 
-        private void Hop()
+        private void Fans()
+        {
+            if (airborne || GroundedWheels() < 3) return;
+            var ramp = Mathf.Clamp01((Time.fixedTime - lastLanding) / FanRamp);
+            body!.AddForce(-body.transform.up * (FanDownforce * -Physics.gravity.y * ramp), ForceMode.Acceleration);
+        }
+
+        private void BarrelRoll()
         {
             var b = body!;
             var now = Time.fixedTime;
             var gravity = -Physics.gravity.y;
 
-            if (hopRequested)
+            if (jumpRequested)
             {
-                hopRequested = false;
+                jumpRequested = false;
                 launching = false;
-                var up = Mathf.Sqrt(2f * gravity * HopHeight);
+                var up = Mathf.Sqrt(2f * gravity * JumpHeight);
                 b.AddForce(Vector3.up * Mathf.Max(0f, up - b.velocity.y), ForceMode.VelocityChange);
                 airborne = true;
-                hopStart = now;
-                hopBase = hopPeak = b.position.y;
-                nextHop = Time.time + HopCooldown;
-                Log.Info($"Hop at {b.velocity.magnitude * 2.23694f:F0} mph.");
+                jumpStart = now;
+                jumpBase = jumpPeak = b.position.y;
+                nextJump = Time.time + JumpCooldown;
+                var heading = Vector3.ProjectOnPlane(b.transform.forward, Vector3.up);
+                rollBase = Quaternion.LookRotation(heading.sqrMagnitude > 1e-4f ? heading.normalized : Vector3.forward, Vector3.up);
+                // Positive roll about the car's forward axis lifts its right side in Unity's left-handed frame, so a roll
+                // to the right is the negative direction.
+                rollSign = jumpSteer < -0.2f ? 1f : -1f;
+                rolled = 0f;
+                b.maxAngularVelocity = Mathf.Max(b.maxAngularVelocity, 20f);
+                Log.Info($"Barrel roll to the {(rollSign < 0f ? "right" : "left")} at {b.velocity.magnitude * 2.23694f:F0} mph.");
                 return;
             }
             if (!airborne) return;
 
-            hopPeak = Mathf.Max(hopPeak, b.position.y);
+            jumpPeak = Mathf.Max(jumpPeak, b.position.y);
             var vy = b.velocity.y;
-            if (now - hopStart > MinAirTime && GroundedWheels() >= 3)
+            var t = now - jumpStart;
+            if (t > MinAirTime && GroundedWheels() >= 3)
             {
                 airborne = false;
-                Log.Info($"Hop landed: peak {hopPeak - hopBase:F1} m, touchdown {-vy:F1} m/s, {now - hopStart:F2} s in the air.");
+                lastLanding = now;
+                var tilt = Vector3.Angle(b.transform.up, Vector3.up);
+                Log.Info($"Barrel roll landed: peak {jumpPeak - jumpBase:F1} m, rolled {rolled:F0} degrees, touchdown {-vy:F1} m/s, " +
+                         $"{tilt:F0} degrees off level, {t:F2} s in the air.");
                 return;
             }
 
-            // Level: turn the car's up towards the world's up, and damp the tumble but not the yaw.
-            var tilt = Vector3.Cross(b.transform.up, Vector3.up);
-            var tumble = Vector3.ProjectOnPlane(b.angularVelocity, Vector3.up);
-            b.AddTorque(tilt * LevelGain - tumble * LevelDamping, ForceMode.Acceleration);
+            if (t <= RollEnd)
+            {
+                // Follow the roll: target orientation and rate from a smooth 0 to 360 degree profile.
+                var s = Mathf.Clamp01((t - RollStart) / (RollEnd - RollStart));
+                var eased = s * s * (3f - 2f * s);
+                var angle = 360f * eased * rollSign;
+                rolled = Mathf.Max(rolled, Mathf.Abs(angle));
+                var rate = 360f * 6f * s * (1f - s) / (RollEnd - RollStart) * rollSign * Mathf.Deg2Rad;
+                var target = rollBase * Quaternion.AngleAxis(angle, Vector3.forward);
+                var error = target * Quaternion.Inverse(b.rotation);
+                error.ToAngleAxis(out var errorAngle, out var errorAxis);
+                if (errorAngle > 180f) errorAngle -= 360f;
+                if (float.IsNaN(errorAxis.x)) errorAxis = Vector3.zero;
+                var targetRate = (rollBase * Vector3.forward) * rate;
+                b.AddTorque(errorAxis * (errorAngle * Mathf.Deg2Rad * AttitudeGain) + (targetRate - b.angularVelocity) * AttitudeDamping,
+                    ForceMode.Acceleration);
+            }
+            else
+            {
+                // Level: turn the car's up towards the world's up, and damp the tumble but not the yaw.
+                var tilt = Vector3.Cross(b.transform.up, Vector3.up);
+                var tumble = Vector3.ProjectOnPlane(b.angularVelocity, Vector3.up);
+                b.AddTorque(tilt * LevelGain - tumble * LevelDamping, ForceMode.Acceleration);
+            }
 
             // Landing: hold the fall at LandingSpeed near the ground.
             if (vy < -LandingSpeed && GroundDistance(b) < LandingBrakeHeight)
