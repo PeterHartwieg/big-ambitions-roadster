@@ -63,6 +63,7 @@ namespace Roadster
                 launching = airborne = hopRequested = false;
                 return;
             }
+            if (body.GetComponent<RoadsterContacts>() == null) body.gameObject.AddComponent<RoadsterContacts>();
             if (GameManager.ShouldBlockKeyboardShortcuts() || CityMap.IsOpen) return;
             var keyboard = Keyboard.current;
             if (keyboard != null && keyboard[HopKey].wasPressedThisFrame && !airborne && Time.time >= nextHop && GroundedWheels() >= 2)
