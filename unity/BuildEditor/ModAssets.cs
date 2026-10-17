@@ -21,15 +21,19 @@ namespace Roadster.BuildEditor
         private const string ExampleVehicleType = "Assets/Mods/Example-Vehicle/TurboHonza.asset";
         private const string ExampleVehiclePrefab = "Assets/Mods/Example-Vehicle/TurboHonza.prefab";
 
-        // Phase 0 placeholder: the SDK's example car body with the Roadster's drivetrain. The model comes in phase 2.
+        // The SDK's example car, with the Roadster model from art/ (RoadsterModel) when tools/build-mod.sh has copied it
+        // in, and the example's body as a placeholder otherwise.
         private const float Price = 250000f; // the Thrust trim's quoted figure; placeholder until a balance pass
         // The game gives every car a 1,400 kg rigidbody; the Roadster keeps it.
         // Power and gearing: the example car has 120 kW and a final drive of 8.51 on 0.305 m wheels, which tops out at
-        // about 64 km/h on its 2.108 top gear at the 10,000 rpm limiter. A final drive of 1.70 puts the limiter at
-        // about 320 km/h. 600 kW is far more than four tyres can put down below 100 km/h; the launch to 60 mph comes
-        // from the thrusters (RoadsterDrive), the engine carries on from there.
+        // about 64 km/h on its 2.108 top gear at the 10,000 rpm limiter. The final drive is set from the wheel radius so
+        // the limiter falls at TopSpeed (1.70 on the example's wheels, about 2.0 on the model's 0.36 m tyres). 600 kW is
+        // far more than four tyres can put down below 100 km/h; the launch to 60 mph comes from the thrusters
+        // (RoadsterDrive), the engine carries on from there.
         private const float EnginePower = 600f; // kW
-        private const float FinalGearRatio = 1.70f;
+        private const float ExampleWheelRadius = 0.3053877f;
+        private const float TopGear = 2.108f;
+        private const float LimiterRadPerSecond = 10000f * 2f * Mathf.PI / 60f;
         private const int TopSpeed = 320; // km/h, for the showroom; the gearing sets the real one
         private const float BrakeTorque = 5000f; // N m on each wheel, double the example's for 320 km/h
 
@@ -82,11 +86,26 @@ namespace Roadster.BuildEditor
                 controller.vehicleType = type;
                 root.name = "Roadster";
 
+                var wheelRadius = ExampleWheelRadius;
+                if (RoadsterModel.Available)
+                {
+                    var fit = RoadsterModel.Apply(root);
+                    wheelRadius = fit.WheelRadius;
+                    var size = fit.BoundsMax - fit.BoundsMin;
+                    Set(root, "dimensions", new Vector3(size.x, size.y, size.z));
+                    Debug.Log($"[RoadsterBuild] Model fitted: wheel radius {wheelRadius:F3} m, size {size.x:F2} x {size.y:F2} x {size.z:F2} m.");
+                }
+                else
+                {
+                    Debug.Log("[RoadsterBuild] No model in Vehicles/RoadsterArt; using the example car's body.");
+                }
+
                 var body = root.GetComponent<Rigidbody>();
                 // At 320 km/h the car moves 3 m per physics step; discrete checks would let it pass through walls.
                 body.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
                 Set(root, "powertrain.engine.maxPower", EnginePower);
-                Set(root, "powertrain.transmission.finalGearRatio", FinalGearRatio);
+                var finalGear = LimiterRadPerSecond * wheelRadius / (TopGear * TopSpeed / 3.6f);
+                Set(root, "powertrain.transmission.finalGearRatio", finalGear);
                 Set(root, "brakes.maxTorque", BrakeTorque);
                 PrefabUtility.SaveAsPrefabAsset(root, prefabPath);
             }
@@ -137,7 +156,11 @@ namespace Roadster.BuildEditor
 
         // Sets a serialized field on whichever components of the object have it, so the NWH types
         // need no compile-time reference. Fails when none has it, rather than building a wrong car.
-        private static void Set(GameObject owner, string path, float value)
+        internal static void Set(GameObject owner, string path, Vector3 value) => Apply(owner, path, p => p.vector3Value = value);
+
+        internal static void Set(GameObject owner, string path, float value) => Apply(owner, path, p => p.floatValue = value);
+
+        private static void Apply(GameObject owner, string path, Action<SerializedProperty> change)
         {
             var hits = 0;
             foreach (var component in owner.GetComponents<MonoBehaviour>().Where(c => c != null))
@@ -145,7 +168,7 @@ namespace Roadster.BuildEditor
                 var serialized = new SerializedObject(component);
                 var property = serialized.FindProperty(path);
                 if (property == null) continue;
-                property.floatValue = value;
+                change(property);
                 serialized.ApplyModifiedPropertiesWithoutUndo();
                 hits++;
             }

@@ -1,0 +1,5 @@
+Saved [Roadster.blend](/Users/peterhartwieg/Coding_Projects/big-ambitions-roadster/art/roadster-free/Roadster.blend) with the deep carbon enclosure, hollow bronze nozzles, recessed fans, and thin tapered strakes. The accepted body, wheels, wing, plate, and existing materials are preserved.
+
+Backup: [Roadster-round3.blend](/Users/peterhartwieg/Coding_Projects/big-ambitions-roadster/art/roadster-free/Roadster-round3.blend).
+
+[Rear comparison](/Users/peterhartwieg/Coding_Projects/big-ambitions-roadster/art/roadster-free/renders/round4/comparison-13-full-rear-reference-left.png) · [Diffuser close-up](/Users/peterhartwieg/Coding_Projects/big-ambitions-roadster/art/roadster-free/renders/round4/03-diffuser-close-up.png) · [All round-four renders](/Users/peterhartwieg/Coding_Projects/big-ambitions-roadster/art/roadster-free/renders/round4/)

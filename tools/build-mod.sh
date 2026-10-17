@@ -48,6 +48,19 @@ if [ ! -f "$DEPS/0Harmony.dll" ] || [ ! -f "$REPO/build/Harmony-LICENSE.txt" ]; 
 fi
 echo "$HARMONY_DLL_SHA256  $DEPS/0Harmony.dll" | shasum -a 256 -c - >/dev/null || { echo "Cached 0Harmony.dll does not match the pinned hash; delete it and rebuild" >&2; exit 1; }
 
+# The model's game export from art/roadster-free (tools: art/roadster-free/feedback-4-game-export.md), copied in so the
+# generator can build the prefab. Only the .meta files are committed (stable GUIDs for the prefab). The FBX goes in as
+# Roadster_Model.fbx: the game finds a vehicle's prefab by file name in any bundle, so no model may share the prefab's name.
+ART="$REPO/art/roadster-free"
+MODEL_DIR="$MOD_DIR/Vehicles/RoadsterArt"
+if [ -f "$ART/Roadster-game.fbx" ] && [ -f "$ART/game-export.json" ]; then
+  mkdir -p "$MODEL_DIR"
+  rsync -a --checksum "$ART/Roadster-game.fbx" "$MODEL_DIR/Roadster_Model.fbx"
+  rsync -a --checksum "$ART/game-export.json" "$MODEL_DIR/game-export.json"
+else
+  echo "No game export in $ART; the prefab keeps the example car's body." >&2
+fi
+
 link() { # link <target> <link path>
   if [ -L "$2" ]; then [ "$(readlink "$2")" = "$1" ] || { rm "$2"; ln -s "$1" "$2"; }
   elif [ -e "$2" ]; then echo "$2 exists and is not a symlink; refusing to replace it" >&2; exit 1

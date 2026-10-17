@@ -1,0 +1,216 @@
+{
+  "name": "Roadster",
+  "fbx": "Roadster.fbx",
+  "visible_budget": 85000,
+  "position_tolerance_m": 0.005,
+  "uv_layers": 2,
+  "uv_min_fill": 0.3,
+  "textures": [
+    {
+      "file": "T_Roadster_D.png",
+      "size": 4096
+    },
+    {
+      "file": "T_Roadster_MaskMap.png",
+      "size": 4096
+    },
+    {
+      "file": "T_Roadster_N.png",
+      "size": 4096
+    },
+    {
+      "file": "T_Roadster_E.png",
+      "size": 2048
+    },
+    {
+      "file": "T_Roadster_EM_1.png",
+      "size": 2048
+    },
+    {
+      "file": "T_Roadster_EM_2.png",
+      "size": 2048
+    }
+  ],
+  "objects": {
+    "Roadster_Body": {
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "max_tris": 60000
+    },
+    "Roadster_Wheel_FL": {
+      "origin": [
+        0.84,
+        -1.39,
+        0.36
+      ],
+      "wheel": true,
+      "diameter": 0.72,
+      "width": 0.3,
+      "max_tris": 5000
+    },
+    "Roadster_Wheel_FR": {
+      "origin": [
+        -0.84,
+        -1.39,
+        0.36
+      ],
+      "wheel": true,
+      "diameter": 0.72,
+      "width": 0.3,
+      "max_tris": 5000
+    },
+    "Roadster_Wheel_RL": {
+      "origin": [
+        0.84,
+        1.39,
+        0.36
+      ],
+      "wheel": true,
+      "diameter": 0.72,
+      "width": 0.3,
+      "max_tris": 5000
+    },
+    "Roadster_Wheel_RR": {
+      "origin": [
+        -0.84,
+        1.39,
+        0.36
+      ],
+      "wheel": true,
+      "diameter": 0.72,
+      "width": 0.3,
+      "max_tris": 5000
+    },
+    "Roadster_Spoiler": {
+      "origin": [
+        0,
+        1.78,
+        0.93
+      ],
+      "hinge": {
+        "axis": "X",
+        "line": [
+          0,
+          1.78,
+          0.93
+        ],
+        "open_deg": 35,
+        "opens_towards": "+z"
+      },
+      "max_tris": 3000
+    },
+    "Roadster_Collision": {
+      "collision": true,
+      "max_tris": 250
+    }
+  },
+  "envelope": {
+    "x": [
+      -1.1,
+      1.1
+    ],
+    "y": [
+      -2.21,
+      2.1
+    ],
+    "z": [
+      0,
+      1.22
+    ]
+  },
+  "extent_at_least": {
+    "x": [
+      -1.0,
+      1.0
+    ],
+    "y": [
+      -2.2,
+      2.09
+    ],
+    "z": [
+      0,
+      1.13
+    ]
+  },
+  "near_points": [
+    {
+      "label": "spoiler hinge on the rear deck",
+      "object": "Roadster_Body",
+      "point": [
+        0,
+        1.78,
+        0.93
+      ],
+      "max_dist": 0.03
+    }
+  ],
+  "clear_boxes": [
+    {
+      "label": "front-left wheel arch",
+      "objects": [
+        "Roadster_Body"
+      ],
+      "min": [
+        0.685,
+        -1.79,
+        0.0
+      ],
+      "max": [
+        0.995,
+        -0.9899999999999999,
+        0.75
+      ]
+    },
+    {
+      "label": "front-right wheel arch",
+      "objects": [
+        "Roadster_Body"
+      ],
+      "min": [
+        -0.995,
+        -1.79,
+        0.0
+      ],
+      "max": [
+        -0.685,
+        -0.9899999999999999,
+        0.75
+      ]
+    },
+    {
+      "label": "rear-left wheel arch",
+      "objects": [
+        "Roadster_Body"
+      ],
+      "min": [
+        0.685,
+        0.9899999999999999,
+        0.0
+      ],
+      "max": [
+        0.995,
+        1.79,
+        0.75
+      ]
+    },
+    {
+      "label": "rear-right wheel arch",
+      "objects": [
+        "Roadster_Body"
+      ],
+      "min": [
+        -0.995,
+        0.9899999999999999,
+        0.0
+      ],
+      "max": [
+        -0.685,
+        1.79,
+        0.75
+      ]
+    }
+  ]
+}

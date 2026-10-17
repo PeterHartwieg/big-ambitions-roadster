@@ -46,4 +46,4 @@ Total: about 10 to 15 working days. Ramp driving upside down with fan suction is
 
 ## Status
 
-Phase 0 is written and builds. Nothing in this repo has been checked in game yet.
+Phase 0 is written and builds. Phase 2's model is in the build (17 October 2026): a free Sol modelling session from reference images only, four rounds of Peter's feedback, then a game export (`art/roadster-free/Roadster-game.fbx`, about 142,000 triangles, 12 flat materials). The earlier spec-and-scorer passes (`art/roadster`, `roadster-v3` to `v9`) drifted further from the car and are kept only as history. Nothing has been checked in game yet.

@@ -12,3 +12,26 @@ CLAUDE.local.md
 # Fetched at build time by tools/build-mod.sh.
 unity/Roadster/Dependencies/
 unity/Roadster/Dependencies.meta
+
+# Reveal press photos: private modelling reference, never committed.
+art/reference/
+
+# The model's game export, copied in by tools/build-mod.sh; the originals are in art/roadster-free.
+unity/Roadster/Vehicles/RoadsterArt/*.fbx
+unity/Roadster/Vehicles/RoadsterArt/*.json
+
+# Modelling runs: Blender scenes, renders and logs are large; keep the briefs and reports.
+art/roadster*/**/*.blend
+art/roadster*/**/*.blend1
+art/roadster*/**/renders/
+art/roadster*/**/codex.log
+art/roadster*/**/*.fbx
+art/roadster*/**/*.png
+art/*.zip
+# The game export is the build's input: keep it.
+!art/roadster-free/Roadster-game.fbx
+art/roadster*/**/*.log
+art/roadster*/**/*.json
+!art/roadster*/spec.json
+!art/roadster-free/game-export.json
+art/roadster*/**/*.txt
