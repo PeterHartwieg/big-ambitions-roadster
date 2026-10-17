@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Copies build/Roadster to the Windows game PC over ssh and installs it into ModsLocal.
+# Usage: tools/install-remote.sh [ssh host]   (or set BA_GAME_HOST)
+set -euo pipefail
+REPO="$(cd "$(dirname "$0")/.." && pwd)"
+HOST="${1:-${BA_GAME_HOST:?Pass the ssh host of the Windows game PC, or set BA_GAME_HOST}}"
+PKG="$REPO/build/Roadster"
+[ -f "$PKG/Roadster.dll" ] || { echo "Build first: tools/build-mod.sh" >&2; exit 1; }
+. "$REPO/tools/game-lock.sh"
+require_lock_free_or_ours
+STAGE="Roadster-staged-$(date +%Y%m%d%H%M%S)"
+scp -q -r "$PKG" "$HOST:$STAGE" < /dev/null
+scp -q "$REPO/build/Roadster.sha256" "$HOST:$STAGE.sha256" < /dev/null
+scp -q "$REPO/tools/Install-Windows.ps1" "$HOST:Install-Roadster.ps1" < /dev/null
+ssh "$HOST" "powershell -NoProfile -ExecutionPolicy Bypass -File Install-Roadster.ps1 -Source $STAGE -Manifest $STAGE.sha256" < /dev/null
