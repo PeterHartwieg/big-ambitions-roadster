@@ -17,6 +17,6 @@ Use a throwaway save. The mod changes every save it loads.
 - `Version 0.0.1 loading.`, `Vehicle registered: roadster:vehicletype_roadster`, `Active: VehicleContractSettings.SetListOfVehiclesForSale.`
 - `Launch (motors): 0-60 mph in X s`: X within 1.55 to 1.65; `Launch (nitrogen)`: within 0.57 to 0.63.
 - `Plumes found: 4 rear, 2 down.`
-- `Barrel roll landed: peak X m, rolled Y degrees, touchdown Z m/s, W degrees off level`: peak about 6 m, rolled 360, touchdown at most 3 m/s, under 10 degrees off level.
+- `Barrel roll landed: peak X m, rolled Y degrees, touchdown Z m/s, W degrees off level`: peak about 6 m, rolled 360, touchdown at most 5 m/s, under 10 degrees off level, about 2.5 s in the air.
 - `Corner:` lines: no wheel `UP`, loads under 14,000 N, compression under about 70%.
 - No `ERROR` lines from `[Mod:Roadster]`.

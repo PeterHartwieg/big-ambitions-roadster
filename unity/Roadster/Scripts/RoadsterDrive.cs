@@ -21,7 +21,14 @@ namespace Roadster
         private bool nitrogen;
         private float LaunchSeconds => nitrogen ? NitrogenSeconds : MotorSeconds;
         private float LaunchAcceleration => SixtyMph / LaunchSeconds; // 16.8 or 44.7 m/s²
-        private const float LaunchGain = 8f; // 1/s, pulls the speed back onto the line
+        private const float LaunchGain = 4f; // 1/s, pulls the speed back onto the line
+        // The launch is for a straight run. A launch started at full steering lock pushed the car on while it turned,
+        // and the catch-up term pushed harder still as it scrubbed speed (Player.log, 17 October 2026). It now starts
+        // only with the wheels near straight, ends when the steering goes past LaunchSteerLimit, and its push never
+        // exceeds LaunchMaxPush times the line's acceleration.
+        private const float LaunchStartSteer = 0.3f;
+        private const float LaunchSteerLimit = 0.6f;
+        private const float LaunchMaxPush = 1.3f;
         private const float LaunchStartSpeed = 0.5f; // m/s; a launch starts from a standstill only
         private const float LaunchMaxSeconds = 1.5f;
         // The game's keyboard throttle settles at 0.77 to 0.85 in NWH's input (Player.log, 17 October 2026), so a
@@ -47,8 +54,10 @@ namespace Roadster
         private const float RollEnd = 1.4f; // s after take-off; about 5.5 m up on the way down
         private const float AttitudeGain = 60f; // 1/s²
         private const float AttitudeDamping = 15f; // 1/s, near critical for the gain
-        private const float LandingSpeed = 3f; // m/s
-        private const float LandingBrakeHeight = 6f; // m
+        // Braking the fall from 6 m to 3 m/s kept the car 3.5 s in the air ("the fall back to the road is a bit too
+        // slow", Peter, 17 October 2026): the thrusters now only catch it over the last 2.5 m, down to 5 m/s.
+        private const float LandingSpeed = 5f; // m/s
+        private const float LandingBrakeHeight = 2.5f; // m
         private const float MaxThrust = 40f; // m/s², about 4 g
         private const float LevelGain = 12f; // 1/s²
         private const float LevelDamping = 4f; // 1/s
@@ -136,7 +145,8 @@ namespace Roadster
 
             if (!launching)
             {
-                if (throttle < StartThrottle || Mathf.Abs(speed) > LaunchStartSpeed || airborne || GroundedWheels() < 4) return;
+                if (throttle < StartThrottle || Mathf.Abs(speed) > LaunchStartSpeed || airborne || GroundedWheels() < 4
+                    || Mathf.Abs(vehicle.input.Steering) > LaunchStartSteer) return;
                 launching = true;
                 launchStart = now;
                 lastSpeed = speed;
@@ -154,9 +164,10 @@ namespace Roadster
                 launching = false;
                 return;
             }
-            if (throttle < HoldThrottle || GroundedWheels() < 2 || t > LaunchMaxSeconds)
+            var steering = vehicle.input.Steering;
+            if (throttle < HoldThrottle || GroundedWheels() < 2 || t > LaunchMaxSeconds || Mathf.Abs(steering) > LaunchSteerLimit)
             {
-                Log.Info($"Launch ended at {speed * 2.23694f:F0} mph after {t:F2} s (throttle {throttle:F2}, wheels down {GroundedWheels()}).");
+                Log.Info($"Launch ended at {speed * 2.23694f:F0} mph after {t:F2} s (throttle {throttle:F2}, steering {steering:F2}, wheels down {GroundedWheels()}).");
                 launching = false;
                 return;
             }
@@ -164,7 +175,7 @@ namespace Roadster
             // What the wheels added over the last step, without our own push.
             var wheels = t > 0f ? Mathf.Max(0f, (speed - lastSpeed) / dt - lastPush) : 0f;
             var target = LaunchAcceleration * t;
-            var push = Mathf.Clamp(LaunchAcceleration - wheels + LaunchGain * (target - speed), 0f, 2f * LaunchAcceleration);
+            var push = Mathf.Clamp(LaunchAcceleration - wheels + LaunchGain * (target - speed), 0f, LaunchMaxPush * LaunchAcceleration);
             var forward = Vector3.ProjectOnPlane(body!.transform.forward, Vector3.up).normalized;
             body.AddForce(forward * push, ForceMode.Acceleration);
             if (nitrogen) rearThrust = Mathf.Clamp01(push / SixtyMph * NitrogenSeconds);
