@@ -75,13 +75,13 @@
     ]
   },
   "triangles": {
-    "Roadster_Body": 109079,
+    "Roadster_Body": 104649,
+    "Roadster_Collision": 230,
     "Roadster_Wheel_FL": 6830,
     "Roadster_Wheel_FR": 6830,
     "Roadster_Wheel_RL": 6830,
     "Roadster_Wheel_RR": 6830,
-    "Roadster_Wing": 5360,
-    "Roadster_Collision": 210
+    "Roadster_Wing": 5360
   },
   "materials": {
     "Paint": {
@@ -216,5 +216,10 @@
       "smoothness": 0.73,
       "emission": null
     }
+  },
+  "collision": {
+    "source": "Roadster_Body only; wheels and wing excluded",
+    "minimum_z": 0.15000000596046448,
+    "clamped_input_z": 0.15
   }
 }

@@ -19,7 +19,10 @@ namespace Roadster
         private const float LaunchGain = 8f; // 1/s, pulls the speed back onto the line
         private const float LaunchStartSpeed = 0.5f; // m/s; a launch starts from a standstill only
         private const float LaunchMaxSeconds = 1.5f;
-        private const float FullThrottle = 0.9f;
+        // The game's keyboard throttle settles at 0.77 to 0.85 in NWH's input (Player.log, 17 October 2026), so a
+        // launch starts above StartThrottle and only ends when the throttle is mostly released.
+        private const float StartThrottle = 0.7f;
+        private const float HoldThrottle = 0.4f;
 
         // Hop: straight up 5 m, enough to clear a box truck, as the reveal hopped the Tesla lineup. In the air the
         // thrusters hold the car level and brake the fall to 3 m/s over the last 6 m.
@@ -83,7 +86,7 @@ namespace Roadster
 
             if (!launching)
             {
-                if (throttle < FullThrottle || Mathf.Abs(speed) > LaunchStartSpeed || airborne || GroundedWheels() < 4) return;
+                if (throttle < StartThrottle || Mathf.Abs(speed) > LaunchStartSpeed || airborne || GroundedWheels() < 4) return;
                 launching = true;
                 launchStart = now;
                 lastSpeed = speed;
@@ -101,7 +104,7 @@ namespace Roadster
                 launching = false;
                 return;
             }
-            if (throttle < FullThrottle || GroundedWheels() < 2 || t > LaunchMaxSeconds)
+            if (throttle < HoldThrottle || GroundedWheels() < 2 || t > LaunchMaxSeconds)
             {
                 Log.Info($"Launch ended at {speed * 2.23694f:F0} mph after {t:F2} s (throttle {throttle:F2}, wheels down {GroundedWheels()}).");
                 launching = false;
