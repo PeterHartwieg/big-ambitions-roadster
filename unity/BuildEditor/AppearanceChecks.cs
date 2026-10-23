@@ -87,9 +87,10 @@ namespace Roadster.BuildEditor
                     Check(bundle != null, "packaged Mac bundle loads in the Mac editor");
                 }
                 var prefabPath = ModAssets.ModFolder + "/Vehicles/Roadster.prefab";
-                var prefab = bundle == null ? AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath) : bundle.LoadAsset<GameObject>(prefabPath);
+                var prefab = (bundle == null ? AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath) : bundle.LoadAsset<GameObject>(prefabPath))
+                    ?? throw new InvalidOperationException("Roadster prefab is missing.");
                 testedPrefab = prefab;
-                Check(prefab != null, "generated prefab exists");
+                Check((bool)prefab, "generated prefab exists");
                 var features = prefab.GetComponent<CarFeatures>();
                 var body = prefab.transform.Find("CarHolder/Body/CheapSaloon").GetComponent<MeshRenderer>();
                 var wing = prefab.transform.Find("CarHolder/Body/WingHinge/Roadster_Wing").GetComponent<MeshRenderer>();
@@ -120,7 +121,7 @@ namespace Roadster.BuildEditor
                 Check(Pixel(marker, "_EmissionMask") == Color.red, "amber markers follow front channel");
                 Near(40f, Pixel(head, "_EmissionTexture").b * 50000f, "headlight lit intensity preserved");
                 Near(10.4f, Pixel(tail, "_EmissionTexture").r * 20000f, "tail light lit intensity preserved");
-                foreach (var name in new[] { "Glass", "Carbon", "Rubber", "Alloy", "Metal", "Black", "Bronze", "Plate" })
+                foreach (var name in new[] { "Glass", "Carbon", "Rubber", "Alloy", "Metal", "Black", "Bronze", "Plate", "WheelPaint" })
                 {
                     var material = Material(name);
                     Check(material.shader.name == "HDRP/Lit", name + " keeps original shader");
@@ -131,8 +132,16 @@ namespace Roadster.BuildEditor
                 Check(body.sharedMaterials.Contains(head) && body.sharedMaterials.Contains(tail) && body.sharedMaterials.Contains(marker), "body binds all lamp materials");
                 Check(!body.HasPropertyBlock() && !wing.HasPropertyBlock(), "prefab has no baked per-instance overrides");
 
-                var first = Fixture("first", body, wing);
-                var second = Fixture("second", body, wing);
+                var wheels = new[] { "FrontLeft", "FrontRight", "RearLeft", "RearRight" }.Select(name =>
+                    prefab.transform.Find("CarHolder/Wheels/" + name).GetComponent<MeshRenderer>()).ToArray();
+                foreach (var wheel in wheels)
+                {
+                    Check(wheel.sharedMaterials.Contains(Material("WheelPaint")), wheel.name + " retains original wheel paint finish");
+                    Check(wheel.sharedMaterials.All(material => !material.HasProperty(RoadsterMaterials.Tint)), wheel.name + " cannot take dealer body tint");
+                }
+                var renderers = new[] { body, wing }.Concat(wheels).ToArray();
+                var first = Fixture("first", renderers);
+                var second = Fixture("second", renderers);
                 var originalTint = paint.GetColor(RoadsterMaterials.Tint);
                 var red = ScriptableObject.CreateInstance<VehicleColor>();
                 red.tint = new Color32(220, 20, 30, 255);

@@ -106,7 +106,9 @@ namespace Roadster.BuildEditor
                 var visual = Find(root, "CarHolder/Wheels/" + prefabName);
                 visual.transform.localPosition = hub;
                 visual.GetComponent<MeshFilter>().sharedMesh = parts[fbxName].sharedMesh;
-                visual.GetComponent<MeshRenderer>().sharedMaterials = Remap(parts[fbxName], materials);
+                // The export reuses Paint on wheel details. Keep their original finish independent of body colour.
+                visual.GetComponent<MeshRenderer>().sharedMaterials = Remap(parts[fbxName], materials)
+                    .Select(m => m == materials["Paint"] ? materials["WheelPaint"] : m).ToArray();
                 foreach (Transform child in visual.transform)
                     if (child.name.StartsWith("ShadowCaster", StringComparison.Ordinal))
                         child.localScale = new Vector3(1.213f * width, 0.471f * 2f * r, 0.471f * 2f * r);
@@ -166,7 +168,10 @@ namespace Roadster.BuildEditor
                 : list.Select(m => (Name: (string)m["name"]!, Value: m));
             var result = new Dictionary<string, Material>();
             foreach (var (name, value) in entries)
+            {
                 result[name] = RoadsterMaterials.Create(name, value);
+                if (name == "Paint") result["WheelPaint"] = RoadsterMaterials.Create("WheelPaint", value);
+            }
             return result;
         }
 

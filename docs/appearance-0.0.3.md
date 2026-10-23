@@ -43,7 +43,9 @@ quantized to black.
 
 The amber material covers both sides, so it follows the front lamps as marker
 lighting. No new turn-signal or reverse-light geometry is claimed. Glass, trim,
-wheels and plates retain HDRP/Lit. Thruster plume materials/controller and driving
+wheels and plates retain HDRP/Lit. The export also uses Paint on wheel details;
+those four slots receive a separate WheelPaint material with their original
+finish, so native body tint does not recolour them. Thruster plume materials/controller and driving
 physics are unchanged. No new runtime Harmony patch, polling loop, cloned material
 per car, save format or custom clock/rain logic is needed.
 
