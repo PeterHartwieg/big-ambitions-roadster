@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-23",
+  "version": "0.0.3",
+  "status": "offline-verified preview; in-game acceptance pending",
+  "branch": "codex/rdstr-0.0.3",
+  "build_source_commit": "844817915a3999457f8a47fc81d210d47ad85582",
+  "sdk_commit": "1e03ddd5071b77a32cfd8bba89f0c130ba6c7d73",
+  "validation": {
+    "python_tests_passed": 8,
+    "native_source_checks_passed": 227,
+    "native_mac_bundle_checks_passed": 228,
+    "expected_empty_sdk_bootstrap_diagnostics": 8,
+    "appearance_fixture_errors": 0,
+    "build_host": "macOS / Unity 2022.3.62f2",
+    "sdk_bundles": [
+      "Windows",
+      "Mac"
+    ],
+    "negative_controls": [
+      {
+        "original_0_0_2_material": "Paint",
+        "exit_code": 1,
+        "expected_failure": "FAILED: System.InvalidOperationException: M_Roadster_Paint uses SDK vehicle shader",
+        "detected": true
+      },
+      {
+        "original_0_0_2_material": "HeadLight",
+        "exit_code": 1,
+        "expected_failure": "FAILED: System.InvalidOperationException: M_Roadster_HeadLight uses SDK vehicle shader",
+        "detected": true
+      }
+    ],
+    "zip_entries": 11,
+    "zip_crc": "passed",
+    "build_checksums": "passed",
+    "zip_round_trip": "passed",
+    "runtime_and_manifest_version": "0.0.3",
+    "in_game_verified": false
+  },
+  "archive": {
+    "path": "build/releases/Roadster-0.0.3-preview.zip",
+    "bytes": 17918344,
+    "sha256": "e7d67a30679d66b3be914eac11891727f68236f8a50c88c3f038ad5e7c36bb88",
+    "file_sha256": {
+      "Roadster/AssetBundles/Mac/roadster.unity3d": "75285c1872ae687e4697e640c3a24e66e7d09f85041180cd16272484dd36b841",
+      "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "1ff9c565a0146aab3cfcc760d8011f54c8c8c34917eb56bf074c6a3165ccdd51",
+      "Roadster/AssetBundles/Windows/roadster.unity3d": "09421297873ddc427718483b0f30b8b708db0d76918ee54f62c1a71f2dc0bcd3",
+      "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "73662db9ed9aa2a11b4c5f61cc7eac73eed8113d60dfe97e62f2ed8990607b48",
+      "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+      "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+      "Roadster/INSTALL.txt": "2a6c01c34fd346183ff2354dc25db26433bbcca333b04859f032680e6978c73e",
+      "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
+      "Roadster/RELEASE-NOTES.txt": "b54718453bff218a703842ca26cb084a81fff683ac2b84bef491557948d4f5cc",
+      "Roadster/Roadster.dll": "55bfd45f4cc068a84ff95e67af7a6bfd7214965067a3c7500bbc4bb04f618415",
+      "SHA256SUMS.txt": "3ecf6206e006b776bfaa609c0b260cab2da328053254db7ada80531f4f3247a2"
+    }
+  },
+  "manual_checks": "CHECKS.md",
+  "local_logs": [
+    "build/verification-final.log",
+    "build/logs/appearance-baseline.log",
+    "build/logs/appearance-source.log",
+    "build/logs/appearance-bundle.log",
+    "build/logs/build.log",
+    "build/mutation-check.log"
+  ],
+  "constraints": {
+    "workshop_uploaded": false,
+    "rig_used": false,
+    "release_branch_merged": false,
+    "force_pushed": false
+  }
+}

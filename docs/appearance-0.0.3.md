@@ -1,6 +1,6 @@
 # RDSTR 0.0.3 appearance fixes
 
-Status: implementation complete; final offline verification in progress. All in-game checks
+Status: implementation and offline verification complete. Release candidate only. All in-game checks
 remain pending; no test rig, game profile or save is used for this work.
 
 ## Diagnosis from local references
@@ -80,5 +80,25 @@ Reference SHA-256 values:
 | ExternalPlugins.dll | `7d43e9d42d2f464674cff045bcb048c48e0f87aec0a987baa34122ac6e3415d1` |
 | SDK SH_Vehicle.shadergraph | `708d03b57d19617132b22b2ab5a6422f7972c641603a8031514b40703a9cc792` |
 
-Final build, test counts, package hash and remaining checks will be recorded after
-verification. Peter's manual checklist is in `CHECKS.md`.
+## Verification results — 23 October 2026
+
+- Full Python suite: **8 passed**.
+- Native Unity source-asset checks: **227 passed**.
+- Native checks against the freshly built Mac bundle: **228 passed**.
+- Both fixture runs match the **8** empty-SDK bootstrap diagnostics and report
+  **zero errors during the appearance checks**. No new C# compiler warnings;
+  the SDK packager's existing duplicate-type warnings remain.
+- Negative controls: separately restoring the original 0.0.2 Paint and HeadLight
+  materials makes the suite reject each for the expected shader mismatch. Both
+  materials were restored and the full suite/build passed again afterward.
+- The Mac-hosted official SDK build produced both Windows and Mac bundles.
+- Generated prefab comparison preserved all 113 compared objects/components
+  except the four intended wheel-material references. Original object IDs were
+  retained; physics, plumes and driving configuration remain unchanged.
+- Package inventory, checksums and ZIP round trip passed. Exact artifact and
+  build-source commit are recorded in `release-0.0.3.json`; the ZIP is ignored.
+
+All in-game acceptance remains pending on both platforms, including dealer
+purchase, existing saved cars, save/reload, night/rain transitions, lamp appearance,
+hover outline, LOD and driving/stunt regressions. Peter's checklist is in
+`CHECKS.md`. No test rig, live installation or Workshop upload was used.
