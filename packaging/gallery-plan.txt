@@ -1,0 +1,27 @@
+WORKSHOP GALLERY — DRAFT ORDER
+
+Cover: cover-v4-hart-green.png — action concept with green subtitle and the small
+HART. wordmark in the lower-right corner. Earlier covers retained.
+Action gallery: gallery-barrel-roll-v2-hart-green.png — wide barrel-roll visual.
+The PROMO ART footer and its rules were removed from both at Peter's request.
+Both use roll-model-reference.png, rendered from the actual game-export model at
+a 115-degree roll angle, and the game skyline frame movie-440.00s.png from
+hart-group/assets/youtube/one-more-stop/sources. Imagegen composed the scene and
+gas effect; these are not screenshots or exact representations of the runtime VFX.
+Reproduce the model reference with Blender using render-roll-reference.py.
+Generation prompts are recorded in action-visual-prompts.txt.
+Model reference: model-preview-front.png — actual Blender render of the corrected
+game-export model. Caption: "Roadster model preview — Blender render."
+
+Pending actual gameplay captures:
+1. Front three-quarter daylight view at normal game zoom: show the car clearly.
+2. Rear launch view with nitrogen plumes: demonstrate the N launch mode.
+3. Barrel roll over an open road: demonstrate J without concealing the landing.
+4. Dealer listing: confirm the location, price and how to obtain the car.
+
+Do not present generated artwork or Blender renders as gameplay screenshots.
+The screenshot set and final gameplay acceptance are still pending.
+
+Rebuild the local preview ZIP with:
+  python3 tools/package-release.py
+The ZIP is written under build/releases and is not published automatically.

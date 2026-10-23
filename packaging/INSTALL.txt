@@ -1,0 +1,34 @@
+ROADSTER 0.0.1 — EXPERIMENTAL PREVIEW
+
+INSTALL
+1. Close Big Ambitions.
+2. Back up your saves and use a separate test save for this preview.
+3. Extract this archive. Copy its Roadster folder into the game's ModsLocal folder.
+   The resulting path must be ModsLocal/Roadster/Roadster.dll, with AssetBundles,
+   Dependencies and Locales beside the DLL. Avoid a second nested Roadster folder.
+4. Launch the game and check that Roadster loads.
+5. In your test save, visit General US Trucks, 1 7th Avenue. The configured price
+   is $250,000. Dealer availability still needs release acceptance confirmation.
+
+CONTROLS
+N switches between motor and nitrogen-thruster launch modes.
+Accelerate from a standstill with the wheels near straight to launch.
+J triggers a barrel roll. Steering selects the direction; straight defaults right.
+Fan downforce operates automatically while grounded.
+
+UPDATE
+With the game closed, keep a copy of the old mod folder outside ModsLocal and
+replace it with the new Roadster folder. Do not keep two active copies.
+
+REMOVE
+Close the game and remove the Roadster folder from ModsLocal. Removing this mod
+loses Roadsters held in affected saves. Restore your pre-mod save backup if you
+want to return to the state before installing it; there is no verified refund flow.
+
+STATUS
+The package includes Windows and Mac asset bundles. Inclusion of a platform bundle
+does not establish successful gameplay testing on that platform.
+See RELEASE-NOTES.txt for the preview's validation limits.
+
+THIRD-PARTY COMPONENT
+Harmony is distributed with its licence in Dependencies/Harmony-LICENSE.txt.

@@ -1,0 +1,40 @@
+ROADSTER — PUBLICATION HANDOFF
+Prepared 17 October 2026 for Big Ambitions build 3682, mod version 0.0.1.
+
+The installed Roadster was found at:
+%USERPROFILE%\AppData\LocalLow\Hovgaard Games\Big Ambitions\ModsLocal\Roadster
+All nine installed files matched the current build's SHA-256 manifest.
+The live game log confirms successful load, registration and dealer patch.
+
+APPLY THE PUBLICATION FILES
+The PC is currently reserved by the Food Trucks playtest. Its running game and
+installation were left alone. After that session releases game-lock.txt and the
+game is closed, double-click Prepare-Publication.cmd in this folder.
+It refuses to proceed during another session or if the installed mod has changed.
+It backs up the old folder and applies the verified package, including thumbnail.jpg.
+The script does not launch the game or publish the mod.
+
+MOD CREATOR FIELDS
+Open Big Ambitions > Mods > Mod Creator > create a new mod.
+Mod folder: Roadster
+Title: paste Workshop\title.txt
+Description: paste Workshop\description.txt
+Target build: 3682
+Thumbnail: thumbnail.jpg in the Roadster folder, square 1024 x 1024, below 1 MB.
+Check the visible thumbnail and all fields before submitting the upload.
+Submission is the publication step; it has not been performed here.
+For a later update, use the existing item instead of creating another one.
+Workshop\changelog.txt contains the first-release text if needed.
+
+GALLERY
+After publication, add Workshop\gallery-barrel-roll.jpg to the item's Steam page.
+The artwork uses the actual mod model and a game skyline reference. It is composed
+promotional artwork, not a captured gameplay screenshot. No additional label is
+overlaid on the approved images.
+
+REMAINING ACCEPTANCE
+This is an experimental preview release. Final acceptance of the most recent
+landing/steering changes, Mac gameplay and removal/save behaviour remains pending.
+Earlier development notes record Windows drive tests; package validation is not
+a substitute for final gameplay acceptance. No game save was loaded or modified
+by this publication preparation.

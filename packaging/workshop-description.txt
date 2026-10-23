@@ -1,0 +1,29 @@
+Roadster — Thruster Launch & Barrel Rolls
+
+[h1]Launch. Grip. Roll.[/h1]
+Give your next drive a little more ambition. Roadster adds a sharp, white sports car with switchable motor and nitrogen-thruster launches, fan-assisted downforce and a thruster-powered barrel roll.
+
+[h2]Behind the wheel[/h2]
+[list]
+[*]Choose your launch: press N to switch between motors and nitrogen thrusters.
+[*]Launch from a standstill with the wheels near straight and full throttle.
+[*]Fan downforce adds grip while the car is on the road.
+[*]Press J for a barrel roll. Steer to choose the roll direction; straight ahead defaults to a right roll.
+[*]Rear and downward thruster plumes accompany the launch and stunt.
+[/list]
+
+[h2]Finding the Roadster[/h2]
+The current build adds the car to General US Trucks at 1 7th Avenue, priced at $250,000.
+
+[h2]Preview build — version 0.0.1[/h2]
+This is an experimental preview. Handling, visuals and compatibility are still being checked. The cover is promotional artwork based on the mod's model; it is not an in-game screenshot.
+
+Use a separate test save and keep a backup before enabling the mod. Removing the mod loses Roadsters held in affected saves.
+
+[h2]Controls[/h2]
+N — switch launch mode
+J — barrel roll
+Normal driving controls — steer, accelerate and brake
+
+[h2]Feedback[/h2]
+When reporting a problem, include your game version, operating system, active mods and what happened immediately before the issue. Relevant [Mod:Roadster] log lines are useful too.

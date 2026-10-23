@@ -1,0 +1,6 @@
+Edited with the built-in imagegen tool on 17 October 2026.
+Inputs: cover-v1.png and hart-wordmark-on-dark.svg.png (Quick Look rendering of
+the HART brand master at hart-group/brand/logos/hart-wordmark-on-dark.svg).
+Output: cover-v2-hart.png
+
+Use case: compositing. Image 1 is the existing Roadster cover to edit. Image 2 is the official HART. wordmark insert. Add only a small HART. wordmark to the lower-right corner of image 1, around 135 pixels wide relative to its 1254px canvas, with around 45 pixels right margin and vertically centered on the existing MODEL PREVIEW footer. Extract just the pale lettering and green circular dot from image 2, no white rectangle. Precisely preserve the supplied original logo geometry, letter shapes and proportions, pale #E9ECE6 lettering and circular #43C07A green dot on baseline. Composite the original artwork, do not retype or redesign the logo. Preserve every other part of image 1 unchanged, including car, all text, background, footer rules, layout, dimensions and colors. Do not move, resize, regenerate or restyle the car or existing typography. Only this discrete logo addition.

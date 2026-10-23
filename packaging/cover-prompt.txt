@@ -1,0 +1,11 @@
+Generated with the built-in imagegen tool on 17 October 2026.
+Reference: art/roadster-free/renders/game/fix-1-after-front-quarter.png
+Output: packaging/cover-v1.png
+
+Use case: compositing
+Asset type: square Steam Workshop cover concept for a Big Ambitions vehicle mod, 1024x1024.
+Input image: the supplied Blender render is the exact vehicle appearance reference.
+Create a polished, bold editorial game-mod cover. Preserve the distinctive white angular Roadster model faithfully: wedge nose, broad dark glass canopy, white faceted panels, black lower splitter and sills, silver and black wheels, folded rear wing. Retain its rendered low-poly game-asset character; do not replace it with a different real-world car.
+Composition: car in a dynamic front three-quarter view, large in the middle and lower two-thirds, fully visible with margin. Dark charcoal studio environment with subtle pale floor illumination, clean directional light and strong white-car contrast. No fake game screenshot scenery. Top quarter reserved for extraordinarily clear bold condensed off-white uppercase heading ROADSTER. Small upper eyebrow BIG AMBITIONS MOD. Under heading, restrained lime-green tagline Launch. Grip. Roll. Small readable bottom label MODEL PREVIEW.
+Exact text only: "ROADSTER", "BIG AMBITIONS MOD", "Launch. Grip. Roll.", "MODEL PREVIEW".
+No Tesla or HART logos, no badges, no speed or performance numbers, no orange flames, no flying-car claim, no additional vehicles. Sophisticated layout, strong readability at thumbnail size.

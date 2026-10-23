@@ -1,0 +1,27 @@
+Roadster 0.0.1 — preview package, 17 October 2026
+
+Included: the current custom Roadster model, switchable motor/nitrogen launches,
+grounded fan downforce, a directional barrel roll and thruster plumes.
+This is a package of the existing build, not a new gameplay version.
+
+PACKAGE CHECKS
+The source build has an SDK packager success result. The packaging tool checks its
+files against build/Roadster.sha256, allows only expected runtime files, retains
+Harmony's licence and validates the ZIP and its per-file hashes.
+
+GAMEPLAY ACCEPTANCE
+Publication preparation on 17 October verified all nine installed Windows PC
+files against the local build checksums. The live Player.log confirms Roadster
+0.0.1 loads, registers the vehicle and activates its dealer patch on game build
+3682. Earlier development-session notes record several Windows driving tests,
+including nitrogen launch and barrel rolls; the current landing and steering
+changes still need final acceptance. Mac gameplay has not been verified.
+No measured acceleration, compatibility or performance guarantee is made here.
+
+Open checks include handling, stunt landings, camera behaviour, save/reload,
+removal, platform compatibility and performance with the detailed vehicle model.
+Earlier documentation records always-on lights and unavailable dealer repainting;
+their current status needs confirmation in the game.
+
+The cover is AI-composited promotional artwork based on a Blender render of the
+mod's model. The supplied gallery image is a Blender model render, not gameplay.

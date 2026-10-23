@@ -1,0 +1,8 @@
+Built-in imagegen edit, 17 October 2026.
+Selected outputs: cover-v4-hart-green.png, gallery-barrel-roll-v2-hart-green.png.
+
+cover-v3-barrel-roll.png
+Make only two precise edits to this existing image. 1. Remove the bottom "PROMO ART" text and the two thin horizontal decorative lines flanking that label, seamlessly restoring the road texture underneath. 2. Recolour the subtitle from yellow/lime to the HART brand green, sRGB hex #43C07A (RGB 67,192,122), flat consistent fill, retaining its existing font, wording, placement, size and shadow. Preserve everything else exactly: canvas dimensions and crop, ROADSTER title and BIG AMBITIONS MOD text, car geometry and pose, thruster plume, skyline, road, lighting, and the small HART. logo at bottom right. Do not remove or alter HART. Do not add new text or change the composition. The subtitle to recolour reads "Launch. Grip. Roll.".
+
+gallery-barrel-roll-v1.png
+Make only two precise edits to this existing image. 1. Remove the bottom "PROMO ART" text and the two thin horizontal decorative lines flanking that label, seamlessly restoring the road texture underneath. 2. Recolour the subtitle from yellow/lime to the HART brand green, sRGB hex #43C07A (RGB 67,192,122), flat consistent fill, retaining its existing font, wording, placement, size and shadow. Preserve everything else exactly: canvas dimensions and crop, ROADSTER title and BIG AMBITIONS MOD text, car geometry and pose, thruster plume, skyline, road, lighting, and the small HART. logo at bottom right. Do not remove or alter HART. Do not add new text or change the composition. The subtitle to recolour reads "BARREL ROLL".

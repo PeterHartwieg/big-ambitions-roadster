@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-17",
+  "host": "homepc",
+  "version": "0.0.1",
+  "targetGameBuild": 3682,
+  "installedMod": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions\\ModsLocal\\Roadster",
+  "stagedFolder": "C:\\Users\\Peter\\Documents\\BigAmbitions-Production\\Releases\\Roadster-0.0.1-20261017",
+  "desktopShortcut": "C:\\Users\\Peter\\OneDrive\\Desktop\\Roadster - Publication.lnk",
+  "archiveSha256": "7c9f847b566c8fc9d42bbdecd98ed2f2b84a92d3cc2fc9637ebf33c86049201a",
+  "checked": [
+    "All nine installed files match the existing build manifest",
+    "Live Player.log confirms load, vehicle registration and active dealer patch on game build 3682",
+    "Transferred archive checksum and all 19 delivery-file checksums match",
+    "Thumbnail decodes as 1024x1024 JPEG, 344587 bytes",
+    "Prepare-Publication.ps1 parsed without PowerShell syntax errors",
+    "Installed mod files remained unchanged after staging"
+  ],
+  "pending": [
+    "Food Trucks playtest must release game-lock.txt and the game must close before applying files",
+    "Run Prepare-Publication.cmd, then review the Mod Creator fields",
+    "Final gameplay acceptance of current changes",
+    "Submit the Workshop upload and add the gallery image"
+  ],
+  "appliedToLiveMod": false,
+  "published": false,
+  "workshopItemId": null
+}
