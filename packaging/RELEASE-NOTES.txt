@@ -1,10 +1,16 @@
-Roadster 0.0.2 — release candidate, 23 October 2026
+Roadster 0.0.3 — release candidate, 23 October 2026
 
-Faster landings bring the car back down sooner after a stunt. Launch assistance
-now engages only during straight runs, keeping it out of turns.
+Headlights, tail lights and amber marker lights now follow the car's normal
+light state instead of glowing constantly. Night/rain switching and leaving
+the car use vanilla behaviour. Brake lights brighten when braking.
 
-Includes the custom Roadster model, switchable motor/nitrogen launches,
-grounded fan downforce, directional barrel roll and thruster plumes.
+Dealer colour choices now repaint the body and rear wing, while glass,
+wheels and trim keep their own colours.
 
-The SDK build and package checksum checks are offline verification. Final
-in-game acceptance of the landing and launch changes remains pending; see CHECKS.md.
+Includes 0.0.2's faster stunt landings and straight-run launch assistance.
+
+Offline Unity checks exercise the native colour and light methods against
+local game assemblies. The SDK builds Windows and Mac asset bundles, and
+the release packager verifies its checksums and ZIP contents. These checks
+do not establish in-game appearance, dealer/purchase/save/reload behaviour
+or gameplay acceptance on either platform. See CHECKS.md for Peter's checks.

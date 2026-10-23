@@ -2,7 +2,8 @@
     "name": "Roadster.BuildEditor",
     "rootNamespace": "Roadster.BuildEditor",
     "references": [
-        "ModBuilder.Editor"
+        "ModBuilder.Editor",
+        "Unity.RenderPipelines.HighDefinition.Editor"
     ],
     "includePlatforms": [
         "Editor"

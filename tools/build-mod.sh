@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 # Builds the Roadster mod package with the official SDK in Unity batch mode.
-# Usage: tools/build-mod.sh [--generate]   (--generate re-creates the generated Unity assets first)
+# Usage: tools/build-mod.sh [--generate] [--check]   (--generate re-creates the generated Unity assets first)
 # Output: build/Roadster/ (the folder that goes into the game's ModsLocal).
 # Same pipeline as the Food Trucks mod (big-ambitions-food-trucks/tools/build-mod.sh), cut down to one vehicle.
 set -euo pipefail
+GENERATE=0
+CHECK=0
+for arg in "$@"; do
+  case "$arg" in
+    --generate) GENERATE=1 ;;
+    --check) CHECK=1 ;;
+    *) echo "Unknown argument: $arg (expected --generate or --check)" >&2; exit 1 ;;
+  esac
+done
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 # A dedicated SDK clone, so other mods in a personal SDK project cannot break this build.
@@ -70,22 +79,31 @@ link "$MOD_DIR" "$SDK/Assets/Mods/Roadster"
 link "$REPO/unity/BuildEditor" "$SDK/Assets/Editor/RoadsterBuild"
 
 run_unity() { # run_unity <method> <log name>
-  local log="$LOG_DIR/$2.log" ok=1
+  local method="$1" log="$LOG_DIR/$2.log" ok=1
+  shift 2
   "$UNITY" -batchmode -nographics -projectPath "$SDK" -buildTarget Win64 \
-      -executeMethod "$1" -modId Roadster -logFile "$log" || ok=0
+      -executeMethod "$method" -modId Roadster -logFile "$log" "$@" || ok=0
   git -C "$SDK" checkout -q -- "${SDK_RESAVED[@]}"
   if [ "$ok" = 0 ]; then
     grep -E "RoadsterBuild|error CS|Exception" "$log" | tail -40 >&2
-    echo "Unity step $1 failed; full log: $log" >&2
+    echo "Unity step $method failed; full log: $log" >&2
     exit 1
   fi
   grep "RoadsterBuild" "$log" || true
 }
 
-if [ "${1:-}" = "--generate" ]; then
+if [ "$GENERATE" = 1 ]; then
   run_unity Roadster.BuildEditor.ModAssets.Generate generate
 fi
+if [ "$CHECK" = 1 ]; then
+  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-baseline -roadsterCheckBaseline
+  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-source
+fi
 run_unity Roadster.BuildEditor.BatchBuild.Build build
+if [ "$CHECK" = 1 ]; then
+  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-bundle \
+      -roadsterCheckBundle "$SDK/Output/Roadster/AssetBundles/Mac/roadster.unity3d"
+fi
 
 OUT="$REPO/build/Roadster"
 rm -rf "$OUT"

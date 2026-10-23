@@ -2,7 +2,7 @@
 
 A Big Ambitions mod: a Roadster with a thruster launch (0-60 mph in 0.81 s), fan downforce and a thruster barrel roll.
 
-Version 0.0.2: faster landings and launches only on straight runs. This release has not had final in-game acceptance. Lights glow all the time and the dealer colour doesn't repaint the body yet.
+Version 0.0.3 preview: lights follow the vehicle's normal light state, and dealer colours apply to the body and wing. Keeps 0.0.2's faster landings and straight-run launch assistance. In-game verification is still pending; see `CHECKS.md`.
 
 ## Controls
 
@@ -13,3 +13,14 @@ Version 0.0.2: faster landings and launches only on straight runs. This release 
 ## Install
 
 Copy the `Roadster` folder into `ModsLocal` with the game closed. The mod changes every save it loads; removing it later loses any Roadster in those saves.
+
+## Build and offline checks
+
+Use the pinned Unity SDK and local game DLLs described in `tools/build-mod.sh`.
+Run `bash tools/check-all.sh` for the complete offline suite and fresh Windows/Mac
+SDK build on the Mac. It uses an empty Unity editor scene to test the actual game
+colour/light methods, without starting Big Ambitions or using a test rig.
+Then run `python3 tools/package-release.py` to create the checksum-verified preview
+ZIP under `build/releases` (existing archives are never overwritten).
+
+Implementation and verification limits: `docs/appearance-0.0.3.md`.
