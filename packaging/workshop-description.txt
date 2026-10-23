@@ -15,7 +15,7 @@ Give your next drive a little more ambition. Roadster adds a sharp, white sports
 [h2]Finding the Roadster[/h2]
 The current build adds the car to General US Trucks at 1 7th Avenue, priced at $250,000.
 
-[h2]Preview build — version 0.0.1[/h2]
+[h2]Preview build — version 0.0.2[/h2]
 This is an experimental preview. Handling, visuals and compatibility are still being checked. The cover is promotional artwork based on the mod's model; it is not an in-game screenshot.
 
 Use a separate test save and keep a backup before enabling the mod. Removing the mod loses Roadsters held in affected saves.

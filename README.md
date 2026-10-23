@@ -2,7 +2,7 @@
 
 A Big Ambitions mod: a Roadster with a thruster launch (0-60 mph in 0.81 s), fan downforce and a thruster barrel roll.
 
-Version 0.0.1, a phase 0 spike with the Roadster model. Not tested in game yet. Lights glow all the time and the dealer colour doesn't repaint the body yet.
+Version 0.0.2: faster landings and launches only on straight runs. This release has not had final in-game acceptance. Lights glow all the time and the dealer colour doesn't repaint the body yet.
 
 ## Controls
 
