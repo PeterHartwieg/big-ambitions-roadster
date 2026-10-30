@@ -23,6 +23,8 @@ Use a throwaway save. The mod changes every save it loads.
 
 ## 0.0.3 manual acceptance — all pending
 
+PC rig preflight on 30 October 2026 was [blocked before launch](docs/rig-test-0.0.3.md). No in-game box below was checked; before/red and after/green proof remains missing.
+
 Use a disposable save and compare against a vanilla car under the same conditions.
 
 1. At General US Trucks choose two clearly different colours, purchase two Roadsters,
