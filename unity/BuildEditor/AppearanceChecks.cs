@@ -20,6 +20,7 @@ namespace Roadster.BuildEditor
         private const string Running = "Roadster.AppearanceChecks.Running";
         private const string Started = "Roadster.AppearanceChecks.Started";
         private const string BaselineOnly = "Roadster.AppearanceChecks.BaselineOnly";
+        private const string BaselinePath = "Roadster.AppearanceChecks.BaselinePath";
         private static readonly List<string> Errors = new List<string>();
         [Serializable] private sealed class Diagnostics { public string[] errors = Array.Empty<string>(); }
         private const string BundlePath = "Roadster.AppearanceChecks.BundlePath";
@@ -51,6 +52,14 @@ namespace Roadster.BuildEditor
         public static void Run()
         {
             var args = Environment.GetCommandLineArgs();
+            var baselineIndex = Array.IndexOf(args, "-roadsterCheckBaselinePath");
+            if (baselineIndex < 0 || baselineIndex + 1 >= args.Length ||
+                args[baselineIndex + 1].StartsWith("-", StringComparison.Ordinal))
+            {
+                Finish(1, "Missing -roadsterCheckBaselinePath; use tools/build-mod.sh --check.");
+                return;
+            }
+            SessionState.SetString(BaselinePath, Path.GetFullPath(args[baselineIndex + 1]));
             SessionState.SetBool(BaselineOnly, args.Contains("-roadsterCheckBaseline"));
             var index = Array.IndexOf(args, "-roadsterCheckBundle");
             SessionState.SetString(BundlePath, index >= 0 ? args[index + 1] : "");
@@ -67,7 +76,7 @@ namespace Roadster.BuildEditor
                 // The partial SDK has no game catalogues, arcade dependency or game managers. Its unrelated
                 // runtime initializers report errors before the fixture runs. Require the exact same diagnostics
                 // as a fresh empty-scene baseline, then fail on any error from the actual checks.
-                var baselinePath = Path.GetFullPath(Path.Combine(Application.dataPath, "../../logs/appearance-baseline.json"));
+                var baselinePath = SessionState.GetString(BaselinePath, "");
                 var startupErrors = Errors.OrderBy(message => message, StringComparer.Ordinal).ToArray();
                 if (SessionState.GetBool(BaselineOnly, false))
                 {

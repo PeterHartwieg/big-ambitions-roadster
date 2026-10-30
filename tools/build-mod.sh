@@ -27,6 +27,7 @@ HARMONY_DLL_SHA256="7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6dea
 MOD_DIR="$REPO/unity/Roadster"
 DEPS="$MOD_DIR/Dependencies"
 LOG_DIR="$REPO/build/logs"
+BASELINE_PATH="$LOG_DIR/appearance-baseline.json"
 mkdir -p "$LOG_DIR" "$DEPS"
 
 [ -x "$UNITY" ] || { echo "Unity 2022.3.62f2 not found at $UNITY" >&2; exit 1; }
@@ -96,12 +97,15 @@ if [ "$GENERATE" = 1 ]; then
   run_unity Roadster.BuildEditor.ModAssets.Generate generate
 fi
 if [ "$CHECK" = 1 ]; then
-  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-baseline -roadsterCheckBaseline
-  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-source
+  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-baseline \
+      -roadsterCheckBaselinePath "$BASELINE_PATH" -roadsterCheckBaseline
+  run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-source \
+      -roadsterCheckBaselinePath "$BASELINE_PATH"
 fi
 run_unity Roadster.BuildEditor.BatchBuild.Build build
 if [ "$CHECK" = 1 ]; then
   run_unity Roadster.BuildEditor.AppearanceChecks.Run appearance-bundle \
+      -roadsterCheckBaselinePath "$BASELINE_PATH" \
       -roadsterCheckBundle "$SDK/Output/Roadster/AssetBundles/Mac/roadster.unity3d"
 fi
 
