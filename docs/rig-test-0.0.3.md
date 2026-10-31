@@ -8,6 +8,8 @@ Finding `Astra-r2-1` remains unresolved. PR #1 was converted to draft, with the 
 
 ## Candidate identity
 
+**31 October source update:** the recorded `8448179` preview below is **stale**, superseded by the issue #2 fix commit on top of `3579e2c` (`Fix barrel-roll key clash and require movement (Refs #2)`). The new source uses Backslash and requires speed above 2 m/s; the recorded archive has neither change. No rebuild was made for this fix. The scheduled Codex Sol/high rig session after 6 November must identify a fresh build from the superseding source commit and post before/red and after/green proof to PR #1 before merge/upload. The observations below remain the historical preflight record.
+
 - Reviewed branch: `codex/rdstr-0.0.3`, HEAD `cc8700b3e20b762b1d4ed4ebfeb0a2d886adfcb5`.
 - `docs/release-0.0.3.json` names build source `844817915a3999457f8a47fc81d210d47ad85582` and preview ZIP SHA-256 `e7d67a30679d66b3be914eac11891727f68236f8a50c88c3f038ad5e7c36bb88`. The recorded Windows bundle SHA-256 is `09421297873ddc427718483b0f30b8b708db0d76918ee54f62c1a71f2dc0bcd3`; `Roadster.dll` is `55bfd45f4cc068a84ff95e67af7a6bfd7214965067a3c7500bbc4bb04f618415`.
 - The preview ZIP is absent from this worktree, the main Roadster checkout, and the sibling Big Ambitions project directories searched on this PC. This worktree also has no `build/` directory. Thus the recorded archive and its member hashes could not be checked against actual bytes or installed.
@@ -37,7 +39,7 @@ The same applies to the earlier look, driving, stutter, cornering and log-line c
 
 ## Required to resume
 
-Provide the recorded candidate archive bytes (or build a fresh candidate and record its source commit and SHA-256), make the rig client target this PC or use its supported local control path, then install into the isolated profile under its lease. Use a disposable `FT` save and record before/after package hashes, game log lines, screenshots, per-check observations, and restoration of the prior rig package. The existing installation and saves were left untouched in this preflight.
+Build a fresh candidate from the issue #2 fix source commit and record its source commit and SHA-256; the stale recorded preview can serve only as a before/red control. Make the rig client target this PC or use its supported local control path, then install into the isolated profile under its lease. Use a disposable `FT` save and record before/after package hashes, game log lines, screenshots, per-check observations (including the stopped/creeping/moving and Self Driving checks in `CHECKS.md`), and restoration of the prior rig package. The existing installation and saves were left untouched in this preflight.
 
 ## Offline validation for this review attempt
 

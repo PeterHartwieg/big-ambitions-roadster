@@ -8,7 +8,7 @@ Version 0.0.3 preview: lights follow the vehicle's normal light state, and deale
 
 - **Launch:** full throttle from a standstill. N switches between the motors (0-60 mph in 1.6 s) and the nitrogen thrusters (0.6 s, with the rear plumes).
 - **Fans:** always on while the wheels are on the road: an extra 2 g of downforce for grip in corners.
-- **Barrel roll:** J. The car lifts 6 m on its thrusters while already rolling, rolls once (towards the side you steer, right when straight) and lands level.
+- **Barrel roll:** Backslash (`\`) while moving above 2 m/s (about 4.5 mph). The car lifts 6 m on its thrusters while already rolling, rolls once (towards the side you steer, right when straight) and lands level. The key is fixed; J stays free for HART. Self Driving.
 
 ## Install
 

@@ -9,6 +9,9 @@ wheels and trim keep their own colours.
 
 Includes 0.0.2's faster stunt landings and straight-run launch assistance.
 
+Barrel roll moves from J to Backslash (\), leaving J free for HART. Self Driving,
+and requires speed above 2 m/s (about 4.5 mph). Refs #2.
+
 Offline Unity checks exercise the native colour and light methods against
 local game assemblies. The SDK builds Windows and Mac asset bundles, and
 the release packager verifies its checksums and ZIP contents. These checks
