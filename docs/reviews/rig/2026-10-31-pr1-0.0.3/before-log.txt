@@ -1,0 +1,9 @@
+[Mod:FoodTrucks] Vehicle registered: foodtrucks:vehicletype_foodtruck (hand vehicle tag: False, price 15000).
+[Mod:FoodTrucks] Vehicle registered: foodtrucks:vehicletype_foodcart (hand vehicle tag: True, price 1200).
+[Mod:Roadster] Version 0.0.2 loading.
+[Mod:Roadster] Vehicle registered: roadster:vehicletype_roadster (price 250000).
+[Mod:Roadster] Active: VehicleContractSettings.SetListOfVehiclesForSale.
+Loaded Big Ambitions (Build 3682)
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Barrel roll to the right at 0 mph.
+[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 3.6 m/s, 1 degrees off level, 2.66 s in the air.
