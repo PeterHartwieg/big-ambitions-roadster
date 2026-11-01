@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 namespace Roadster
 {
     // The Roadster's fans and thrusters while the player drives one: the launch to 60 mph, the fans' suction, and the
-    // barrel roll on J. One instance for the whole game; it does nothing in any other vehicle.
+    // barrel roll on Backslash while moving. One instance for the whole game; it does nothing in any other vehicle.
     internal sealed class RoadsterDrive : MonoBehaviour
     {
         // Launch, two modes switched with N (Peter, 17 October 2026): the motors alone, 0-60 mph in 1.6 s, and the
@@ -42,12 +42,14 @@ namespace Roadster
         private const float FanDownforce = 2f; // in g
         private const float FanRamp = 0.3f; // s
 
-        // Barrel roll (J), as the reveal rolled over the Tesla lineup, in one motion (Peter, 17 October 2026): the
+        // Barrel roll (Backslash), as the reveal rolled over the Tesla lineup, in one motion (Peter, 17 October 2026): the
         // down thrusters lift the car over ThrustTime while it already starts to roll, it rolls once about its own
         // length on the way up and over the top, then the thrusters hold it level and brake the fall to 3 m/s over the
         // last 6 m. The roll goes the way the steering points (right when straight). Its rate starts at its fastest and
         // eases to nothing at RollEnd (rate ~ 1 - x squared), so it leaves the ground already turning and settles level.
-        private const Key RollKey = Key.J;
+        // Keep J free for HART. Self Driving; ignore stopped/creeping starts (issue #2).
+        private const Key RollKey = Key.Backslash;
+        private const float RollMinSpeed = 2f; // m/s, about 4.5 mph; must be exceeded before requesting a roll
         private const float JumpHeight = 6f; // m, top of the climb
         private const float ThrustTime = 0.35f; // s the lift takes
         private const float JumpCooldown = 2f; // s
@@ -118,7 +120,8 @@ namespace Roadster
             if (GameManager.ShouldBlockKeyboardShortcuts() || CityMap.IsOpen) return;
             var keyboard = Keyboard.current;
             if (keyboard != null && keyboard[ModeKey].wasPressedThisFrame) SwitchLaunchMode();
-            if (keyboard != null && keyboard[RollKey].wasPressedThisFrame && !airborne && Time.time >= nextJump && GroundedWheels() >= 2)
+            if (keyboard != null && keyboard[RollKey].wasPressedThisFrame && !airborne && Time.time >= nextJump
+                && body.velocity.magnitude > RollMinSpeed && GroundedWheels() >= 2)
             {
                 jumpRequested = true;
                 jumpSteer = car.vehicleController.input.Steering;

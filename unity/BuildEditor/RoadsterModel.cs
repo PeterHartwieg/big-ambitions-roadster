@@ -106,7 +106,9 @@ namespace Roadster.BuildEditor
                 var visual = Find(root, "CarHolder/Wheels/" + prefabName);
                 visual.transform.localPosition = hub;
                 visual.GetComponent<MeshFilter>().sharedMesh = parts[fbxName].sharedMesh;
-                visual.GetComponent<MeshRenderer>().sharedMaterials = Remap(parts[fbxName], materials);
+                // The export reuses Paint on wheel details. Keep their original finish independent of body colour.
+                visual.GetComponent<MeshRenderer>().sharedMaterials = Remap(parts[fbxName], materials)
+                    .Select(m => m == materials["Paint"] ? materials["WheelPaint"] : m).ToArray();
                 foreach (Transform child in visual.transform)
                     if (child.name.StartsWith("ShadowCaster", StringComparison.Ordinal))
                         child.localScale = new Vector3(1.213f * width, 0.471f * 2f * r, 0.471f * 2f * r);
@@ -157,7 +159,7 @@ namespace Roadster.BuildEditor
                    ?? throw new InvalidOperationException($"game-export.json has no wheel {key}.");
         }
 
-        // One HDRP/Lit material per entry in game-export.json "materials", named M_Roadster_<name>.
+        // One material per export entry; paint and lamps use the SDK vehicle shader.
         private static Dictionary<string, Material> Materials(JObject export)
         {
             var list = export["materials"] ?? throw new InvalidOperationException("game-export.json has no materials.");
@@ -165,38 +167,13 @@ namespace Roadster.BuildEditor
                 ? keyed.Properties().Select(p => (Name: p.Name, Value: p.Value))
                 : list.Select(m => (Name: (string)m["name"]!, Value: m));
             var result = new Dictionary<string, Material>();
-            var shader = Shader.Find("HDRP/Lit") ?? throw new InvalidOperationException("HDRP/Lit shader not found.");
             foreach (var (name, value) in entries)
             {
-                var path = $"{ArtFolder}/M_Roadster_{Safe(name)}.mat";
-                var material = AssetDatabase.LoadAssetAtPath<Material>(path);
-                if (material == null)
-                {
-                    material = new Material(shader);
-                    AssetDatabase.CreateAsset(material, path);
-                }
-                // Blender's values are linear; Unity's material colours are sRGB.
-                var linear = Rgb(value["base_color"]!);
-                material.SetColor("_BaseColor", linear.gamma);
-                material.SetFloat("_Metallic", (float)value["metallic"]!);
-                material.SetFloat("_Smoothness", (float)value["smoothness"]!);
-                var emission = value["emission"];
-                if (emission != null && emission.Type != JTokenType.Null)
-                {
-                    // HDR and linear; the factor lifts Blender's unit emission to a lamp that reads at night.
-                    material.SetColor("_EmissiveColor", Rgb(emission) * 8f);
-                    material.SetColor("_EmissiveColorLDR", Rgb(emission).gamma);
-                    material.SetFloat("_EmissiveIntensity", 8f);
-                }
-                material.SetFloat("_SupportDecals", 0f);
-                material.EnableKeyword("_DISABLE_DECALS");
-                EditorUtility.SetDirty(material);
-                result[name] = material;
+                result[name] = RoadsterMaterials.Create(name, value);
+                if (name == "Paint") result["WheelPaint"] = RoadsterMaterials.Create("WheelPaint", value);
             }
             return result;
         }
-
-        private static Color Rgb(JToken v) => new Color((float)v[0]!, (float)v[1]!, (float)v[2]!, 1f);
 
         // The FBX's imported materials, in submesh order, swapped for ours by name.
         private static Material[] Remap(MeshFilter part, Dictionary<string, Material> materials)
@@ -209,8 +186,6 @@ namespace Roadster.BuildEditor
                 throw new InvalidOperationException($"{part.name} uses material '{name}', which game-export.json doesn't list.");
             }).ToArray();
         }
-
-        private static string Safe(string name) => new string(name.Select(ch => char.IsLetterOrDigit(ch) ? ch : '_').ToArray());
 
         // Normals from the FBX (creases and weighted normals carry the look), readable meshes for the game's damage
         // deformation, and the materials imported only so their names tell us which submesh is which.

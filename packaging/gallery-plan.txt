@@ -16,7 +16,8 @@ game-export model. Caption: "Roadster model preview — Blender render."
 Pending actual gameplay captures:
 1. Front three-quarter daylight view at normal game zoom: show the car clearly.
 2. Rear launch view with nitrogen plumes: demonstrate the N launch mode.
-3. Barrel roll over an open road: demonstrate J without concealing the landing.
+3. Barrel roll over an open road: demonstrate Backslash (\) from a moving start
+   above 2 m/s (about 4.5 mph), without concealing the landing.
 4. Dealer listing: confirm the location, price and how to obtain the car.
 
 Do not present generated artwork or Blender renders as gameplay screenshots.

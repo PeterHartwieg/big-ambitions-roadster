@@ -15,7 +15,7 @@ MonoBehaviour:
   ModId: Roadster
   DisplayName: Roadster
   Author: Peter Hartwieg
-  Version: 0.0.2
+  Version: 0.0.3
   AssetBundleName: roadster.unity3d
   ModAssembly: {fileID: 5897886265953266890, guid: a3ec97394c004f1789c88956d2c25695,
     type: 3}

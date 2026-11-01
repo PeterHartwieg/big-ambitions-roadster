@@ -1,4 +1,4 @@
-ROADSTER 0.0.2 — EXPERIMENTAL PREVIEW
+ROADSTER 0.0.3 — EXPERIMENTAL PREVIEW
 
 INSTALL
 1. Close Big Ambitions.
@@ -13,7 +13,9 @@ INSTALL
 CONTROLS
 N switches between motor and nitrogen-thruster launch modes.
 Accelerate from a standstill with the wheels near straight to launch.
-J triggers a barrel roll. Steering selects the direction; straight defaults right.
+Backslash (\) triggers a barrel roll only above 2 m/s (about 4.5 mph).
+Steering selects the direction; straight defaults right. The roll key is fixed.
+J stays free for HART. Self Driving; stopped or creeping cars cannot roll.
 Fan downforce operates automatically while grounded.
 
 UPDATE

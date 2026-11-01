@@ -13,7 +13,7 @@ namespace Roadster
     [ModEntryOnInitializationLoad]
     public sealed class RoadsterMod : IModBigAmbitions
     {
-        public const string Version = "0.0.2";
+        public const string Version = "0.0.3";
         internal const string BundleKey = "AssetBundles/roadster.unity3d";
         internal const string TypeName = "roadster:vehicletype_roadster";
         private const string TypeAssetPath = "Assets/Mods/Roadster/Vehicles/Roadster.asset";
