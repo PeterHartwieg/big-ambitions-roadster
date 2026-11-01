@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
-"""Package the existing, checksum-verified build as a local preview release."""
+"""Package the checksum-verified build as Roadster-<version>.zip.
+
+Use --preview to opt into Roadster-<version>-preview.zip.
+"""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import re
@@ -15,7 +19,10 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def main():
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--preview', action='store_true', help='Use the -preview archive suffix.')
+    args = parser.parse_args(argv)
     version = re.search(r'^  Version: ([0-9.]+)$',
                         (ROOT / 'unity/Roadster/ModManifest.asset').read_text(), re.M).group(1)
     runtime = {
@@ -48,7 +55,8 @@ def main():
     payload['SHA256SUMS.txt'] = checksums.encode()
     out = ROOT / 'build/releases'
     out.mkdir(parents=True, exist_ok=True)
-    archive = out / f'Roadster-{version}-preview.zip'
+    suffix = '-preview' if args.preview else ''
+    archive = out / f'Roadster-{version}{suffix}.zip'
     # Exclusive creation preserves earlier deliverables.
     if archive.exists():
         raise SystemExit(f'Already exists: {archive}. Move it aside before packaging another build.')

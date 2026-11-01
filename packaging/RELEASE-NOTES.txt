@@ -1,4 +1,4 @@
-Roadster 0.0.3 — release candidate, 23 October 2026
+Roadster 0.0.3 — released
 
 Headlights, tail lights and amber marker lights now follow the car's normal
 light state instead of glowing constantly. Night/rain switching and leaving
@@ -12,8 +12,6 @@ Includes 0.0.2's faster stunt landings and straight-run launch assistance.
 Barrel roll moves from J to Backslash (\), leaving J free for HART. Self Driving,
 and requires speed above 2 m/s (about 4.5 mph). Refs #2.
 
-Offline Unity checks exercise the native colour and light methods against
-local game assemblies. The SDK builds Windows and Mac asset bundles, and
-the release packager verifies its checksums and ZIP contents. These checks
-do not establish in-game appearance, dealer/purchase/save/reload behaviour
-or gameplay acceptance on either platform. See CHECKS.md for Peter's checks.
+Passed the PC rig test on 1 Nov 2026: motor launch (0-60 mph in about 1.3 s),
+nitrogen launch timing, a clean left barrel roll, and the Backslash roll
+binding with J free for HART. Self Driving.

@@ -47,28 +47,32 @@ class PackageTests(unittest.TestCase):
         self.patch = patch.multiple(package, ROOT=self.root, BUILD=self.build, PACKAGING=self.packaging)
         self.patch.start()
         self.addCleanup(self.patch.stop)
-        self.archive = self.root / 'build/releases/Roadster-0.0.3-preview.zip'
+        self.archive = self.root / 'build/releases/Roadster-0.0.3.zip'
 
     def write_checksums(self):
         (self.root / 'build/Roadster.sha256').write_text(''.join(
             f'{hashlib.sha256(data).hexdigest()}  ./{name}\n' for name, data in sorted(self.files.items())))
 
-    def run_package(self):
+    def run_package(self, *args):
         with contextlib.redirect_stdout(io.StringIO()):
-            package.main()
+            package.main(list(args))
 
     def test_round_trip_and_checksums(self):
-        self.run_package()
-        with zipfile.ZipFile(self.archive) as archive:
-            self.assertIsNone(archive.testzip())
-            self.assertEqual(11, len(archive.namelist()))
-            self.assertNotIn('Roadster/README.md', archive.namelist())
-            for line in archive.read('SHA256SUMS.txt').decode().splitlines():
-                digest, name = line.split(maxsplit=1)
-                self.assertEqual(digest, hashlib.sha256(archive.read(name)).hexdigest())
-            self.assertEqual(b'RELEASE-NOTES.txt', archive.read('Roadster/RELEASE-NOTES.txt'))
-        self.assertEqual(hashlib.sha256(self.archive.read_bytes()).hexdigest(),
-                         self.archive.with_suffix('.zip.sha256').read_text().split()[0])
+        for args, name in (((), 'Roadster-0.0.3.zip'),
+                           (('--preview',), 'Roadster-0.0.3-preview.zip')):
+            with self.subTest(name=name):
+                self.run_package(*args)
+                path = self.archive.parent / name
+                with zipfile.ZipFile(path) as archive:
+                    self.assertIsNone(archive.testzip())
+                    self.assertEqual(11, len(archive.namelist()))
+                    self.assertNotIn('Roadster/README.md', archive.namelist())
+                    for line in archive.read('SHA256SUMS.txt').decode().splitlines():
+                        digest, member = line.split(maxsplit=1)
+                        self.assertEqual(digest, hashlib.sha256(archive.read(member)).hexdigest())
+                    self.assertEqual(b'RELEASE-NOTES.txt', archive.read('Roadster/RELEASE-NOTES.txt'))
+                self.assertEqual(f'{hashlib.sha256(path.read_bytes()).hexdigest()}  {name}\n',
+                                 path.with_suffix('.zip.sha256').read_text())
 
     def test_missing_file_refused(self):
         (self.build / 'Roadster.dll').unlink()
