@@ -1,0 +1,14 @@
+{
+  "before": {
+    "version": "0.0.2",
+    "required_lines_present": true,
+    "roadster_errors": [],
+    "native_log_sha256": "313e942e37251df9cf73d93a0edd1c2870e2bda18cba0f2ecfa8268944ba7441"
+  },
+  "after": {
+    "version": "0.0.3",
+    "required_lines_present": true,
+    "roadster_errors": [],
+    "native_log_sha256": "436379bec5d8a4b88b1ab0db394d4579c248c0048356dbc69861ea9c51842cdd"
+  }
+}

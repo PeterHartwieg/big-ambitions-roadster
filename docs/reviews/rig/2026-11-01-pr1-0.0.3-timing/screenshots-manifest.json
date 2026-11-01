@@ -1,0 +1,38 @@
+[
+  {
+    "file": "left-roll-2-overhead.png",
+    "kind": "native diagnostic observer camera",
+    "original_dimensions": [
+      1400,
+      900
+    ],
+    "original_sha256": "d669c15f3117f970fb8b737fdc75cfd19896eadac0f987c01948d65b91e3ab7c",
+    "published_sha256": "4fe94e9ad00f2149cf3771f9f2d76bf17ca11bb80d70bda0a0dcdf1638d95b59",
+    "bytes": 754000,
+    "transform": "Pillow thumbnail to width <=1000, aspect ratio preserved; PNG optimize; no compositing"
+  },
+  {
+    "file": "left-roll-2-midair.png",
+    "kind": "native diagnostic observer camera",
+    "original_dimensions": [
+      1400,
+      900
+    ],
+    "original_sha256": "675f3a0ac7e65eb1b9965bf1f36e73a261c10658405e643038c40ae6e4c31c74",
+    "published_sha256": "e7c3075031bba611db65508f3e9f254905934caceff4ca856eb2ed85971d5095",
+    "bytes": 596006,
+    "transform": "Pillow thumbnail to width <=1000, aspect ratio preserved; PNG optimize; no compositing"
+  },
+  {
+    "file": "left-roll-2-landing.png",
+    "kind": "native diagnostic observer camera",
+    "original_dimensions": [
+      1600,
+      900
+    ],
+    "original_sha256": "3bb0726ced142a4a1aee2ccaadc94750d04f1e162d840d785e279ffd903e5b6e",
+    "published_sha256": "95ee3e180b7d94883c5c9d5a386515e3bd754089d3d7632d6168edbfb10a750c",
+    "bytes": 612363,
+    "transform": "Pillow thumbnail to width <=1000, aspect ratio preserved; PNG optimize; no compositing"
+  }
+]
