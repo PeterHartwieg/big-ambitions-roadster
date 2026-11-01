@@ -15,7 +15,7 @@ Use a throwaway save. The mod changes every save it loads.
 ## Log lines (read by the agent from Player.log)
 
 - `Version 0.0.3 loading.`, `Vehicle registered: roadster:vehicletype_roadster`, `Active: VehicleContractSettings.SetListOfVehiclesForSale.`
-- `Launch (motors): 0-60 mph in X s`: X within 1.55 to 1.65; `Launch (nitrogen)`: within 0.57 to 0.63.
+- `Launch (motors): 0-60 mph in X s`: X within 1.25 to 1.35; `Launch (nitrogen)`: within 0.57 to 0.63. Measured 1 Nov 2026 in the PC rig with the same method: 0.0.2 median 1.31 s, 0.0.3 median 1.29 s; launch code unchanged since 0.0.2, logged target stays 1.60 s.
 - `Plumes found: 4 rear, 2 down.`
 - `Barrel roll to the right/left at X mph.`: accepted moving starts above 2 m/s (about 4.5 mph); no start line for stopped/creeping Backslash or J presses. Capture speed and key input alongside the log for rejected starts.
 - `Barrel roll landed: peak X m, rolled Y degrees, touchdown Z m/s, W degrees off level`: peak about 6 m, rolled 360, touchdown at most 5 m/s, under 10 degrees off level, about 2.5 s in the air.
