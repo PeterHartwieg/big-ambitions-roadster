@@ -28,7 +28,8 @@
       "Roadster/INSTALL.txt": "dda23404fe099bf8374eb0a1f0376955cb69494f339a4f82b6b1d4d736e2ab4e",
       "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
       "Roadster/RELEASE-NOTES.txt": "00a1a6791c8587ca6fd6afdef3df745b9c78ae65ec54f78c6d411af793e5381b",
-      "Roadster/Roadster.dll": "8412918ca1d6f04ff61286d57e3822fe828d89ab7da413e702eeb61c0bc779b9"
+      "Roadster/Roadster.dll": "8412918ca1d6f04ff61286d57e3822fe828d89ab7da413e702eeb61c0bc779b9",
+      "SHA256SUMS.txt": "2b7419bddf3b642dc6d1468af68ae9fca6ddd6839b35336affcdb6084254aa0f"
     }
   },
   "rig_tested_package": {
