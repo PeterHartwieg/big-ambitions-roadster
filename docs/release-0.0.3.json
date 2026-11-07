@@ -1,79 +1,185 @@
 {
-  "date": "2026-10-23",
   "version": "0.0.3",
-  "status": "stale preview; superseded by issue #2 source fix; fresh build and in-game acceptance pending",
-  "preview_stale": true,
-  "stale_since": "2026-10-31",
-  "stale_reason": "The recorded 8448179 package still binds barrel roll to J and has no minimum speed guard. Refs #2.",
-  "superseded_by_source_commit_subject": "Fix barrel-roll key clash and require movement (Refs #2)",
-  "superseding_source_parent_commit": "3579e2c",
-  "validation_scope": "Historical results for the recorded preview only; not validation of the superseding source commit. No rebuild or upload performed for the issue #2 fix.",
+  "record_updated": "2026-11-07",
+  "status": "shipped candidate merged; rig acceptance passed for paint, lamps, braking, launches and rolls; native gaps remain open (see remaining_native_gaps)",
+  "pull_request": "https://github.com/PeterHartwieg/big-ambitions-roadster/pull/1",
+  "merge_commit": "7671f84d2e9d015c8a663824e078dde669f962d6",
+  "merged_at": "2026-11-01T07:43:22Z",
   "branch": "codex/rdstr-0.0.3",
-  "build_source_commit": "844817915a3999457f8a47fc81d210d47ad85582",
+  "source_head_commit": "43765955ddd185676d72f0f0a075b35a9950f01c",
+  "source_notes": "43765955 has the same tree as merge 7671f84 (a1b2e636). It is 0e6d823 (barrel roll moved to Backslash with a 2 m/s minimum, Refs #2) plus a CHECKS.md-only change of the motor 0-60 range to 1.25-1.35 s.",
   "sdk_commit": "1e03ddd5071b77a32cfd8bba89f0c130ba6c7d73",
-  "validation": {
-    "python_tests_passed": 8,
-    "native_source_checks_passed": 227,
-    "native_mac_bundle_checks_passed": 228,
-    "expected_empty_sdk_bootstrap_diagnostics": 8,
-    "appearance_fixture_errors": 0,
-    "build_host": "macOS / Unity 2022.3.62f2",
-    "sdk_bundles": [
-      "Windows",
-      "Mac"
-    ],
-    "negative_controls": [
-      {
-        "original_0_0_2_material": "Paint",
-        "exit_code": 1,
-        "expected_failure": "FAILED: System.InvalidOperationException: M_Roadster_Paint uses SDK vehicle shader",
-        "detected": true
-      },
-      {
-        "original_0_0_2_material": "HeadLight",
-        "exit_code": 1,
-        "expected_failure": "FAILED: System.InvalidOperationException: M_Roadster_HeadLight uses SDK vehicle shader",
-        "detected": true
-      }
-    ],
-    "zip_entries": 11,
-    "zip_crc": "passed",
-    "build_checksums": "passed",
-    "zip_round_trip": "passed",
-    "runtime_and_manifest_version": "0.0.3",
-    "in_game_verified": false
-  },
   "archive": {
-    "path": "build/releases/Roadster-0.0.3-preview.zip",
-    "bytes": 17918344,
-    "sha256": "e7d67a30679d66b3be914eac11891727f68236f8a50c88c3f038ad5e7c36bb88",
+    "name": "Roadster-0.0.3-preview.zip",
+    "local_copy": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-release\\Roadster-0.0.3-preview.zip",
+    "bytes": 17918517,
+    "sha256": "05a27e4271cccc408914367a7aadd4059c9c00bb6709bc33c88c8ca5b5439ccd",
+    "sha256_verification": "Recomputed 2026-11-07 from the local copy; the staged content folder beside it passes its SHA256SUMS.txt.",
+    "zip_entry_timestamp": "2026-11-01 19:09:30",
+    "build_source_commit": "unverified",
+    "build_source_evidence": "The build did not record its source commit. Its packaged RELEASE-NOTES.txt (00a1a679...), INSTALL.txt (dda23404...) and Locales/en.json (72ec2aa5...) match 7671f84 and not 6e97ff2, which changed RELEASE-NOTES.txt and en.json. Its asset bundles, Harmony, INSTALL, RELEASE-NOTES and en.json are byte-identical to the rig-tested 0e6d823 package. The bytes are consistent with the 7671f84/43765955 tree, and equally with 0e6d823 because CHECKS.md is not packaged. They do not prove which of these commits was built.",
     "file_sha256": {
       "Roadster/AssetBundles/Mac/roadster.unity3d": "75285c1872ae687e4697e640c3a24e66e7d09f85041180cd16272484dd36b841",
-      "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "1ff9c565a0146aab3cfcc760d8011f54c8c8c34917eb56bf074c6a3165ccdd51",
+      "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "fb768c5dfeff2c9085e25f491573dd49c6eb6d811fb28a8d9ca9db5299295f7b",
       "Roadster/AssetBundles/Windows/roadster.unity3d": "09421297873ddc427718483b0f30b8b708db0d76918ee54f62c1a71f2dc0bcd3",
-      "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "73662db9ed9aa2a11b4c5f61cc7eac73eed8113d60dfe97e62f2ed8990607b48",
+      "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "ae0758b0176e2a9fe9440b30050ecd9154dd0c6a62922061313fa102c691397c",
       "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
       "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
-      "Roadster/INSTALL.txt": "2a6c01c34fd346183ff2354dc25db26433bbcca333b04859f032680e6978c73e",
+      "Roadster/INSTALL.txt": "dda23404fe099bf8374eb0a1f0376955cb69494f339a4f82b6b1d4d736e2ab4e",
       "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
-      "Roadster/RELEASE-NOTES.txt": "b54718453bff218a703842ca26cb084a81fff683ac2b84bef491557948d4f5cc",
-      "Roadster/Roadster.dll": "55bfd45f4cc068a84ff95e67af7a6bfd7214965067a3c7500bbc4bb04f618415",
-      "SHA256SUMS.txt": "3ecf6206e006b776bfaa609c0b260cab2da328053254db7ada80531f4f3247a2"
+      "Roadster/RELEASE-NOTES.txt": "00a1a6791c8587ca6fd6afdef3df745b9c78ae65ec54f78c6d411af793e5381b",
+      "Roadster/Roadster.dll": "8412918ca1d6f04ff61286d57e3822fe828d89ab7da413e702eeb61c0bc779b9"
     }
   },
-  "manual_checks": "CHECKS.md",
-  "local_logs": [
-    "build/verification-final.log",
-    "build/logs/appearance-baseline.log",
-    "build/logs/appearance-source.log",
-    "build/logs/appearance-bundle.log",
-    "build/logs/build.log",
-    "build/mutation-check.log"
+  "rig_tested_package": {
+    "name": "after-0e6d823-Roadster-0.0.3-preview.zip",
+    "source_commit": "0e6d82332cc122235fca10c1ede90745939114b7",
+    "sha256": "df2621160712a539821d7f80ff31262cfe6aa2f798d1bf26ebfd78ea62bddd04",
+    "roadster_dll_sha256": "a035fbe1c85ba3d25379a9463372b520feaa2fd5e862d72092eaff428069517c",
+    "relation_to_shipped_archive": "Same asset bundles, Harmony, INSTALL, RELEASE-NOTES and en.json bytes. Roadster.dll, both bundle .manifest files and SHA256SUMS.txt differ (rebuild non-determinism, as already seen for 0.0.2). The shipped 05a27e42 archive itself has not been run in the rig."
+  },
+  "rig_sessions": [
+    {
+      "date": "2026-10-31",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md",
+      "source_branch": "rig-evidence/rdstr-pr1-0.0.3 (252ddbf)",
+      "game_build": 3682,
+      "verdict_at_the_time": "FAIL: motors 1.31 s against the then 1.55-1.65 s range; clean left roll and stopped-J departure incomplete"
+    },
+    {
+      "date": "2026-11-01",
+      "evidence": "docs/reviews/rig/2026-11-01-pr1-0.0.3-timing/README.md",
+      "source_branch": "rig-evidence/rdstr-pr1-0.0.3-rig2 (865bd45)",
+      "game_build": 3682,
+      "verdict_at_the_time": "PASS: motors 0.0.2 median 1.31 s, 0.0.3 median 1.29 s (same); clean left roll; stopped-J departure still incomplete"
+    }
   ],
+  "checks": [
+    {
+      "item": "1. Two dealer colours, independent body/wing paint",
+      "status": "pass",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md (S1 PNGs)"
+    },
+    {
+      "item": "2. Daylight lamps and braking",
+      "status": "pass",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md (S2 PNGs, observations.json)"
+    },
+    {
+      "item": "3. Dusk/night/dawn and daytime rain",
+      "status": "partial",
+      "pass": "night, dawn/dusk, night braking, rain on entry matches vanilla",
+      "open": "rain live-toggle lamp refresh while already in the car",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md"
+    },
+    {
+      "item": "4. Exit/re-enter, beams, two-car independence",
+      "status": "partial",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md (S2-after-road-night-exit-front.png, vanilla snapshots)",
+      "pass": "exit lamps 0/0 and beams off match vanilla; two cars' paint independent",
+      "open": "unverified: night re-entry repeat and per-car lamp independence not separately recorded"
+    },
+    {
+      "item": "5. Save/reload and existing 0.0.2 car migration",
+      "status": "pass",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md (S1-after-reload PNGs, observations.json)"
+    },
+    {
+      "item": "6. Both sides, hover, LOD, shader/decal appearance",
+      "status": "partial",
+      "pass": "no pink/missing shader, giant glow, daylight emission, dirt or decal projection in sampled observer views; wheel finish independent of paint (S3)",
+      "open": "SKIPPED-LOCKED: hover outline, native near/far camera LOD",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md"
+    },
+    {
+      "item": "7. Launch, plumes, barrel roll, startup and errors",
+      "status": "partial",
+      "pass": "startup 0.0.3, registration, dealer Active, 4 rear/2 down plumes, no Roadster ERROR; motors median 1.29 s inside 1.25-1.35; nitrogen 0.60-0.63 s; right roll; clean left roll (1 Nov); stopped/creeping/held Backslash rejected; J stopped and moving starts no roll; N switches mode",
+      "open": "stopped-J Self Driving sustained departure; SKIPPED-LOCKED stunt camera comfort",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md, docs/reviews/rig/2026-11-01-pr1-0.0.3-timing/README.md"
+    }
+  ],
+  "remaining_native_gaps": [
+    "Stopped-J HART. Self Driving departure: J enters Self Driving without a roll, but no sustained self-driven departure was observed (cancelled while unparking).",
+    "Rain live-toggle lamp refresh: toggling rain while already in the car did not refresh lamps immediately (vanilla behaved similarly); no pass claimed.",
+    "SKIPPED-LOCKED: hover outline.",
+    "SKIPPED-LOCKED: native near/far camera and LOD.",
+    "SKIPPED-LOCKED: stunt camera comfort, and subjective stutter/handling feel.",
+    "Unverified: night re-entry repeat and two-car lamp independence (only paint independence is recorded).",
+    "The shipped 05a27e42 archive has not itself been run in the rig; only the df262116 package from 0e6d823 was.",
+    "The source commit of the 05a27e42 build is not recorded (see archive.build_source_evidence)."
+  ],
+  "superseded_preview": {
+    "status": "historical; superseded by 0e6d823 (Refs #2) and the shipped candidate above",
+    "date": "2026-10-23",
+    "note": "This preview still bound barrel roll to J and had no minimum speed guard. Its results apply to it alone.",
+    "build_source_commit": "844817915a3999457f8a47fc81d210d47ad85582",
+    "validation": {
+      "python_tests_passed": 8,
+      "native_source_checks_passed": 227,
+      "native_mac_bundle_checks_passed": 228,
+      "expected_empty_sdk_bootstrap_diagnostics": 8,
+      "appearance_fixture_errors": 0,
+      "build_host": "macOS / Unity 2022.3.62f2",
+      "sdk_bundles": [
+        "Windows",
+        "Mac"
+      ],
+      "negative_controls": [
+        {
+          "original_0_0_2_material": "Paint",
+          "exit_code": 1,
+          "expected_failure": "FAILED: System.InvalidOperationException: M_Roadster_Paint uses SDK vehicle shader",
+          "detected": true
+        },
+        {
+          "original_0_0_2_material": "HeadLight",
+          "exit_code": 1,
+          "expected_failure": "FAILED: System.InvalidOperationException: M_Roadster_HeadLight uses SDK vehicle shader",
+          "detected": true
+        }
+      ],
+      "zip_entries": 11,
+      "zip_crc": "passed",
+      "build_checksums": "passed",
+      "zip_round_trip": "passed",
+      "runtime_and_manifest_version": "0.0.3",
+      "in_game_verified": false
+    },
+    "archive": {
+      "path": "build/releases/Roadster-0.0.3-preview.zip",
+      "bytes": 17918344,
+      "sha256": "e7d67a30679d66b3be914eac11891727f68236f8a50c88c3f038ad5e7c36bb88",
+      "file_sha256": {
+        "Roadster/AssetBundles/Mac/roadster.unity3d": "75285c1872ae687e4697e640c3a24e66e7d09f85041180cd16272484dd36b841",
+        "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "1ff9c565a0146aab3cfcc760d8011f54c8c8c34917eb56bf074c6a3165ccdd51",
+        "Roadster/AssetBundles/Windows/roadster.unity3d": "09421297873ddc427718483b0f30b8b708db0d76918ee54f62c1a71f2dc0bcd3",
+        "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "73662db9ed9aa2a11b4c5f61cc7eac73eed8113d60dfe97e62f2ed8990607b48",
+        "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+        "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+        "Roadster/INSTALL.txt": "2a6c01c34fd346183ff2354dc25db26433bbcca333b04859f032680e6978c73e",
+        "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
+        "Roadster/RELEASE-NOTES.txt": "b54718453bff218a703842ca26cb084a81fff683ac2b84bef491557948d4f5cc",
+        "Roadster/Roadster.dll": "55bfd45f4cc068a84ff95e67af7a6bfd7214965067a3c7500bbc4bb04f618415",
+        "SHA256SUMS.txt": "3ecf6206e006b776bfaa609c0b260cab2da328053254db7ada80531f4f3247a2"
+      }
+    },
+    "local_logs": [
+      "build/verification-final.log",
+      "build/logs/appearance-baseline.log",
+      "build/logs/appearance-source.log",
+      "build/logs/appearance-bundle.log",
+      "build/logs/build.log",
+      "build/mutation-check.log"
+    ]
+  },
+  "manual_checks": "CHECKS.md",
+  "rig_test_record": "docs/rig-test-0.0.3.md",
   "constraints": {
-    "workshop_uploaded": false,
-    "rig_used": false,
-    "release_branch_merged": false,
+    "rig_used": true,
+    "in_game_verified": "partial (rig observer sessions, see checks)",
+    "release_branch_merged": true,
+    "workshop_upload_recorded_here": false,
     "force_pushed": false
   }
 }
