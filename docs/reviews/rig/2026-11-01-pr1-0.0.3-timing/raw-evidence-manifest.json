@@ -1,0 +1,701 @@
+{
+  "observer_source_sha256": "147eddefab10f51767380784476e33b28fa1b5284bde001a92efb4321f2ae7d2",
+  "observer_dll_sha256": "cd790c9fcf0e4660e2cdb6b2a2b016c319040b5bbd132f043e15b6f54ce54dd1",
+  "samples_csv_rows": 30377,
+  "raw_input_files": [
+    {
+      "file": "after-final-native-confirm-mode.json",
+      "sha256": "705ef4feb98acc5443ea3615b798ad6e59a7a6c7c930ae2cda05a787aa459aee",
+      "samples": 48
+    },
+    {
+      "file": "after-final-native-motors-1-settle.json",
+      "sha256": "9430791af31a2f264c04c7a7cc32cee8b6b8b316646d019a3aebcf3012a19d1c",
+      "samples": 54
+    },
+    {
+      "file": "after-final-native-motors-1.json",
+      "sha256": "3b4aef2a2733873adcb7eff03c6f7de27a2edd0612d71e41317ad4bafde9a833",
+      "samples": 112
+    },
+    {
+      "file": "after-final-native-motors-2-settle.json",
+      "sha256": "dfdae0558cf6ba73aafe23b4b5530fcc1953d09443891d63f62cbc95cfb6de3f",
+      "samples": 36
+    },
+    {
+      "file": "after-final-native-motors-2.json",
+      "sha256": "ac25ed48e52f8f0a96685c6ea6ca59345ac4d10dceb61605d3f25e2e1288d92e",
+      "samples": 191
+    },
+    {
+      "file": "after-final-native-motors-3-settle.json",
+      "sha256": "839cd9da410357461f5d596bb50ba9c1597d46a1a5c6a1836b6ee6f67e1a9605",
+      "samples": 102
+    },
+    {
+      "file": "after-final-native-motors-3.json",
+      "sha256": "974f6d76ddd03d63233f51fc9d408d0e4e7b632c93c12e17df7b661b6dafe8b1",
+      "samples": 187
+    },
+    {
+      "file": "after-final-native-motors-4-settle.json",
+      "sha256": "1e5bb2e13b578afd810fee60121845466d9746dabc6b31c71e49273358b947d9",
+      "samples": 103
+    },
+    {
+      "file": "after-final-native-motors-4.json",
+      "sha256": "b393fd3f8f223706c2ba1adf70c0b873583ea66660ae4fc3019d7378a2c2a6b8",
+      "samples": 165
+    },
+    {
+      "file": "after-final-native-motors-5-settle.json",
+      "sha256": "cf509f5a628d6217b6e3d098a75f292fa1c17a4c8654eb73348771242d66d513",
+      "samples": 102
+    },
+    {
+      "file": "after-final-native-motors-5.json",
+      "sha256": "8a2e1bbc387dae76b208177c4af010ec8793b610bc6ba90b6bbfd20401da79be",
+      "samples": 199
+    },
+    {
+      "file": "after-final-native-nitrogen-1-settle.json",
+      "sha256": "1b1cc53695d7e3b34c2c016eedb8f843467133b1a3437ed6b0c49a27b1fb264d",
+      "samples": 101
+    },
+    {
+      "file": "after-final-native-nitrogen-1.json",
+      "sha256": "ab57b181dbdb5e8d3ea00f3ed7abe8d4ce90121863336eac1a30c7b86954b1e9",
+      "samples": 199
+    },
+    {
+      "file": "after-final-native-nitrogen-2-settle.json",
+      "sha256": "5aba4236c603626b503e0372672432944ab38657fb3b5ca6cd56748a7c0834c0",
+      "samples": 102
+    },
+    {
+      "file": "after-final-native-nitrogen-2.json",
+      "sha256": "00782012377743fd9ea12355a0746e326736a86dc8df09ccd858c74d3d2200cd",
+      "samples": 199
+    },
+    {
+      "file": "after-final-native-nitrogen-3-settle.json",
+      "sha256": "f4ac45b9466b45befe9d820806d7e6ff21381bc2bc223925bd275015f82a25e3",
+      "samples": 107
+    },
+    {
+      "file": "after-final-native-nitrogen-3.json",
+      "sha256": "926538fc7cbc67463a610617d4fc53cd8e6d277c66a269c99c186ab59ff66a9b",
+      "samples": 194
+    },
+    {
+      "file": "after-final-native-set-nitrogen.json",
+      "sha256": "6e2ccf6050c2fc58f3c390f240ae0d8341533adc924bba3222a60bdfe80358cc",
+      "samples": 26
+    },
+    {
+      "file": "after-matched-native-confirm-mode.json",
+      "sha256": "03eacd36bd7c255cc20582d710acd3a4d86c150ed401f61e0caeb4c4cdcb674d",
+      "samples": 49
+    },
+    {
+      "file": "after-matched-native-motors-1-settle.json",
+      "sha256": "c97348cdbb2b3c2eec41a73fd98fffe5684ccf5b72bc45e616f954081c600f7c",
+      "samples": 450
+    },
+    {
+      "file": "after-matched-native-motors-1.json",
+      "sha256": "47d8b87ed74581629f197021aa2b45aaa032e6d8e518c49198160eaf13c18530",
+      "samples": 343
+    },
+    {
+      "file": "after-matched-native-motors-2-settle.json",
+      "sha256": "d6045da09da2696b42714f98aedecf8d5fd62c44d8391991df4fa865ef6b2d14",
+      "samples": 449
+    },
+    {
+      "file": "after-matched-native-motors-2.json",
+      "sha256": "e170cb907bed87b46c64989dc399f35b03604fc6a427f561593b22e8fb3f46e1",
+      "samples": 342
+    },
+    {
+      "file": "after-matched-native-motors-3-settle.json",
+      "sha256": "470611153d6af702e80ca0cb7ca4a1cbd7c1109744e1606fbb41b1f066b29cc9",
+      "samples": 448
+    },
+    {
+      "file": "after-matched-native-motors-3.json",
+      "sha256": "995671045dfd41bc32d1b9fed322f22f9bf7a31ffad443f87becfdcb08fa6323",
+      "samples": 342
+    },
+    {
+      "file": "after-matched-native-motors-4-settle.json",
+      "sha256": "7baa006395830593b408ede5614432a1603d541e148822d7ff54510069af990e",
+      "samples": 447
+    },
+    {
+      "file": "after-matched-native-motors-4.json",
+      "sha256": "d3ad92debc5ea947c9d7ebc34689bebc0cb436011e90640044c903ce28349ab8",
+      "samples": 340
+    },
+    {
+      "file": "after-matched-native-motors-5-settle.json",
+      "sha256": "0ffb700c510af0815d5b4191741d87f02c1ee5377d22b8927f1f7c60414b1617",
+      "samples": 448
+    },
+    {
+      "file": "after-matched-native-motors-5.json",
+      "sha256": "eae85475e2ac7f4467926e0c99aeb0a41fe805796d8358db3e8338469dce6748",
+      "samples": 342
+    },
+    {
+      "file": "after-matched-native-nitrogen-1-settle.json",
+      "sha256": "8fca1cb7ec58f8b3fcaf6a1120150e230d4b58ccc3a457f95c9db1e492fcbe78",
+      "samples": 448
+    },
+    {
+      "file": "after-matched-native-nitrogen-1.json",
+      "sha256": "9ec0bbecf84b025039000d7b569a0dba79c599e2dbb846a591387672c22c08a6",
+      "samples": 342
+    },
+    {
+      "file": "after-matched-native-nitrogen-2-settle.json",
+      "sha256": "14aa021dd89b507d500691095047be09345b299c7d2475e114e6910add7e3944",
+      "samples": 450
+    },
+    {
+      "file": "after-matched-native-nitrogen-2.json",
+      "sha256": "fdc74c465afe62969687f30f630dd3e88e6c808cc76f93ba014c620aac277e9a",
+      "samples": 331
+    },
+    {
+      "file": "after-matched-native-nitrogen-3-settle.json",
+      "sha256": "2a13076af8f24191670e871d12839a289195182797adbee5bbbf351b7bc35a40",
+      "samples": 392
+    },
+    {
+      "file": "after-matched-native-nitrogen-3.json",
+      "sha256": "d3dc99b77b21bee9bb9173aec2ee568793c9e0f60081856d8e702bd35f8f7994",
+      "samples": 319
+    },
+    {
+      "file": "after-matched-native-set-nitrogen.json",
+      "sha256": "f0940b345363db8bf6b94ac546af637eef03827aebc7b516ce9d3163475d9aaf",
+      "samples": 30
+    },
+    {
+      "file": "after-steady-native-confirm-mode.json",
+      "sha256": "be79b33f71ab75776977cfc3a9ced6038b9bc6ede74c7934aab2c0621efd7e4a",
+      "samples": 43
+    },
+    {
+      "file": "after-steady-native-motors-1-settle.json",
+      "sha256": "f31e2af9ae161cf86649653fc4504646e8f41f0c23fc42d2bfa4a64d66850c7b",
+      "samples": 449
+    },
+    {
+      "file": "after-steady-native-motors-1.json",
+      "sha256": "9128fc08fb6fab83e217717720d023efe07e9f000388335ebd8e8cd0d6a844a5",
+      "samples": 298
+    },
+    {
+      "file": "after-steady-native-motors-2-settle.json",
+      "sha256": "e82671c930b6d2a52188ce1b5a4ae3d5f454560d3a601a92fb5982eccb9f88ca",
+      "samples": 451
+    },
+    {
+      "file": "after-steady-native-motors-2.json",
+      "sha256": "d64e6b49157b7ada95c543f1c20fdb92e9454c56cd5167524662d8471db2ddda",
+      "samples": 298
+    },
+    {
+      "file": "after-steady-native-motors-3-settle.json",
+      "sha256": "8e1cce2ccc3bee8b8a06711c7ad831e1376c6dfb03add31d80851c2cad1221c7",
+      "samples": 449
+    },
+    {
+      "file": "after-steady-native-motors-3.json",
+      "sha256": "fee4850c23e7b51e50dd6166419df9bac71bf7f96bf85ede947abf7f98a644f5",
+      "samples": 297
+    },
+    {
+      "file": "after-steady-native-motors-4-settle.json",
+      "sha256": "4b2c5c2bc8b82f6e7439f573d1a0a54a2b1de1c6357830da341d3d55148df9e4",
+      "samples": 451
+    },
+    {
+      "file": "after-steady-native-motors-4.json",
+      "sha256": "ef3c4d3ce423d3467e8372608ecc75be9f370660fffc58637cb8df12f6ebca3c",
+      "samples": 298
+    },
+    {
+      "file": "after-steady-native-motors-5-settle.json",
+      "sha256": "9d88a9671298f02123213559d13da9ee81b08cbede39bf8b7a508a2dc6c53868",
+      "samples": 450
+    },
+    {
+      "file": "after-steady-native-motors-5.json",
+      "sha256": "ba69669fc3cb3abbbf030c3292d3ba709e30c9f3d7d5b317bf50b936bfabcbcb",
+      "samples": 299
+    },
+    {
+      "file": "before-final-native-confirm-mode.json",
+      "sha256": "60aa0a330d8c3f2c816f7b178291a437077b182b9cd89b44c0c39fe6100aa8d5",
+      "samples": 49
+    },
+    {
+      "file": "before-final-native-motors-1-settle.json",
+      "sha256": "5555f3b42459344bce76c545421c8404e4cebd64a6c8c022d0cc3b45fe3baae9",
+      "samples": 106
+    },
+    {
+      "file": "before-final-native-motors-1.json",
+      "sha256": "a7a6d9c3f51580212f38da446c18806852db13d7a5aa838b2ed92f88095e6e7d",
+      "samples": 202
+    },
+    {
+      "file": "before-final-native-motors-2-settle.json",
+      "sha256": "c4f7b4018c30d5620d8d7f97be3c52afa34ace5ab375619a079a883c78c7315a",
+      "samples": 107
+    },
+    {
+      "file": "before-final-native-motors-2.json",
+      "sha256": "031fb3c5c55167f6489ddfd47ce756daefcb3a5f59e376bbf65ed02add2aeebf",
+      "samples": 204
+    },
+    {
+      "file": "before-final-native-motors-3-settle.json",
+      "sha256": "ba9099e441329f28b56fbd8dc40b142a2db200a76aa9dbec4f0b4ac4c7d597db",
+      "samples": 106
+    },
+    {
+      "file": "before-final-native-motors-3.json",
+      "sha256": "ff11fadb7bfa5c423623b50432a51ad69989a04995c881f74028bee0b821787f",
+      "samples": 202
+    },
+    {
+      "file": "before-final-native-motors-4-settle.json",
+      "sha256": "2ae05d736f87f793daf2cfe18bc2ff0db5471b2965f9dce8f6734b4def11f529",
+      "samples": 107
+    },
+    {
+      "file": "before-final-native-motors-4.json",
+      "sha256": "16d7c5458bdcd08eed3b80c982e803699b835692ec4a34459883c754b16bc935",
+      "samples": 203
+    },
+    {
+      "file": "before-final-native-motors-5-settle.json",
+      "sha256": "bd2454a73e60c643930116a4004353a5cce1051d64998cfbc994836d25b44a6e",
+      "samples": 107
+    },
+    {
+      "file": "before-final-native-motors-5.json",
+      "sha256": "40a77c46dc3fc52063359e77c88b1e557bdaf294e30e09745e3a30a3eb052291",
+      "samples": 204
+    },
+    {
+      "file": "before-final-native-nitrogen-1-settle.json",
+      "sha256": "0c8893e4aecf5738e513c904ff3200528ec5a3389c04ae732663c2041fff28ed",
+      "samples": 105
+    },
+    {
+      "file": "before-final-native-nitrogen-1.json",
+      "sha256": "464495f366859ac89140198b37e6dfb9f78e356f737511a24ad09b80730d2593",
+      "samples": 204
+    },
+    {
+      "file": "before-final-native-nitrogen-2-settle.json",
+      "sha256": "befb4575fdc404e17b01a3408339b25cede818b6650e2cbc0a54fb027b63a013",
+      "samples": 105
+    },
+    {
+      "file": "before-final-native-nitrogen-2.json",
+      "sha256": "5a663d7c5665295254597c5efa0a6b6f88cebc6e43dd6e70fe1f40001c705b36",
+      "samples": 176
+    },
+    {
+      "file": "before-final-native-nitrogen-3-settle.json",
+      "sha256": "8cc5f9a28c530399a7db9fe226a1121527d1a8730eb46c1ec82085eecfd17b88",
+      "samples": 105
+    },
+    {
+      "file": "before-final-native-nitrogen-3.json",
+      "sha256": "693a0fc44afa2ce2992804cce57a2f66e041fe9f0bff9fb8c2ecae1d26788fed",
+      "samples": 196
+    },
+    {
+      "file": "before-final-native-set-nitrogen.json",
+      "sha256": "a7566b6519349b6995fc90dfa83cb67dfa11b56c856567f6eff5648ff791443a",
+      "samples": 28
+    },
+    {
+      "file": "before-legacy-085.json",
+      "sha256": "5961581e13aa7b6d520537d37cf6f7c2db5ea93da169b500af33188e7a8e5819",
+      "samples": 183
+    },
+    {
+      "file": "before-legacy-mode-motors.json",
+      "sha256": "834451b4976f364c151be5c68c8a243a658a4d540c1ad87608ee3dfb5576e437",
+      "samples": 22
+    },
+    {
+      "file": "before-legacy-settle.json",
+      "sha256": "9dba7f1225ae328f46773c99c781d6125fcbfcc49fa206164693db0d90323d6a",
+      "samples": 100
+    },
+    {
+      "file": "before-matched-native-confirm-mode.json",
+      "sha256": "e05a6f56308bf7980f04d7aa8d484f70a91d576c963fcf010aedb1e0a6980fca",
+      "samples": 48
+    },
+    {
+      "file": "before-matched-native-motors-1-settle.json",
+      "sha256": "bf7286e5e8f67ccc96274696b845782c50a67fa8a6da1c852afd5fb3f89c9a66",
+      "samples": 448
+    },
+    {
+      "file": "before-matched-native-motors-1.json",
+      "sha256": "ee6001e50969eff115eace399015a38ac82ba5e470dd84a6ad272cf9d2c06363",
+      "samples": 338
+    },
+    {
+      "file": "before-matched-native-motors-2-settle.json",
+      "sha256": "b9791f6e183aa126e28a0a6c76634fa004d01ff827189b7f728ef1993e2064c9",
+      "samples": 440
+    },
+    {
+      "file": "before-matched-native-motors-2.json",
+      "sha256": "eff2da1c28595397f688213765bfc2ede0222e600f7671403b4916c16807133c",
+      "samples": 337
+    },
+    {
+      "file": "before-matched-native-motors-3-settle.json",
+      "sha256": "61907e27f137d8f457623f7027b269d6fcfa0b0ea3ff4a2b4f0cd79dcf92eb08",
+      "samples": 445
+    },
+    {
+      "file": "before-matched-native-motors-3.json",
+      "sha256": "1d54b747424d9773e232caee599dbda00608093216044d6630368d327186548a",
+      "samples": 342
+    },
+    {
+      "file": "before-matched-native-motors-4-settle.json",
+      "sha256": "fad2d4c20240b132262dccef495743fd1ba2197821fa00890443db91b40f6486",
+      "samples": 448
+    },
+    {
+      "file": "before-matched-native-motors-4.json",
+      "sha256": "7750b98fbf74db404499599d9e877e4f2b8f974bade14d5072c08193450f03b2",
+      "samples": 334
+    },
+    {
+      "file": "before-matched-native-motors-5-settle.json",
+      "sha256": "4e24a938331cc0b686bd376b4075ece0b619670f3a2db105fe2e4742b33ee80f",
+      "samples": 444
+    },
+    {
+      "file": "before-matched-native-motors-5.json",
+      "sha256": "d27bca220d1f7468c5c6e57765a36747f80c7efcfe55112e37ee21acdf4d5ba9",
+      "samples": 330
+    },
+    {
+      "file": "before-matched-native-nitrogen-1-settle.json",
+      "sha256": "e074b7cf7fd95410cb8426ffb76fbd52f3c67a8c1d3f4f4b732bd3d042b1e4a0",
+      "samples": 429
+    },
+    {
+      "file": "before-matched-native-nitrogen-1.json",
+      "sha256": "71b0f0e2a451d0f47c66f3e31ef05d69afebd78af0a755f7c0bfd78741c6f54e",
+      "samples": 335
+    },
+    {
+      "file": "before-matched-native-nitrogen-2-settle.json",
+      "sha256": "bb3132fb2034bed76c36d1bb6f80bfc6ac0095d5f7f9c666fcb576f5a3ec1e05",
+      "samples": 442
+    },
+    {
+      "file": "before-matched-native-nitrogen-2.json",
+      "sha256": "4874d2fdef025d93aa9b4d2e8a8a4cd38abe94574d2b1f3d76a0f072f90a8c97",
+      "samples": 340
+    },
+    {
+      "file": "before-matched-native-nitrogen-3-settle.json",
+      "sha256": "5df991aa3c2594850bcc8cf14276b8f85dd70897c63b4404cf2d893ace8397b7",
+      "samples": 442
+    },
+    {
+      "file": "before-matched-native-nitrogen-3.json",
+      "sha256": "632382d8c0a9f5738baa044077b84a1bf0990ef864dacfd59947c944f9e35dd1",
+      "samples": 332
+    },
+    {
+      "file": "before-matched-native-set-nitrogen.json",
+      "sha256": "f66a4879711477a891e181dcf34e192fd5e1de8b06c7b005d08ec361874ea428",
+      "samples": 27
+    },
+    {
+      "file": "before-motors-0-settle.json",
+      "sha256": "9b81615d6be366bf2e2b7e69f2266e4af620ba9da561cd6aa32ad534a5496acc",
+      "samples": 156
+    },
+    {
+      "file": "before-motors-0.json",
+      "sha256": "5905fb04e3f957287657ffae03cd6b85fd1fb797e11db63b4925660fcc048a6b",
+      "samples": 695
+    },
+    {
+      "file": "before-motors-1-settle.json",
+      "sha256": "8ce545cdb59f586cd768ada68a27d94f6534c15dc0275573b0aa35c989a06f58",
+      "samples": 14
+    },
+    {
+      "file": "before-motors-1.json",
+      "sha256": "f58ac67a5fd490fbbf7fd35598c09c21d9c4f540f922c2e9f2382514a019d948",
+      "samples": 29
+    },
+    {
+      "file": "before-native-confirm-mode.json",
+      "sha256": "1fdca3d48e3d0ac54e8dc4fd11cd99f59b6b7fab84a33162f651e41c9d34eead",
+      "samples": 49
+    },
+    {
+      "file": "before-native-motors-1-settle.json",
+      "sha256": "d635051396e1bd0e9b0bc376a65b8ef12aca23a51359fd688751409add090323",
+      "samples": 107
+    },
+    {
+      "file": "before-native-motors-1.json",
+      "sha256": "45cf6f79e671d7c16a952083dbae9f4b8d8dff99d1918fdf108f083853e7bce0",
+      "samples": 200
+    },
+    {
+      "file": "before-native-motors-2-settle.json",
+      "sha256": "71529b205c37c7f94c6d32fe07af021edbba0f2aff397f9bbb9fcd664f4e1491",
+      "samples": 97
+    },
+    {
+      "file": "before-native-motors-2.json",
+      "sha256": "b6515a6a27647110fc0d10a980a9623e5b5dfde2a01c0a4e13d36d822a7e4ace",
+      "samples": 188
+    },
+    {
+      "file": "before-native-motors-3-settle.json",
+      "sha256": "611dfb710dd6ca4201edce597445422595e6aa25ed0b72b06457750dd83f989d",
+      "samples": 100
+    },
+    {
+      "file": "before-native-motors-3.json",
+      "sha256": "747c9cac091146ac84bf2c5e43d537d58281594cd24f0c6d7d6c36e29bf191a7",
+      "samples": 205
+    },
+    {
+      "file": "before-native-motors-4-settle.json",
+      "sha256": "652a96fd854ecf2ee8c15ac83510d199fb14f8c362b8d4c65288f32d896ee4d2",
+      "samples": 106
+    },
+    {
+      "file": "before-native-motors-4.json",
+      "sha256": "a6eb08bd36d7f993a08456a8f3aaf75b4873ae916bfe8640ca15bf4607283648",
+      "samples": 208
+    },
+    {
+      "file": "before-native-motors-5-settle.json",
+      "sha256": "39c9d0c9902a8e2234dfe361b7cd8be4aec3ab83bbf1ba3c70481b57e4f08a87",
+      "samples": 106
+    },
+    {
+      "file": "before-native-motors-5.json",
+      "sha256": "9cb403ebae08bce175e06d4f713fd4d17d2c7ad324d86593d35acf5a2c6e6a30",
+      "samples": 207
+    },
+    {
+      "file": "before-native-motors-6-settle.json",
+      "sha256": "32962d81b00f1eef55d21017f822666e9488bbeca270ca12fb8de567052717f6",
+      "samples": 106
+    },
+    {
+      "file": "before-native-motors-6.json",
+      "sha256": "57de62d3a6f83c1457f4f5c14ce72f3fe52cdf947f0d98a2e58eff12bbbec740",
+      "samples": 208
+    },
+    {
+      "file": "before-native-nitrogen-1-settle.json",
+      "sha256": "4b9ddd9fe364ac88685696f7d745bc3948e09df371243525c9c230ac2cfe507c",
+      "samples": 97
+    },
+    {
+      "file": "before-native-nitrogen-1.json",
+      "sha256": "1906f6dbd35b8d87923104432e06b03639d2f6b1e0c882be675c9500b596c269",
+      "samples": 206
+    },
+    {
+      "file": "before-native-nitrogen-2-settle.json",
+      "sha256": "ea07e1f44d3db18ceeb9ecfff1f8c702fe828f8818e64416fd4a4dcf27ab7989",
+      "samples": 97
+    },
+    {
+      "file": "before-native-nitrogen-2.json",
+      "sha256": "becfec7ba7232a071e33270749c868ba765e1c89a0c242d5879e9fb7b5c5e2eb",
+      "samples": 205
+    },
+    {
+      "file": "before-native-nitrogen-3-settle.json",
+      "sha256": "26e825ae788ffee9ae055ee6ffebedd713ff97bedaca65c49079e27745fdd1bb",
+      "samples": 106
+    },
+    {
+      "file": "before-native-nitrogen-3.json",
+      "sha256": "5010b79fee346644bab6f6f38b884eb30c13f078960a492842e9ef92e5baa2b5",
+      "samples": 194
+    },
+    {
+      "file": "before-native-nitrogen-4-settle.json",
+      "sha256": "d7c3a2e4875e2521ce500c5d489fbbb0e2b83bfdd49ac431f4f0833a17e883b5",
+      "samples": 104
+    },
+    {
+      "file": "before-native-nitrogen-4.json",
+      "sha256": "443cbd2c919622cf025cfb4e5fd21a75d0f4b0270074d098c05f7f54a63ab58a",
+      "samples": 204
+    },
+    {
+      "file": "before-native-nitrogen-5-settle.json",
+      "sha256": "e41ef572427b6c33a38d448ef42e10375b12bf5a9e40aec55abbcbf452243881",
+      "samples": 105
+    },
+    {
+      "file": "before-native-nitrogen-5.json",
+      "sha256": "5f11d07a45ec6cd38a1f70a7fb448a58a02d01585103f2dd514640b6e1c5d82b",
+      "samples": 198
+    },
+    {
+      "file": "before-native-nitrogen-6-settle.json",
+      "sha256": "c6674537a6ab4ebb6b5abcb5a07ed0a5a1a42d2b7bf433ee928586a51bf3ce6e",
+      "samples": 106
+    },
+    {
+      "file": "before-native-nitrogen-6.json",
+      "sha256": "acd4847dd5297d9c8a1008ca4783c4a70198170d733583021ea59e81967e2c43",
+      "samples": 205
+    },
+    {
+      "file": "before-native-set-nitrogen.json",
+      "sha256": "ad90b245195124bd634b8ade745013c302a788ba20fa8b151d3dc502cbd57144",
+      "samples": 30
+    },
+    {
+      "file": "before-native-trial.json",
+      "sha256": "73a1786acf90ccf736880b6dd57312b0038b6abd4087f3be3a10c8b81b720ca2",
+      "samples": 192
+    },
+    {
+      "file": "before-v2-mode.json",
+      "sha256": "3517c7b4a7b65d47120f40f1470aa415859960403af554ddf97307955d41c94f",
+      "samples": 26
+    },
+    {
+      "file": "J-cancel.json",
+      "sha256": "59214a3c2f6c9db4164c2e3e306daa0e1b343a0c708c13705d1c2659e486305c",
+      "samples": 17
+    },
+    {
+      "file": "J-settle.json",
+      "sha256": "f091e8f2b5998069aa60620d87344f02553041b53c12050197b8fa7f6e2eb716",
+      "samples": 393
+    },
+    {
+      "file": "J-stopped-default.json",
+      "sha256": "9b95bb0c38a7b3f1747e85b99aeb8555299154eaf48cad05bca0c83f76cec5a2",
+      "samples": 464
+    },
+    {
+      "file": "left-roll-1-settle.json",
+      "sha256": "bf0402f2df361a2b77ba4b5129ad775379bc902aa49ee13f4c53e60c37afc83b",
+      "samples": 102
+    },
+    {
+      "file": "left-roll-1.json",
+      "sha256": "427ea2f42c3d6a9dfb1d77655cadf259621481580686d32e2b526ed9ed2647a2",
+      "samples": 212
+    },
+    {
+      "file": "left-roll-2-new-settle.json",
+      "sha256": "f267e03774bf5fa512e2ddb47a1fb76329cbfd1dc81eefeb6c08b4128e957e63",
+      "samples": 450
+    },
+    {
+      "file": "left-roll-2-settle.json",
+      "sha256": "24ac5d23ea177c4e56a724ddcb1dd71962259bb2cc073433cb0615b66b8e18cc",
+      "samples": 437
+    },
+    {
+      "file": "left-roll-2.json",
+      "sha256": "346b97fbf6399c8bd45178148808266a9d5dc14ed9dd3031d225815c24d11648",
+      "samples": 538
+    },
+    {
+      "file": "reference-native-confirm-mode.json",
+      "sha256": "edf2f1b91fa9ff235787f67f17db8ed70d5aa77cf65ba8f317ea8d3181a8d82f",
+      "samples": 48
+    },
+    {
+      "file": "reference-native-motors-1-settle.json",
+      "sha256": "752395d737e45bfd179c9ce9507aee81275de502d732efa8e38a335585b92030",
+      "samples": 107
+    },
+    {
+      "file": "reference-native-motors-1.json",
+      "sha256": "0da9f134b8683071f3e6904166f65dd87ea4fc3f583c2a5f331d1dc394b4cdd0",
+      "samples": 203
+    },
+    {
+      "file": "reference-native-motors-2-settle.json",
+      "sha256": "0057e36da41103d3cf82ae4da2023a4c98b4659f7cf69372dd823adeca3ea7f5",
+      "samples": 106
+    },
+    {
+      "file": "reference-native-motors-2.json",
+      "sha256": "9731ac01617b24a6deb716471e5fe8b460d2a402ec949babaee890a26e853b48",
+      "samples": 207
+    },
+    {
+      "file": "reference-native-motors-3-settle.json",
+      "sha256": "22380f0c5afe68600bcf668a5dde3169872cfd0ad601ed92ee12b567f1e85a9e",
+      "samples": 105
+    },
+    {
+      "file": "reference-native-motors-3.json",
+      "sha256": "2dc490d23a624b56fd9161b82f3d568e94925278d2b8600c2ca69a5e9ed13684",
+      "samples": 195
+    },
+    {
+      "file": "roll-mode-motors.json",
+      "sha256": "03e5855bce064d09df0e291a1b902092bfae194cd4edf19eaad7d619302c2c24",
+      "samples": 28
+    },
+    {
+      "file": "roll2-mode-motors.json",
+      "sha256": "7d9004eca600eff1906d00aa4b3abb7f6d25c0b7a5a70ab8211e6b3526f1efee",
+      "samples": 16
+    },
+    {
+      "file": "verify-handbrake-rest.json",
+      "sha256": "5445b0a15defeb4bc32d03a79f395634833fbf6c5f15e4c33de600a3e4426585",
+      "samples": 449
+    }
+  ],
+  "raw_native_logs": {
+    "before": {
+      "version": "0.0.2",
+      "required_lines_present": true,
+      "roadster_errors": [],
+      "native_log_sha256": "313e942e37251df9cf73d93a0edd1c2870e2bda18cba0f2ecfa8268944ba7441"
+    },
+    "after": {
+      "version": "0.0.3",
+      "required_lines_present": true,
+      "roadster_errors": [],
+      "native_log_sha256": "436379bec5d8a4b88b1ab0db394d4579c248c0048356dbc69861ea9c51842cdd"
+    }
+  }
+}

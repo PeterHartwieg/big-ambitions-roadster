@@ -1,0 +1,56 @@
+{
+  "after-0e6d823-Roadster-0.0.3-preview.zip": {
+    "sha256": "df2621160712a539821d7f80ff31262cfe6aa2f798d1bf26ebfd78ea62bddd04",
+    "members": {
+      "Roadster/AssetBundles/Mac/roadster.unity3d": "75285c1872ae687e4697e640c3a24e66e7d09f85041180cd16272484dd36b841",
+      "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "cc85e8719c5e8f404ba97324da7bd3476e992e122c792dd94322a5183a875ed7",
+      "Roadster/AssetBundles/Windows/roadster.unity3d": "09421297873ddc427718483b0f30b8b708db0d76918ee54f62c1a71f2dc0bcd3",
+      "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "a71bd3903bb826d3ac01e30d26647344200745f0be974d3b9849d77ef7bc6aca",
+      "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+      "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+      "Roadster/INSTALL.txt": "dda23404fe099bf8374eb0a1f0376955cb69494f339a4f82b6b1d4d736e2ab4e",
+      "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
+      "Roadster/RELEASE-NOTES.txt": "00a1a6791c8587ca6fd6afdef3df745b9c78ae65ec54f78c6d411af793e5381b",
+      "Roadster/Roadster.dll": "a035fbe1c85ba3d25379a9463372b520feaa2fd5e862d72092eaff428069517c",
+      "SHA256SUMS.txt": "6c416777168a7145318103e0e9898d68284b4e67364f0ce1ec8536ce6962a13e"
+    }
+  },
+  "before-master-2250540-Roadster-0.0.2-preview.zip": {
+    "sha256": "d64d67074a1e4b62d2e52631b7375e5314d0d19f9601ad683d041cbc89154f7e",
+    "members": {
+      "Roadster/AssetBundles/Mac/roadster.unity3d": "36d196f71798238f36be47fc9fee6e0e250e782d1ae31411959a891db79de528",
+      "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "436e668361c97c74f222c25373c58976027f5463563be91a428fd67316979c75",
+      "Roadster/AssetBundles/Windows/roadster.unity3d": "15b5d09295670be7dcffe2abcbd18710d867f09babdbfde65379e11254c5304a",
+      "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "c5a5ae90caa49fa2b52cb2571112d3702b78c535699970f9764ea8ec568e1271",
+      "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+      "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+      "Roadster/INSTALL.txt": "44e912e30270ef64de47c9ebab825eb8f9f0967c8e8907f4a335145603aac856",
+      "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
+      "Roadster/RELEASE-NOTES.txt": "647e04b7e881690e83d4177399670bc26d0e029cd8eaefd59d2b3ea867498267",
+      "Roadster/Roadster.dll": "203fc20fe4b753142cce48ec2c5adb74d67b92817ac5a0f2c37a16c469456875",
+      "SHA256SUMS.txt": "50cfa42e7fdd575b2bc8f3e33547296c4ea738fed22dca490c8139ff21e5f2a3"
+    }
+  },
+  "uploaded-0.0.2-Roadster-0.0.2-preview.zip": {
+    "sha256": "28877bf82f13dab6a63b998efae6d515fc75e0d13a258929193c894aac793057",
+    "members": {
+      "Roadster/AssetBundles/Mac/roadster.unity3d": "36d196f71798238f36be47fc9fee6e0e250e782d1ae31411959a891db79de528",
+      "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "baad1d6d4812877e6aef045ba80c5e495b5580a9da149c429eab095e3317de72",
+      "Roadster/AssetBundles/Windows/roadster.unity3d": "15b5d09295670be7dcffe2abcbd18710d867f09babdbfde65379e11254c5304a",
+      "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "080bb857fc24b0657837882e3cabbb3605f7a2fbd29708759d68d3fa88024d70",
+      "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+      "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+      "Roadster/INSTALL.txt": "44e912e30270ef64de47c9ebab825eb8f9f0967c8e8907f4a335145603aac856",
+      "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
+      "Roadster/RELEASE-NOTES.txt": "647e04b7e881690e83d4177399670bc26d0e029cd8eaefd59d2b3ea867498267",
+      "Roadster/Roadster.dll": "4038398a492b69739a8e8118ca42783062c8f1bf8fd6c3d744a8a7fe898e86a5",
+      "SHA256SUMS.txt": "371b39af191ee0216304acb1276736c263ffe6dbb90254fe81a43e1364bda2c8"
+    }
+  },
+  "before_vs_uploaded_differences": [
+    "SHA256SUMS.txt",
+    "Roadster/AssetBundles/Mac/roadster.unity3d.manifest",
+    "Roadster/Roadster.dll",
+    "Roadster/AssetBundles/Windows/roadster.unity3d.manifest"
+  ]
+}

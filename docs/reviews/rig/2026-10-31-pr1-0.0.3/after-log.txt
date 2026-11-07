@@ -1,0 +1,69 @@
+[Mod:FoodTrucks] Vehicle registered: foodtrucks:vehicletype_foodtruck (hand vehicle tag: False, price 15000).
+[Mod:FoodTrucks] Vehicle registered: foodtrucks:vehicletype_foodcart (hand vehicle tag: True, price 1200).
+[Mod:Roadster] Version 0.0.3 loading.
+[Mod:Roadster] Vehicle registered: roadster:vehicletype_roadster (price 250000).
+[Mod:Roadster] Active: VehicleContractSettings.SetListOfVehiclesForSale.
+Loaded Big Ambitions (Build 3682)
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch ended at 58 mph after 1.52 s (throttle 0.85, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 16 mph after 0.44 s (throttle 0.30, steering 0.00, wheels down 4).
+[Mod:Roadster] Barrel roll to the right at 16 mph.
+[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.6 m/s, 2 degrees off level, 2.62 s in the air.
+[Mod:Roadster] Launch ended at 19 mph after 0.54 s (throttle 0.30, steering -0.30, wheels down 4).
+[Mod:Roadster] Barrel roll to the left at 20 mph.
+[Mod:Roadster] Barrel roll landed: peak 5.5 m, rolled 360 degrees, touchdown 3.9 m/s, 2 degrees off level, 2.26 s in the air.
+[Mod:Roadster] Launch ended at 57 mph after 1.52 s (throttle 0.85, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 0 mph after 0.32 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch mode: nitrogen.
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.60 s (target 0.60 s).
+[Mod:Roadster] Launch ended at -1 mph after 0.04 s (throttle 0.00, steering 0.00, wheels down 3).
+[Mod:Roadster] Launch ended at 52 mph after 0.52 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch ended at 29 mph after 0.30 s (throttle 0.25, steering 0.00, wheels down 4).
+[Mod:Roadster] Barrel roll to the right at 31 mph.
+[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.7 m/s, 1 degrees off level, 2.62 s in the air.
+[Mod:Roadster] Launch ended at 23 mph after 0.24 s (throttle 0.25, steering -0.30, wheels down 4).
+[Mod:Roadster] Barrel roll to the left at 25 mph.
+[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 3.1 m/s, 2 degrees off level, 2.62 s in the air.
+[Mod:Roadster] Launch mode: motors.
+[Mod:Roadster] Launch ended at 59 mph after 1.52 s (throttle 0.85, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 0 mph after 0.20 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 26 mph after 0.72 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 12 mph after 0.34 s (throttle 0.30, steering 0.00, wheels down 4).
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch ended at 12 mph after 0.34 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 12 mph after 0.34 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 18 mph after 0.48 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 12 mph after 0.34 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Launch ended at 16 mph after 0.46 s (throttle 0.00, steering 0.00, wheels down 4).
+Loaded Big Ambitions (Build 3682)
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch ended at 39 mph after 1.06 s (throttle 0.00, steering 0.00, wheels down 4).
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.31 s (target 1.60 s).
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Own car: starts on the step from waypoint 4666, -5.2 m to the side of it.
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Vanilla ride: pull out into the lane first: no lane step runs under the car its way.
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Own car: starts on the step from waypoint 17901, +0.0 m to the side of it.
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Own car: starts on the step from waypoint 17901, +0.8 m to the side of it.
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Own car: starts on the step from waypoint 17901, +1.1 m to the side of it.
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Own car: starts on the step from waypoint 17901, +1.4 m to the side of it.
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).
+[Mod:DrivenRides] Own car: choosing a destination for roadster:vehicletype_roadster.
+[Mod:DrivenRides] Own car: starts on the step from waypoint 17901, +1.7 m to the side of it.
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).

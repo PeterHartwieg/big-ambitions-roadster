@@ -1,0 +1,26 @@
+[
+  {
+    "start": "[Mod:Roadster] Barrel roll to the right at 16 mph.",
+    "landed": "[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.6 m/s, 2 degrees off level, 2.62 s in the air.",
+    "contacts_during_roll": []
+  },
+  {
+    "start": "[Mod:Roadster] Barrel roll to the left at 20 mph.",
+    "landed": "[Mod:Roadster] Barrel roll landed: peak 5.5 m, rolled 360 degrees, touchdown 3.9 m/s, 2 degrees off level, 2.26 s in the air.",
+    "contacts_during_roll": [
+      "[Mod:Roadster] Contact (hit) with the car's BodyCollider: Harbor/TruckGarageBuilding/TruckGarageBuilding (layer Buildings), impact 10.4 m/s at 5 mph, on the car at x -0.67, y 0.13, z 2.24 m."
+    ]
+  },
+  {
+    "start": "[Mod:Roadster] Barrel roll to the right at 31 mph.",
+    "landed": "[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.7 m/s, 1 degrees off level, 2.62 s in the air.",
+    "contacts_during_roll": []
+  },
+  {
+    "start": "[Mod:Roadster] Barrel roll to the left at 25 mph.",
+    "landed": "[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 3.1 m/s, 2 degrees off level, 2.62 s in the air.",
+    "contacts_during_roll": [
+      "[Mod:Roadster] Contact (hit) with the car's BodyCollider: Harbor/Props/Nature/Trees/Tree Broadleaf M2 (15) (layer Roads), impact 13.0 m/s at 25 mph, on the car at x -1.01, y 0.31, z 1.75 m."
+    ]
+  }
+]

@@ -1,0 +1,167 @@
+[
+  {
+    "file": "S1-before-red-final.png",
+    "native_file": "S1-before-red-final.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "c551bc098f0e35bdb45aa4eae597e64d734189f5287a10fb4d02a71337bff9bf",
+    "evidence_sha256": "311b2f5a82bb52ce2d23e6750254986a421bf9497b91df29aeaeccd34ce5c1c7",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S1-before-blue-final.png",
+    "native_file": "S1-before-blue-final.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "4c262dc96f3ac692032b94275f5e23bd562d32c2b1aecc38eca7fc7112a03b44",
+    "evidence_sha256": "46ca1fd026fb2e50ec6f01794796f2b2132a37a45f217ca85e3ff659e0bdadc8",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S1-after-reload-red.png",
+    "native_file": "S1-after-reload-red.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "9897025c3f99738ffc809aa405d8f46c2c78b2543c639c52afda434c46f58923",
+    "evidence_sha256": "67beff770f6c5fcdb98ff09c0274f646d55985d661581c702c4d23995f3bba45",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S1-after-reload-blue.png",
+    "native_file": "S1-after-reload-blue.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "c1f8175a3effc257763a391bf27469f1544510e370b4a742bd62ee08293003fd",
+    "evidence_sha256": "458d26b928addc58a205414d46e5066543e99fab965587f9ee9bfe4ec4cd046d",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S2-before-day-front.png",
+    "native_file": "S2-before-day-front.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "6e459832153621cadfaccac9c4c59c9113f098d01304329fa2cf825704f51e53",
+    "evidence_sha256": "0cac8918882925655c2e6794f0cf804adb049134bd87768a6ffb1ec727b858e9",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S2-after-road-day-front.png",
+    "native_file": "S2-after-road-day-front.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "d9a99824a2165141a4741f4cefaf9a13c866808eed8896865982506c184e0408",
+    "evidence_sha256": "0149f1cacade02c24f93ab71edf909a1f82ede381401c4f123579a980c59cfdc",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S2-after-road-night-front.png",
+    "native_file": "S2-after-road-night-front.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "d8b2daca7c3c4b9cb2db3d831a238634eb28c6424f2da7519961d1dcaad371fb",
+    "evidence_sha256": "ac1b61863f2c1dbc4ab809d903f570745a997afaaed9ab369662151405c5f845",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S2-after-road-night-exit-front.png",
+    "native_file": "S2-after-road-night-exit-front.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "93bfce2dcc3059311597ac1d6a35e74382b2fadaecb5edb1cb955236db7ce475",
+    "evidence_sha256": "61c0eb63b06ce10534ba4ddcecf5009adfceff523d949ef7a597e61a3f5ca5ea",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S2-after-vanilla-night-front.png",
+    "native_file": "S2-after-vanilla-night-front.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "1437451203865b8ab4bef9b1f75ccd52e933002ede923bfd4e59e05cf97fb1d6",
+    "evidence_sha256": "6c15e4c054f72ff05767678a880ce26b368e21d3e5c641090673670f1299d479",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S3-after-wheel-red.png",
+    "native_file": "S3-after-wheel-red.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "c8059c9332dec76d864f8bd8f182186125abd48e7179d3440176f7fd3172294c",
+    "evidence_sha256": "bac2d0ea54c3e41fe0dd5c015a0b87e484879bc2da6f84a9447ec80bb4ca5650",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  },
+  {
+    "file": "S3-after-wheel-blue.png",
+    "native_file": "S3-after-wheel-blue.png",
+    "native_pixels": [
+      1600,
+      900
+    ],
+    "evidence_pixels": [
+      1000,
+      562
+    ],
+    "native_sha256": "dcb2b8beeea432b8efc6f7cc61d6161ee1a1c8782903e41b69a435f0d2ca4e91",
+    "evidence_sha256": "15b33d4083bc9234a633c2a000ca7b28030a7e1ca1612dd9d93d78d92b0c4407",
+    "transform": "Lanczos resize to 1000 px width; no other edits"
+  }
+]
