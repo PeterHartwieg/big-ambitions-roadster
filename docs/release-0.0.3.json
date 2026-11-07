@@ -1,7 +1,7 @@
 {
   "version": "0.0.3",
   "record_updated": "2026-11-07",
-  "status": "shipped candidate merged; rig acceptance passed for paint, lamps, braking, launches and rolls; native gaps remain open (see remaining_native_gaps)",
+  "status": "shipped candidate merged; shipped 05a27e42 archive run in the rig on 2026-11-07; rig acceptance passed for paint, lamps, braking, launches, rolls, stopped-J Self Driving, hover and native near/far; rain live-toggle lamp refresh is a known issue matching vanilla; stunt camera skipped (see remaining_native_gaps)",
   "pull_request": "https://github.com/PeterHartwieg/big-ambitions-roadster/pull/1",
   "merge_commit": "7671f84d2e9d015c8a663824e078dde669f962d6",
   "merged_at": "2026-11-01T07:43:22Z",
@@ -30,14 +30,15 @@
       "Roadster/RELEASE-NOTES.txt": "00a1a6791c8587ca6fd6afdef3df745b9c78ae65ec54f78c6d411af793e5381b",
       "Roadster/Roadster.dll": "8412918ca1d6f04ff61286d57e3822fe828d89ab7da413e702eeb61c0bc779b9",
       "SHA256SUMS.txt": "2b7419bddf3b642dc6d1468af68ae9fca6ddd6839b35336affcdb6084254aa0f"
-    }
+    },
+    "rig_run": "Installed and run in the rig on 2026-11-07 after SHA-256, member hash and ZIP CRC checks (docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/package-verification.json). No rebuild."
   },
   "rig_tested_package": {
     "name": "after-0e6d823-Roadster-0.0.3-preview.zip",
     "source_commit": "0e6d82332cc122235fca10c1ede90745939114b7",
     "sha256": "df2621160712a539821d7f80ff31262cfe6aa2f798d1bf26ebfd78ea62bddd04",
     "roadster_dll_sha256": "a035fbe1c85ba3d25379a9463372b520feaa2fd5e862d72092eaff428069517c",
-    "relation_to_shipped_archive": "Same asset bundles, Harmony, INSTALL, RELEASE-NOTES and en.json bytes. Roadster.dll, both bundle .manifest files and SHA256SUMS.txt differ (rebuild non-determinism, as already seen for 0.0.2). The shipped 05a27e42 archive itself has not been run in the rig."
+    "relation_to_shipped_archive": "Same asset bundles, Harmony, INSTALL, RELEASE-NOTES and en.json bytes. Roadster.dll, both bundle .manifest files and SHA256SUMS.txt differ (rebuild non-determinism, as already seen for 0.0.2). Used for the 31 Oct and 1 Nov sessions; the 7 Nov session ran the shipped 05a27e42 archive itself."
   },
   "rig_sessions": [
     {
@@ -53,6 +54,14 @@
       "source_branch": "rig-evidence/rdstr-pr1-0.0.3-rig2 (865bd45)",
       "game_build": 3682,
       "verdict_at_the_time": "PASS: motors 0.0.2 median 1.31 s, 0.0.3 median 1.29 s (same); clean left roll; stopped-J departure still incomplete"
+    },
+    {
+      "date": "2026-11-07",
+      "evidence": "docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/README.md",
+      "package": "shipped Roadster-0.0.3-preview.zip, sha256 05a27e4271cccc408914367a7aadd4059c9c00bb6709bc33c88c8ca5b5439ccd",
+      "game_build": 3682,
+      "self_driving": "0.4.2 (Workshop 3819853552), DLL sha256 4c52d5d14867f84beee3b36ed97a3688370c8a48f21709fc55945b441bdc2d67",
+      "verdict_at_the_time": "PASS: clean left roll, stopped-J Self Driving, hover outline, native near/far visuals. FAIL for rain live-toggle lamp refresh, identical in vanilla Mersaidi Dash. SKIPPED: stunt camera (rig input/capture limit)."
     }
   ],
   "checks": [
@@ -68,10 +77,10 @@
     },
     {
       "item": "3. Dusk/night/dawn and daytime rain",
-      "status": "partial",
+      "status": "pass with known issue",
       "pass": "night, dawn/dusk, night braking, rain on entry matches vanilla",
-      "open": "rain live-toggle lamp refresh while already in the car",
-      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md"
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md; docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/rain-results.json, docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/README.md#rain-finding",
+      "known_issue": "Live rain toggle while remaining in the vehicle left Roadster lamp strengths stale for at least 10 s; vanilla Mersaidi Dash behaved identically. ShouldLightsBeOn changed immediately; re-entering refreshed both to 50000/20000. Matches vanilla; not a Roadster-specific regression. Optional later improvement; no fix in 0.0.3."
     },
     {
       "item": "4. Exit/re-enter, beams, two-car independence",
@@ -87,27 +96,24 @@
     },
     {
       "item": "6. Both sides, hover, LOD, shader/decal appearance",
-      "status": "partial",
-      "pass": "no pink/missing shader, giant glow, daylight emission, dirt or decal projection in sampled observer views; wheel finish independent of paint (S3)",
-      "open": "SKIPPED-LOCKED: hover outline, native near/far camera LOD",
-      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md"
+      "status": "pass",
+      "pass": "no pink/missing shader, giant glow, daylight emission, dirt or decal projection in sampled observer views; wheel finish independent of paint (S3); hover outline and tooltip; native wheel-zoom near/far visuals within the sampled range, no numerical LOD index claimed (7 Nov)",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md; docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/camera-evidence.json, docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/images/native-hover-*.png, docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/images/native-zoom-*.png"
     },
     {
       "item": "7. Launch, plumes, barrel roll, startup and errors",
       "status": "partial",
-      "pass": "startup 0.0.3, registration, dealer Active, 4 rear/2 down plumes, no Roadster ERROR; motors median 1.29 s inside 1.25-1.35; nitrogen 0.60-0.63 s; right roll; clean left roll (1 Nov); stopped/creeping/held Backslash rejected; J stopped and moving starts no roll; N switches mode",
-      "open": "stopped-J Self Driving sustained departure; SKIPPED-LOCKED stunt camera comfort",
-      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md, docs/reviews/rig/2026-11-01-pr1-0.0.3-timing/README.md"
+      "pass": "startup 0.0.3, registration, dealer Active, 4 rear/2 down plumes, no Roadster ERROR; motors median 1.29 s inside 1.25-1.35; nitrogen 0.60-0.63 s; right roll; clean left roll (1 Nov); stopped/creeping/held Backslash rejected; J stopped and moving starts no roll; N switches mode; clean left roll on the shipped archive (7 Nov: 23 mph, 6.3 m, 360 deg, touchdown 2.6 m/s, 2 deg, no contacts); stopped Roadster + J: Self Driving engaged, departed and completed the trip (7 Nov)",
+      "open": "subjective stunt camera comfort unverified",
+      "evidence": "docs/reviews/rig/2026-10-31-pr1-0.0.3/README.md, docs/reviews/rig/2026-11-01-pr1-0.0.3-timing/README.md, docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/left-roll.json, docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/J-departure.json, docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/camera-evidence.json",
+      "skipped": "stunt camera: the rig cannot combine keyboard input with native captures (background: no Keyboard.current; windowed: keys work, native frames black). Not retried."
     }
   ],
   "remaining_native_gaps": [
-    "Stopped-J HART. Self Driving departure: J enters Self Driving without a roll, but no sustained self-driven departure was observed (cancelled while unparking).",
-    "Rain live-toggle lamp refresh: toggling rain while already in the car did not refresh lamps immediately (vanilla behaved similarly); no pass claimed.",
-    "SKIPPED-LOCKED: hover outline.",
-    "SKIPPED-LOCKED: native near/far camera and LOD.",
-    "SKIPPED-LOCKED: stunt camera comfort, and subjective stutter/handling feel.",
+    "KNOWN ISSUE (matches vanilla): live rain toggle while remaining in the car leaves lamp strengths stale for at least 10 s until re-entry; vanilla Mersaidi Dash identical. Optional later improvement, not a Roadster regression (docs/reviews/rig/2026-11-07-rdstr-0.0.3-native/rain-results.json).",
+    "SKIPPED: stunt camera. The rig cannot combine keyboard input with native captures (background: no Keyboard.current; windowed: native frames black). Not retried.",
+    "SKIPPED-LOCKED / unverified: subjective stutter, handling, cornering and camera comfort.",
     "Unverified: night re-entry repeat and two-car lamp independence (only paint independence is recorded).",
-    "The shipped 05a27e42 archive has not itself been run in the rig; only the df262116 package from 0e6d823 was.",
     "The source commit of the 05a27e42 build is not recorded (see archive.build_source_evidence)."
   ],
   "superseded_preview": {
@@ -178,7 +184,7 @@
   "rig_test_record": "docs/rig-test-0.0.3.md",
   "constraints": {
     "rig_used": true,
-    "in_game_verified": "partial (rig observer sessions, see checks)",
+    "in_game_verified": "partial (rig observer and native sessions, see checks)",
     "release_branch_merged": true,
     "workshop_upload_recorded_here": false,
     "force_pushed": false
