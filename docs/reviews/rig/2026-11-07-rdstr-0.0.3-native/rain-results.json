@@ -1,0 +1,1667 @@
+[
+  {
+    "label": "roadster-baseline-clear",
+    "utc": "2026-11-07T08:02:01.6995159Z",
+    "game_time": "12:00",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 5250.3335,
+        "NextRainEndTime": 6439.53369,
+        "NextRainPreRainPeriodEndTime": 5307.3335,
+        "NextRainPostRainPeriodStartTime": 6406.8335,
+        "NextRainMaxIntensity": 0.568
+      },
+      "saved_next_rain_minutes": 5250.3335
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-on-immediate",
+    "utc": "2026-11-07T08:02:07.0766188Z",
+    "game_time": "12:00",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3540.92236,
+        "NextRainEndTime": 3753.32227,
+        "NextRainPreRainPeriodEndTime": 3589.82227,
+        "NextRainPostRainPeriodStartTime": 3720.32227,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 5250.3335
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-on-2s",
+    "utc": "2026-11-07T08:02:12.0749043Z",
+    "game_time": "12:03",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3540.92236,
+        "NextRainEndTime": 3753.32227,
+        "NextRainPreRainPeriodEndTime": 3589.82227,
+        "NextRainPostRainPeriodStartTime": 3720.32227,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 5250.3335
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-on-10s",
+    "utc": "2026-11-07T08:02:22.5652581Z",
+    "game_time": "12:12",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3540.92236,
+        "NextRainEndTime": 3753.32227,
+        "NextRainPreRainPeriodEndTime": 3589.82227,
+        "NextRainPostRainPeriodStartTime": 3720.32227,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 5250.3335
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-reentry",
+    "utc": "2026-11-07T08:02:31.5228850Z",
+    "game_time": "12:13",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3540.92236,
+        "NextRainEndTime": 3753.32227,
+        "NextRainPreRainPeriodEndTime": 3589.82227,
+        "NextRainPostRainPeriodStartTime": 3720.32227,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 5250.3335
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-off-immediate",
+    "utc": "2026-11-07T08:02:37.5235513Z",
+    "game_time": "12:13",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8995.733,
+        "NextRainEndTime": 10000.1338,
+        "NextRainPreRainPeriodEndTime": 9044.033,
+        "NextRainPostRainPeriodStartTime": 9957.233,
+        "NextRainMaxIntensity": 0.856
+      },
+      "saved_next_rain_minutes": 8995.733
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-off-2s",
+    "utc": "2026-11-07T08:02:42.8424392Z",
+    "game_time": "12:16",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8995.733,
+        "NextRainEndTime": 10000.1338,
+        "NextRainPreRainPeriodEndTime": 9044.033,
+        "NextRainPostRainPeriodStartTime": 9957.233,
+        "NextRainMaxIntensity": 0.856
+      },
+      "saved_next_rain_minutes": 8995.733
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-rain-off-10s",
+    "utc": "2026-11-07T08:02:53.0177423Z",
+    "game_time": "12:24",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8995.733,
+        "NextRainEndTime": 10000.1338,
+        "NextRainPreRainPeriodEndTime": 9044.033,
+        "NextRainPostRainPeriodStartTime": 9957.233,
+        "NextRainMaxIntensity": 0.856
+      },
+      "saved_next_rain_minutes": 8995.733
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "roadster-clear-reentry",
+    "utc": "2026-11-07T08:03:07.9909584Z",
+    "game_time": "12:25",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8995.733,
+        "NextRainEndTime": 10000.1338,
+        "NextRainPreRainPeriodEndTime": 9044.033,
+        "NextRainPostRainPeriodStartTime": 9957.233,
+        "NextRainMaxIntensity": 0.856
+      },
+      "saved_next_rain_minutes": 8995.733
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "CheapSaloon",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "Roadster_Wing",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 180000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-baseline-clear",
+    "utc": "2026-11-07T08:04:12.6519686Z",
+    "game_time": "12:40",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 6807.176,
+        "NextRainEndTime": 7811.57568,
+        "NextRainPreRainPeriodEndTime": 6843.776,
+        "NextRainPostRainPeriodStartTime": 7768.97559,
+        "NextRainMaxIntensity": 0.82
+      },
+      "saved_next_rain_minutes": 6807.176
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-on-immediate",
+    "utc": "2026-11-07T08:04:18.6919998Z",
+    "game_time": "12:40",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3580.49341,
+        "NextRainEndTime": 4756.493,
+        "NextRainPreRainPeriodEndTime": 3628.19336,
+        "NextRainPostRainPeriodStartTime": 4707.29346,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 6807.176
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-on-2s",
+    "utc": "2026-11-07T08:04:23.5515529Z",
+    "game_time": "12:43",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3580.49341,
+        "NextRainEndTime": 4756.493,
+        "NextRainPreRainPeriodEndTime": 3628.19336,
+        "NextRainPostRainPeriodStartTime": 4707.29346,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 6807.176
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-on-10s",
+    "utc": "2026-11-07T08:04:35.0622489Z",
+    "game_time": "12:51",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3580.49341,
+        "NextRainEndTime": 4756.493,
+        "NextRainPreRainPeriodEndTime": 3628.19336,
+        "NextRainPostRainPeriodStartTime": 4707.29346,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 6807.176
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-reentry",
+    "utc": "2026-11-07T08:04:46.5809034Z",
+    "game_time": "12:52",
+    "controlled": true,
+    "weather": {
+      "type": "rain",
+      "override": true,
+      "drops_falling": true,
+      "intensity": 1.0,
+      "environment_transition": 1.0,
+      "schedule": {
+        "NextRainStartTime": 3580.49341,
+        "NextRainEndTime": 4756.493,
+        "NextRainPreRainPeriodEndTime": 3628.19336,
+        "NextRainPostRainPeriodStartTime": 4707.29346,
+        "NextRainMaxIntensity": 1.0
+      },
+      "saved_next_rain_minutes": 6807.176
+    },
+    "shouldLightsBeOn": true,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-off-immediate",
+    "utc": "2026-11-07T08:04:52.7982476Z",
+    "game_time": "12:52",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8494.852,
+        "NextRainEndTime": 9486.052,
+        "NextRainPreRainPeriodEndTime": 8537.151,
+        "NextRainPostRainPeriodStartTime": 9441.052,
+        "NextRainMaxIntensity": 0.418
+      },
+      "saved_next_rain_minutes": 8494.852
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-off-2s",
+    "utc": "2026-11-07T08:04:57.5207384Z",
+    "game_time": "12:55",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8494.852,
+        "NextRainEndTime": 9486.052,
+        "NextRainPreRainPeriodEndTime": 8537.151,
+        "NextRainPostRainPeriodStartTime": 9441.052,
+        "NextRainMaxIntensity": 0.418
+      },
+      "saved_next_rain_minutes": 8494.852
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-rain-off-10s",
+    "utc": "2026-11-07T08:05:11.5894055Z",
+    "game_time": "13:04",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8494.852,
+        "NextRainEndTime": 9486.052,
+        "NextRainPreRainPeriodEndTime": 8537.151,
+        "NextRainPostRainPeriodStartTime": 9441.052,
+        "NextRainMaxIntensity": 0.418
+      },
+      "saved_next_rain_minutes": 8494.852
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 50000.0,
+        "rear": 20000.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": true,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  },
+  {
+    "label": "vanilla-retest-clear-reentry",
+    "utc": "2026-11-07T08:05:20.9718511Z",
+    "game_time": "13:05",
+    "controlled": true,
+    "weather": {
+      "type": "clear",
+      "override": true,
+      "drops_falling": false,
+      "intensity": 0.0,
+      "environment_transition": 0.0,
+      "schedule": {
+        "NextRainStartTime": 8494.852,
+        "NextRainEndTime": 9486.052,
+        "NextRainPreRainPeriodEndTime": 8537.151,
+        "NextRainPostRainPeriodStartTime": 9441.052,
+        "NextRainMaxIntensity": 0.418
+      },
+      "saved_next_rain_minutes": 8494.852
+    },
+    "shouldLightsBeOn": false,
+    "bodyProperties": [
+      {
+        "name": "SM_Mersaidi Dash",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackLeftWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_BackRightWheel ",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontLeftWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      },
+      {
+        "name": "SM_Mersaidi Dash_FrontRightWheel",
+        "tint": [
+          0.5028866,
+          0.5028866,
+          0.5028866,
+          1.0
+        ],
+        "front": 0.0,
+        "rear": 0.0
+      }
+    ],
+    "beamLights": [
+      {
+        "name": "Spotlights",
+        "enabled": false,
+        "active": true,
+        "intensity": 540000.0
+      }
+    ]
+  }
+]

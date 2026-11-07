@@ -1,0 +1,43 @@
+{
+  "lease_owner": "rdstr-0.0.3-records-1107",
+  "queue_log": "lease-wait.jsonl",
+  "backup": {
+    "verified": true,
+    "utc": "2026-11-07T07:53:57.2601191Z",
+    "profile_files": 5094,
+    "receipt_references": 110,
+    "receipt_sha256": "9a25d9bb1759a3e63b734b6e924c668bb8d241a80a48ac2cdb8fc09ff26b20e9"
+  },
+  "restore": {
+    "root_file_hashes": {
+      "run.json": "19b5bf5e303c81fb31eccd56cd08036fb8c763d3b4a8fb0eea5bcaa4a58bc645",
+      "Player-agent.log": "7f17ff4f57c57e75c83d1935a92941c8265e7b1913eb73f489e8791323be525b",
+      "agent-install.json": "9a25d9bb1759a3e63b734b6e924c668bb8d241a80a48ac2cdb8fc09ff26b20e9"
+    },
+    "preferences_sha256": "e0c444650dee7df90e3557409fd5d2666b54c2867c455268b5d2c57f8da333eb",
+    "utc": "2026-11-07T08:13:10.8343596Z",
+    "restored": true,
+    "preferences_hash_matches": true,
+    "profile_files_verified": 5094,
+    "rig_running": false,
+    "tested_profile": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\tested-profile",
+    "receipt_references_verified": 110
+  },
+  "release": {
+    "observed_released_utc": "2026-11-07T08:14:25.500315+00:00",
+    "owner": "rdstr-0.0.3-records-1107",
+    "after": {
+      "instance": "agent1",
+      "held": true,
+      "owner": "cp1-sync-native-1107b",
+      "purpose": "cp1-sync-native-1107b native CP PR1 before/after acceptance",
+      "acquired_utc": "2026-11-07T08:13:54.5421581Z",
+      "expires_automatically": false,
+      "pending": 0,
+      "legacy_blocked": false
+    },
+    "workshop_source_files_unchanged": true,
+    "workshop_files_verified": 8,
+    "note": "Release succeeded and unheld/zero-pending assertion passed in release.py; subsequent verification initially hit a receipt text-encoding error. This read-only check confirms the lease belongs to a subsequent tester and Workshop hashes match; no control was attempted after release."
+  }
+}

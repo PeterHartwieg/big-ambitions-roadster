@@ -1,0 +1,171 @@
+{
+  "ok": false,
+  "checks": {
+    "lease": {
+      "passed": true,
+      "detail": "Calling session holds the agent1 lease (owner and credential verified)",
+      "alert": "delivered"
+    },
+    "bridge": {
+      "passed": true,
+      "detail": "health and read-only mouse status answered on loopback 18330",
+      "alert": "delivered"
+    },
+    "mod_inventory": {
+      "passed": true,
+      "detail": "11 managed mod DLLs inspected without executing code",
+      "alert": "delivered"
+    },
+    "identity": {
+      "passed": true,
+      "detail": "Expected the dedicated agent1 executable, product and port 18330",
+      "alert": "delivered"
+    },
+    "runtime_version": {
+      "passed": true,
+      "detail": "Expected runtime_version 7; observed 7",
+      "alert": "delivered"
+    },
+    "rig_ops": {
+      "passed": true,
+      "detail": "rig_ops must be ready with a valid agent1 session and updated_utc within 10 seconds; stale/missing/disabled ops fails even when bridge and mouse are fresh",
+      "alert": "delivered"
+    },
+    "rig_input": {
+      "passed": true,
+      "detail": "rig_input.status=ready",
+      "alert": "delivered"
+    },
+    "receipt_hash": {
+      "passed": true,
+      "detail": "Receipt identity, installed hashes and loaded AgentRigInput SHA-256 must agree",
+      "alert": "delivered"
+    },
+    "rig_mouse": {
+      "passed": true,
+      "detail": "rig_mouse.available must be true in health and mouse status",
+      "alert": "delivered"
+    },
+    "schedule_resize": {
+      "passed": true,
+      "detail": "legacy_coverage.schedule_resize=True",
+      "alert": "delivered"
+    },
+    "mod_coverage": {
+      "passed": false,
+      "detail": "Uncovered or unreadable mod DLLs: none; legacy scan must be complete with zero queue drops",
+      "alert": "delivered"
+    },
+    "report": {
+      "passed": true,
+      "detail": "Health, coverage and receipt shapes valid",
+      "alert": "delivered"
+    },
+    "rig_ops_status_file": {
+      "passed": true,
+      "detail": "AgentRig/status.json must pass the same ready/session/10-second freshness gate as agent op; its session must match health; fresh bridge health cannot substitute for a fresh ops file",
+      "alert": "delivered"
+    }
+  },
+  "mod_inventory": [
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\AgentOverlay\\AgentOverlay.dll",
+      "name": "AgentOverlay",
+      "module_id": "fc2fe64b-de57-4e3e-9fda-3608ea3e9e5b",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\DrivenRides\\Dependencies\\0Harmony.dll",
+      "name": "0Harmony",
+      "module_id": "024a0e6e-c8c2-437e-ad04-7b6279389c23",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": true,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\DrivenRides\\Dependencies\\DrivenRides.Core.dll",
+      "name": "DrivenRides.Core",
+      "module_id": "8a7ffb9d-4c7a-46de-bf8b-63d2af364ade",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\DrivenRides\\DrivenRides.dll",
+      "name": "DrivenRides",
+      "module_id": "aa677f70-3d6e-4964-8a9d-c17be4c4bfa8",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\FoodTrucks\\Dependencies\\0Harmony.dll",
+      "name": "0Harmony",
+      "module_id": "024a0e6e-c8c2-437e-ad04-7b6279389c23",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": true,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\FoodTrucks\\Dependencies\\BridgeControl.dll",
+      "name": "BridgeControl",
+      "module_id": "b0e52d52-8757-4c9a-88bc-cc3c07116827",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": true,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\FoodTrucks\\Dependencies\\FoodTrucks.Core.dll",
+      "name": "FoodTrucks.Core",
+      "module_id": "79a44445-040d-45b4-8239-cbf123a0273f",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\FoodTrucks\\FoodTrucks.dll",
+      "name": "FoodTrucks",
+      "module_id": "d55ce262-e607-47ca-86e3-28a472820d97",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\Roadster\\Dependencies\\0Harmony.dll",
+      "name": "0Harmony",
+      "module_id": "024a0e6e-c8c2-437e-ad04-7b6279389c23",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": true,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\Roadster\\Roadster.dll",
+      "name": "Roadster",
+      "module_id": "5cadbe74-eba8-4994-b5dd-88f33aef598f",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    },
+    {
+      "file": "C:\\Users\\Peter\\AppData\\LocalLow\\Hovgaard Games\\Big Ambitions Agent Tests\\ModsLocal\\RoadsterRig\\RoadsterRig.dll",
+      "name": "RoadsterRig",
+      "module_id": "b687378e-66ac-4011-8436-68cfbb8f9b4b",
+      "call_sites": 0,
+      "methods": 0,
+      "excluded": false,
+      "problems": []
+    }
+  ]
+}

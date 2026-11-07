@@ -1,0 +1,17 @@
+{
+  "observed_released_utc": "2026-11-07T08:14:25.500315+00:00",
+  "owner": "rdstr-0.0.3-records-1107",
+  "after": {
+    "instance": "agent1",
+    "held": true,
+    "owner": "cp1-sync-native-1107b",
+    "purpose": "cp1-sync-native-1107b native CP PR1 before/after acceptance",
+    "acquired_utc": "2026-11-07T08:13:54.5421581Z",
+    "expires_automatically": false,
+    "pending": 0,
+    "legacy_blocked": false
+  },
+  "workshop_source_files_unchanged": true,
+  "workshop_files_verified": 8,
+  "note": "Release succeeded and unheld/zero-pending assertion passed in release.py; subsequent verification initially hit a receipt text-encoding error. This read-only check confirms the lease belongs to a subsequent tester and Workshop hashes match; no control was attempted after release."
+}

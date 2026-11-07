@@ -1,0 +1,6706 @@
+{
+  "start": {
+    "frame": 22166,
+    "time": 121.1992,
+    "realtime": 272.055847,
+    "fixedTime": 121.18,
+    "deltaTime": 0.0120694,
+    "fixedDeltaTime": 0.02,
+    "timeScale": 1.0,
+    "cars": [
+      {
+        "id": "Xg8fbquqrEeWBbxkEUVbyA==",
+        "speed_mps": 0.0,
+        "position": {
+          "x": -1549.97681,
+          "y": 0.2959584,
+          "z": -972.2471
+        },
+        "rotation": {
+          "x": -1.87392445e-07,
+          "y": 90.0,
+          "z": 1.14462082e-07
+        },
+        "throttle": 0.0,
+        "steering": 0.0,
+        "brake": 0.0,
+        "handbrake": 0.0
+      }
+    ]
+  },
+  "final": {
+    "save": "FT RDSTR Rig 20261031 Before",
+    "frame": 23079,
+    "time": 188.694016,
+    "realtime": 298.451,
+    "fixedTime": 188.68,
+    "fixedDeltaTime": 0.02,
+    "deltaTime": 0.0147988,
+    "timeScale": 1.0,
+    "targetFrameRate": 90,
+    "vSyncCount": 0,
+    "blocked": false,
+    "mapOpen": false,
+    "keyboard": {
+      "enabled": true,
+      "J": false,
+      "Backslash": false,
+      "N": false,
+      "W": false
+    },
+    "cars": [
+      {
+        "id": "Xg8fbquqrEeWBbxkEUVbyA==",
+        "type": "roadster:vehicletype_roadster",
+        "savedColor": "Red",
+        "controlled": true,
+        "position": {
+          "x": 221.255,
+          "y": 0.005882602,
+          "z": -173.381516
+        },
+        "rotation": {
+          "x": 0.136828378,
+          "y": 175.976456,
+          "z": 359.92157
+        },
+        "speed_mps": 0.131682843,
+        "velocity": {
+          "x": 0.09897956,
+          "y": -6.66677952e-05,
+          "z": -0.08685283
+        },
+        "kinematic": false,
+        "shouldLightsBeOn": false,
+        "throttle": 0.0,
+        "brake": 0.0,
+        "steering": 0.000692754344,
+        "handbrake": 1.0,
+        "gear": 0,
+        "damage": 0.1728198,
+        "autoInput": false,
+        "wheelCenters": [
+          {
+            "name": "FrontLeft_WheelController",
+            "position": {
+              "x": 222.183746,
+              "y": 0.5309395,
+              "z": -174.680817
+            },
+            "grounded": true
+          },
+          {
+            "name": "FrontRight_WheelController",
+            "position": {
+              "x": 220.515854,
+              "y": 0.528651059,
+              "z": -174.798126
+            },
+            "grounded": true
+          },
+          {
+            "name": "RearLeft_WheelController",
+            "position": {
+              "x": 222.0139,
+              "y": 0.545637846,
+              "z": -171.895889
+            },
+            "grounded": true
+          },
+          {
+            "name": "RearRight_WheelController",
+            "position": {
+              "x": 220.294144,
+              "y": 0.5432782,
+              "z": -172.016846
+            },
+            "grounded": true
+          }
+        ],
+        "bodyProperties": [
+          {
+            "name": "CheapSaloon",
+            "tint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0
+          },
+          {
+            "name": "FrontLeft",
+            "tint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0
+          },
+          {
+            "name": "FrontRight",
+            "tint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0
+          },
+          {
+            "name": "RearLeft",
+            "tint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0
+          },
+          {
+            "name": "RearRight",
+            "tint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0
+          },
+          {
+            "name": "Roadster_Wing",
+            "tint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0
+          }
+        ],
+        "beamLights": [
+          {
+            "name": "Spotlights",
+            "enabled": false,
+            "active": true,
+            "intensity": 180000.0
+          }
+        ],
+        "plumes": [
+          {
+            "name": "Plume_Rear_1",
+            "enabled": false,
+            "active": true,
+            "scale": {
+              "x": 0.35,
+              "y": 0.35,
+              "z": 1.6
+            }
+          },
+          {
+            "name": "Plume_Rear_2",
+            "enabled": false,
+            "active": true,
+            "scale": {
+              "x": 0.35,
+              "y": 0.35,
+              "z": 1.6
+            }
+          },
+          {
+            "name": "Plume_Rear_3",
+            "enabled": false,
+            "active": true,
+            "scale": {
+              "x": 0.35,
+              "y": 0.35,
+              "z": 1.6
+            }
+          },
+          {
+            "name": "Plume_Rear_4",
+            "enabled": false,
+            "active": true,
+            "scale": {
+              "x": 0.35,
+              "y": 0.35,
+              "z": 1.6
+            }
+          },
+          {
+            "name": "Plume_Down_1",
+            "enabled": false,
+            "active": true,
+            "scale": {
+              "x": 0.2847167,
+              "y": 0.2847167,
+              "z": 1.02207649
+            }
+          },
+          {
+            "name": "Plume_Down_2",
+            "enabled": false,
+            "active": true,
+            "scale": {
+              "x": 0.33156243,
+              "y": 0.33156243,
+              "z": 1.19024336
+            }
+          }
+        ],
+        "renderers": [
+          {
+            "name": "CheapSaloon",
+            "boundsCenter": {
+              "x": 221.25354,
+              "y": 0.618021,
+              "z": -173.372208
+            },
+            "boundsSize": {
+              "x": 2.32961345,
+              "y": 1.17323172,
+              "z": 4.62865639
+            },
+            "bodyTint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Black",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Paint",
+                "shader": "Shader Graphs/SH_Vehicle",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Carbon",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Indicator",
+                "shader": "Shader Graphs/SH_Vehicle",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Metal",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Rubber",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Plate",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Glass",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_HeadLight",
+                "shader": "Shader Graphs/SH_Vehicle",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_TailLight",
+                "shader": "Shader Graphs/SH_Vehicle",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Bronze",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Alloy",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Roadster_Wing",
+            "boundsCenter": {
+              "x": 221.122818,
+              "y": 0.895708859,
+              "z": -171.519562
+            },
+            "boundsSize": {
+              "x": 2.11577439,
+              "y": 0.105138,
+              "z": 0.5856247
+            },
+            "bodyTint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Paint",
+                "shader": "Shader Graphs/SH_Vehicle",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Carbon",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Metal",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Alloy",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Plume_Rear_1",
+            "boundsCenter": {
+              "x": 220.642944,
+              "y": 0.428708732,
+              "z": -170.331955
+            },
+            "boundsSize": {
+              "x": 0.4617663,
+              "y": 0.3074077,
+              "z": 1.6213603
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Plume",
+                "shader": "HDRP/Unlit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Plume_Rear_2",
+            "boundsCenter": {
+              "x": 220.9063,
+              "y": 0.429070055,
+              "z": -170.313431
+            },
+            "boundsSize": {
+              "x": 0.4617663,
+              "y": 0.3074077,
+              "z": 1.6213603
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Plume",
+                "shader": "HDRP/Unlit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Plume_Rear_3",
+            "boundsCenter": {
+              "x": 221.169647,
+              "y": 0.429431379,
+              "z": -170.2949
+            },
+            "boundsSize": {
+              "x": 0.4617663,
+              "y": 0.3074077,
+              "z": 1.6213603
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Plume",
+                "shader": "HDRP/Unlit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Plume_Rear_4",
+            "boundsCenter": {
+              "x": 221.433,
+              "y": 0.4297927,
+              "z": -170.276382
+            },
+            "boundsSize": {
+              "x": 0.4617663,
+              "y": 0.3074077,
+              "z": 1.6213603
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Plume",
+                "shader": "HDRP/Unlit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Plume_Down_1",
+            "boundsCenter": {
+              "x": 220.343185,
+              "y": -0.3219391,
+              "z": -171.642426
+            },
+            "boundsSize": {
+              "x": 0.30254,
+              "y": 1.02305126,
+              "z": 0.2684732
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Plume",
+                "shader": "HDRP/Unlit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Plume_Down_2",
+            "boundsCenter": {
+              "x": 221.9154,
+              "y": -0.403865218,
+              "z": -171.531631
+            },
+            "boundsSize": {
+              "x": 0.352318257,
+              "y": 1.19137847,
+              "z": 0.312646329
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Plume",
+                "shader": "HDRP/Unlit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FrontLeft",
+            "boundsCenter": {
+              "x": 222.19191,
+              "y": 0.372193545,
+              "z": -174.6799
+            },
+            "boundsSize": {
+              "x": 0.3952192,
+              "y": 1.00760627,
+              "z": 1.02741528
+            },
+            "bodyTint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Rubber",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Metal",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Alloy",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Black",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_WheelPaint",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShadowCaster",
+            "boundsCenter": {
+              "x": 222.183929,
+              "y": 0.372139335,
+              "z": -174.68042
+            },
+            "boundsSize": {
+              "x": 0.340510041,
+              "y": 0.9512049,
+              "z": 0.9676912
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "DefaultHDMaterial",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FrontRight",
+            "boundsCenter": {
+              "x": 220.508072,
+              "y": 0.36424,
+              "z": -174.798279
+            },
+            "boundsSize": {
+              "x": 0.387569636,
+              "y": 0.904627442,
+              "z": 0.92474097
+            },
+            "bodyTint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Rubber",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Metal",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Alloy",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Black",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_WheelPaint",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShadowCaster",
+            "boundsCenter": {
+              "x": 220.516052,
+              "y": 0.364251763,
+              "z": -174.797714
+            },
+            "boundsSize": {
+              "x": 0.333279282,
+              "y": 0.8538762,
+              "z": 0.8706301
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "DefaultHDMaterial",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "RearLeft",
+            "boundsCenter": {
+              "x": 222.022064,
+              "y": 0.381990671,
+              "z": -171.8949
+            },
+            "boundsSize": {
+              "x": 0.397799641,
+              "y": 1.03704643,
+              "z": 1.05692661
+            },
+            "bodyTint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Rubber",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Metal",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Alloy",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Black",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_WheelPaint",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShadowCaster (2)",
+            "boundsCenter": {
+              "x": 222.014084,
+              "y": 0.38196677,
+              "z": -171.895477
+            },
+            "boundsSize": {
+              "x": 0.342939049,
+              "y": 0.9788958,
+              "z": 0.995417953
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "DefaultHDMaterial",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "RearRight",
+            "boundsCenter": {
+              "x": 220.286377,
+              "y": 0.373903126,
+              "z": -172.016983
+            },
+            "boundsSize": {
+              "x": 0.398043841,
+              "y": 1.03681338,
+              "z": 1.05667746
+            },
+            "bodyTint": [
+              0.371237785,
+              0.0116122449,
+              0.0109600937,
+              1.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Roadster_Rubber",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Metal",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Alloy",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_Black",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Roadster_WheelPaint",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShadowCaster (1)",
+            "boundsCenter": {
+              "x": 220.294357,
+              "y": 0.373912543,
+              "z": -172.016418
+            },
+            "boundsSize": {
+              "x": 0.343168557,
+              "y": 0.9786626,
+              "z": 0.99516803
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "DefaultHDMaterial",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SmokeBrokenCar",
+            "boundsCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "SmokeMaterialMobile",
+                "shader": "Mobile/Particles/Alpha Blended",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "None",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "DefaultHDMaterial",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair01",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair02",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair03",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair04",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair05",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair06",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair07",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleHair08",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "None",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "DefaultHDMaterial",
+                "shader": "HDRP/Lit",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard01",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard02",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard03",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard04",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard05",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard06",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Beard07",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "MaleFace",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleFace1LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "Eyebrows2",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hat",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Hat",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Half_Hat",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Hat",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Headphones",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Headset",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hoodie",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Hoodie",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Polo",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtBiColor",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_BicolorShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtHG",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HGShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "EmployeeShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShirtEmployee",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitTop",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_SuitTop",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SportShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SportShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtInside",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "HighNeckShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HighNeckShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DiscoShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_DiscoShirtColors",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "OpenedShirtLines",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_OpenedShirtLines",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "UniformShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_UniformShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DoctorGown",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_DoctorGownStethoscope",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_DoctorGownNeck",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_DoctorGown",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_UniformShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "OpenedShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_OpenedShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitJacket",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SuitJacket",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_HighNeckShirt_SuitJacket",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sweater",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sweater",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SweaterChristmas",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_ChristmasSweater",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Apron",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ApronShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Apron",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Half_Apron",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ApronShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_HalfApron",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "BulletproofVest",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_BulletproofVest",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_HighNeckShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NakedTorso",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBase_LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Whistle",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Whistle",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CargoPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShortCargoPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CargoPantsLong",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_LongCargoPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CargoPants_Camuflage",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShortCargoPantsCamuflage",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jeans",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Jeans",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SuitPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DiscoPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_DiscoPants",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SportPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sportpants",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShortJeans",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShortJeans",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NakedLegs",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleUnderwear",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SwimSuit",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBase",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSwimsuit",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shoes",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shoes_Sole",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Shoes_Base",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Shoes_Fabric",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Shoes_Inside",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitShoes",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSuitShoes",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBase",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sneakers",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SneakersLOD",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBase",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SportSneakers",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SportSneakers",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBase",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NakedFeet",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Boots",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Boots",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_BootsSole",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sneakers02",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sneakers02_01",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Sneakers02_02",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sneakers03",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_MaleSkinBaseWithoutSSS",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Sneakers03Sole",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Sneakers03",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "None",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              null
+            ]
+          },
+          {
+            "name": "FemHair01",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FemHair02",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FemHair03",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FemHair04",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FemHair05",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FemHair06",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleHair01LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FemFace",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "MaleFace1LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "Eyebrows2",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hat",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Hat",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Half_Hat",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Hat",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Headphones",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Headset",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Hoodie",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Hoodie",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DoctorGown",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_DoctorGownStethoscope",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_DoctorGownNeck",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_DoctorGown",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_UniformShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtBiColor",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_BicolorShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtInside",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtHG",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HGShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "HighNeckShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HighNeckShirt_Female",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sweater",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sweater",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SweaterChristmas",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_ChristmasSweater",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitTop",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_SuitTop",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Top",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Top",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "TopCamuflage",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_TopCam",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Croptop",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Croptop",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DiscoTop",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_InsideTopDisco",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DiscoShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_DiscoShirtColors",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitJacket",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SuitJacket",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_HighNeckShirt_SuitJacket",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "UniformShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_UniformShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "EmployeeShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShirtEmployee",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShirtSport",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SportShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Half_Apron",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HalfApron",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_ApronShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Apron",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Apron",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_ApronShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "BulletproofVest",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_BulletproofVest",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_HighNeckShirt_Female",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "InsideTop",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_InsideTop",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "OpenedShirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_OpenedShirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NakedTorso",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemaleUnderwear",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Swimsuit",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin_LOD",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemaleSwimsuit",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Whistle",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Whistle",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CargoPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShortCargoPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShortJeans",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShortJeans",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CargoPantsLong",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_LongCargoPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "CargoPantsCamuflage",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_ShortCargoPantsCamuflage",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Jeans",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Jeans",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_SuitPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "HighWaisted",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HighwaistedPants",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "DiscoPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_DiscoPants",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SportPants",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sportpants",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "FormalSkirt",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "FemaleSkirt",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NakedLegs",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemaleUnderwear",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Swimsuit",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemaleSwimsuit",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sneakers",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_SneakersLOD",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "SuitShoes",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSuitShoes",
+                "shader": "Shader Graphs/SH_CharacterClothesStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sportsneakers",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_SportSneakers",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "NakedFeet",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemaleUnderwear",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Boots",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Boots",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_BootsSole",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sneakers02",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sneakers02_01",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Sneakers02_02",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Shoes",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Shoes_Sole",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Shoes_Base",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Shoes_Fabric",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Shoes_Inside",
+                "shader": "Shader Graphs/SH_CharacterClothes",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Sneakers03",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Sneakers03Sole",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_Sneakers03",
+                "shader": "Shader Graphs/SH_CharacterClothesArray",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              },
+              {
+                "name": "M_FemSkin",
+                "shader": "Shader Graphs/SH_CharacterStandard",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "ShadowCaster",
+            "boundsCenter": {
+              "x": 221.255,
+              "y": 0.005882602,
+              "z": -173.381516
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_UnlitBlack",
+                "shader": "Shader Graphs/SH_SimpleUnlitColor",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Rain",
+            "boundsCenter": {
+              "x": -1549.84351,
+              "y": 50.2958946,
+              "z": -972.217163
+            },
+            "boundsSize": {
+              "x": 2.028195e-05,
+              "y": 2.00708128e-05,
+              "z": 2.02491974e-05
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_RainDrop",
+                "shader": "Shader Graphs/ParticleLitSoft",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "RainSheet",
+            "boundsCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_HeavyRainDrops",
+                "shader": "Shader Graphs/ParticleLitSoft",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Ripple_PS",
+            "boundsCenter": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "boundsSize": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "bodyTint": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "front": 0.0,
+            "rear": 0.0,
+            "materials": [
+              {
+                "name": "M_Ripple",
+                "shader": "Legacy Shaders/Particles/Additive",
+                "supported": true,
+                "emission": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "samples": 911,
+  "observed_wall_seconds": 26.322271,
+  "simulation_seconds": 67.41667499999998,
+  "sampled_path_excluding_large_bridge_jump_m": 788.5700110838512,
+  "large_bridge_jump_m": [
+    1418.920530566565
+  ],
+  "contacts": [
+    {
+      "time": 121.2,
+      "realtime": 272.064484,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0253319722,
+      "point": "(-1552.31, 1.04, -972.11)"
+    },
+    {
+      "time": 121.219994,
+      "realtime": 272.067322,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0116964607,
+      "point": "(-1552.31, 1.05, -972.11)"
+    },
+    {
+      "time": 121.24,
+      "realtime": 272.070557,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0372483172,
+      "point": "(-1552.31, 1.05, -972.11)"
+    },
+    {
+      "time": 121.259995,
+      "realtime": 272.073761,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0188372713,
+      "point": "(-1552.31, 1.05, -972.11)"
+    },
+    {
+      "time": 121.28,
+      "realtime": 272.076355,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.009260007,
+      "point": "(-1552.31, 1.05, -972.11)"
+    },
+    {
+      "time": 121.299995,
+      "realtime": 272.0792,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0216934122,
+      "point": "(-1552.31, 1.05, -972.11)"
+    },
+    {
+      "time": 121.32,
+      "realtime": 272.08194,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.02230065,
+      "point": "(-1552.35, 0.78, -971.83)"
+    },
+    {
+      "time": 121.34,
+      "realtime": 272.084564,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0267076958,
+      "point": "(-1552.35, 0.78, -971.83)"
+    },
+    {
+      "time": 121.36,
+      "realtime": 272.087158,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.050132975,
+      "point": "(-1552.34, 0.78, -971.83)"
+    },
+    {
+      "time": 121.38,
+      "realtime": 272.0906,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.03779172,
+      "point": "(-1552.34, 0.78, -971.83)"
+    },
+    {
+      "time": 121.399994,
+      "realtime": 272.0937,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.103962384,
+      "point": "(-1552.34, 0.78, -971.83)"
+    },
+    {
+      "time": 121.42,
+      "realtime": 272.096832,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0496529154,
+      "point": "(-1552.34, 0.78, -971.83)"
+    },
+    {
+      "time": 121.439995,
+      "realtime": 272.100067,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.156023666,
+      "point": "(-1552.29, 1.12, -971.38)"
+    },
+    {
+      "time": 121.46,
+      "realtime": 272.2108,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0600185543,
+      "point": "(-1552.34, 0.78, -971.84)"
+    },
+    {
+      "time": 121.479996,
+      "realtime": 272.213257,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.209205046,
+      "point": "(-1552.29, 1.12, -971.38)"
+    },
+    {
+      "time": 121.5,
+      "realtime": 272.216217,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.05810336,
+      "point": "(-1552.28, 1.12, -971.38)"
+    },
+    {
+      "time": 121.52,
+      "realtime": 272.218933,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.2621469,
+      "point": "(-1552.28, 1.12, -971.38)"
+    },
+    {
+      "time": 121.54,
+      "realtime": 272.222015,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0659979,
+      "point": "(-1552.28, 1.13, -971.38)"
+    },
+    {
+      "time": 121.56,
+      "realtime": 272.2248,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.300697684,
+      "point": "(-1552.28, 1.12, -971.38)"
+    },
+    {
+      "time": 121.579994,
+      "realtime": 272.227966,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0720251948,
+      "point": "(-1552.28, 1.13, -971.38)"
+    },
+    {
+      "time": 121.6,
+      "realtime": 273.657562,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.286418855,
+      "point": "(-1552.28, 1.12, -971.39)"
+    },
+    {
+      "time": 121.619995,
+      "realtime": 273.6635,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.0774663,
+      "point": "(-1552.28, 1.13, -971.39)"
+    },
+    {
+      "time": 121.64,
+      "realtime": 273.67,
+      "name": "BodyCollider",
+      "layer": "AiVehicles",
+      "path": "TrafficHolder/Colliders/BodyCollider",
+      "parent": "Colliders",
+      "relativeSpeed": 0.4847911,
+      "point": "(-1552.31, 1.05, -972.17)"
+    }
+  ],
+  "note": "Self Driving uses native trip acceleration and a bridge skip. Sampled physical path and bridge jump are separated; no claim of 3138 m continuous physical driving."
+}
