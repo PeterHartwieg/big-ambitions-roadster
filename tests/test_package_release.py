@@ -101,7 +101,12 @@ class PackageTests(unittest.TestCase):
         original.unlink()
         target = self.root / 'external.dll'
         target.write_bytes(data)
-        original.symlink_to(target)
+        try:
+            original.symlink_to(target)
+        except OSError as error:
+            if getattr(error, 'winerror', None) != 1314:
+                raise
+            self.skipTest('creating symlinks needs Developer Mode or admin rights on Windows')
         with self.assertRaisesRegex(SystemExit, 'Refusing symlink'):
             self.run_package()
 

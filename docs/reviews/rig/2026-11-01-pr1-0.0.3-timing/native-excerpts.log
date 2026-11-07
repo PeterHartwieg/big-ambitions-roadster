@@ -1,0 +1,68 @@
+=== BEFORE STARTUP ===
+[Mod:Roadster] Version 0.0.2 loading.
+[Mod:Roadster] Vehicle registered: roadster:vehicletype_roadster (price 250000).
+[Mod:Roadster] Active: VehicleContractSettings.SetListOfVehiclesForSale.
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch mode: motors.
+=== ACCEPTED before-matched-native-motors-1 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.31 s (target 1.60 s).
+=== ACCEPTED before-matched-native-motors-2 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.31 s (target 1.60 s).
+=== ACCEPTED before-matched-native-motors-3 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.30 s (target 1.60 s).
+=== ACCEPTED before-matched-native-motors-4 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.30 s (target 1.60 s).
+=== ACCEPTED before-matched-native-motors-5 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.31 s (target 1.60 s).
+=== ACCEPTED before-matched-native-nitrogen-1 ===
+[Mod:Roadster] Launch started (nitrogen, target 0-60 mph in 0.6 s).
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.60 s (target 0.60 s).
+=== ACCEPTED before-matched-native-nitrogen-2 ===
+[Mod:Roadster] Launch started (nitrogen, target 0-60 mph in 0.6 s).
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.60 s (target 0.60 s).
+=== ACCEPTED before-matched-native-nitrogen-3 ===
+[Mod:Roadster] Launch started (nitrogen, target 0-60 mph in 0.6 s).
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.63 s (target 0.60 s).
+=== AFTER STARTUP ===
+[Mod:Roadster] Version 0.0.3 loading.
+[Mod:Roadster] Vehicle registered: roadster:vehicletype_roadster (price 250000).
+[Mod:Roadster] Active: VehicleContractSettings.SetListOfVehiclesForSale.
+[Mod:Roadster] Plumes found: 4 rear, 2 down.
+[Mod:Roadster] Launch mode: motors.
+=== ACCEPTED after-matched-native-motors-1 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.29 s (target 1.60 s).
+=== ACCEPTED after-matched-native-motors-2 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.29 s (target 1.60 s).
+=== ACCEPTED after-matched-native-motors-3 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.30 s (target 1.60 s).
+=== ACCEPTED after-matched-native-motors-4 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.29 s (target 1.60 s).
+=== ACCEPTED after-matched-native-motors-5 ===
+[Mod:Roadster] Launch started (motors, target 0-60 mph in 1.6 s).
+[Mod:Roadster] Launch (motors): 0-60 mph in 1.30 s (target 1.60 s).
+=== ACCEPTED after-matched-native-nitrogen-1 ===
+[Mod:Roadster] Launch started (nitrogen, target 0-60 mph in 0.6 s).
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.60 s (target 0.60 s).
+=== ACCEPTED after-matched-native-nitrogen-2 ===
+[Mod:Roadster] Launch started (nitrogen, target 0-60 mph in 0.6 s).
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.63 s (target 0.60 s).
+=== ACCEPTED after-matched-native-nitrogen-3 ===
+[Mod:Roadster] Launch started (nitrogen, target 0-60 mph in 0.6 s).
+[Mod:Roadster] Launch (nitrogen): 0-60 mph in 0.60 s (target 0.60 s).
+=== LEFT ROLL 2 ===
+[Mod:Roadster] Barrel roll to the left at 23 mph.
+[Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.6 m/s, 2 degrees off level, 2.62 s in the air.
+=== OPTIONAL J ===
+[Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+[Mod:DrivenRides] Boarded inside the car at (-1476.55, 0.30, -973.01).
+[Mod:DrivenRides] Ride cancelled: unparking: not enough clear straight road to pull out.
+[Mod:DrivenRides] Own car: the keys are the player's again (cancelled: unparking: not enough clear straight road to pull out).

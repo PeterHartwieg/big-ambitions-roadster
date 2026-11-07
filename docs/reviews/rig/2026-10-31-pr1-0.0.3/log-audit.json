@@ -1,0 +1,12 @@
+{
+  "game_build": 3682,
+  "before_log_sha256": "39ad775b90d05898c147b013ac9a412f64ed2b585ed557b94f24f11429103a96",
+  "after_final_log_sha256": "f553a1347859d3a78e1060c52e57eba839cc835495d0e082552222df3aafe000",
+  "after_trials_log_sha256": "bc10e90bff55e21dea17d55528ea76ba784f8b4df61b38e188168de3538a2c40",
+  "before_roadster_ERROR_lines": [],
+  "after_roadster_ERROR_lines": [],
+  "after_exception_or_shader_load_errors": [],
+  "helper_source_sha256": "14f799ac651fdce79e973bdaf66e790d707973ef76b5e730591ba70db6396e44",
+  "helper_dll_sha256": "8d877307fe258d80ed79cbcbc0efff77ddcfb07e9e54aa1f2407ba60de567c72",
+  "existing_agent1_BigAmbitions_dll_sha256": "055700fd26a7a6430bbb6a9d79379781909fbc518af760453396947887db5063"
+}

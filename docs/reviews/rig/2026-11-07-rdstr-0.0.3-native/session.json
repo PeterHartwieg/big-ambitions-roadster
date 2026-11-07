@@ -1,0 +1,35 @@
+{
+  "task": "rdstr-0.0.3-records-1107",
+  "branch": "harness/rdstr-0.0.3-records-1107",
+  "head": "ba548cbc70d4f7ba6895b520e293b0a8fe13a3d7",
+  "configured_rig_role": {
+    "tool": "codex",
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "where": "pc"
+  },
+  "provider_returned_model_identifier": "not independently exposed",
+  "stage": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107",
+  "helper_source_sha256": "49c35f000eecfa367ce7c02764910e0c37824e091f02c49c11f117ab6d5ab7b4",
+  "helper_dll_sha256": "14b4539945cc5aaccd384e869be0438c50cdae6400689f88c2d5a7a12c7e18dc",
+  "helper_scope": "Isolated product and FT RDSTR Rig save prefix; queues Input System KeyboardState, records native properties and contacts; fixture place/pin/enter/exit only. Does not assign roll/lamp state.",
+  "no_candidate_rebuild": true,
+  "pretest_receipt_game_files": [
+    {
+      "sha256": "4a248b40f09ed19dcaf1a44719345c033c6bebd889fae0b25ac4304e1cefe6d2",
+      "path": "C:\\BigAmbitions-AgentTests\\Big Ambitions Agent Tests_Data\\Managed\\AgentTestRuntime.dll"
+    },
+    {
+      "path": "C:\\BigAmbitions-AgentTests\\Big Ambitions Agent Tests_Data\\Managed\\BigAmbitions.dll",
+      "sha256": "095db57964c85ebb293067ae4699002b383c6d7cfe81674ce15c58ed9fc628ed"
+    },
+    {
+      "sha256": "4b16c613eb2d8bcb90da0f5665ea5f2d6704d21177a01bda35195316c69d2f24",
+      "path": "C:\\BigAmbitions-AgentTests\\Big Ambitions Agent Tests_Data\\Managed\\AgentRigOps.dll"
+    },
+    {
+      "sha256": "c9d93537eea54abf8c7fe513cdfe708ded299301a6f652eea646c9a4c445d6c0",
+      "path": "C:\\BigAmbitions-AgentTests\\Big Ambitions Agent Tests_Data\\Managed\\AgentRigInput.dll"
+    }
+  ]
+}

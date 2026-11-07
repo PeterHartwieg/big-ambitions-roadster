@@ -1,0 +1,20 @@
+Player-windowed.log:30: [Mod:DrivenRides] Version 0.4.2 loading.
+Player-windowed.log:194: [Mod:Roadster] Version 0.0.3 loading.
+Player-windowed.log:195: [Mod:Roadster] Vehicle registered: roadster:vehicletype_roadster (price 250000).
+Player-windowed.log:197: [Mod:Roadster] Active: VehicleContractSettings.SetListOfVehiclesForSale.
+Player-windowed.log:323: [Mod:Roadster] Barrel roll to the left at 22 mph.
+Player-windowed.log:325: [Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.6 m/s, 2 degrees off level, 2.62 s in the air.
+Player-windowed.log:337: [Mod:Roadster] Barrel roll to the left at 23 mph.
+Player-windowed.log:340: [Mod:Roadster] Barrel roll landed: peak 6.3 m, rolled 360 degrees, touchdown 2.6 m/s, 2 degrees off level, 2.62 s in the air.
+Player-windowed.log:348: [RDSTR Rig input] J-stopped-departure-437310 keys=J {"frame":22166,"time":121.1992,"realtime":272.056,"fixedTime":121.18,"deltaTime":0.0120694,"fixedDeltaTime":0.02,"timeScale":1.0,"cars":[{"id":"Xg8fbquqrEeWBbxkEUVbyA==","speed_mps":0.0,"position":{"x":-1549.97681,"y":0.2959584,"z":-972.2471},"rotation":{"x":-1.87392445E-07,"y":90.0,"z":1.14462082E-07},"throttle":0.0,"steering":0.0,"brake":0.0,"handbrake":0.0}]}
+Player-windowed.log:360: [Mod:DrivenRides] Own car: starts on the step from waypoint 16070, -0.3 m to the side of it.
+Player-windowed.log:365: [Mod:DrivenRides] Own car: driving itself (roadster:vehicletype_roadster, wheelbase 2.79 m).
+Player-windowed.log:366: [Mod:DrivenRides] Ride accepted: OwnCar, 613 waypoints, 3138 m, drive 261 s, walk 3 s, planned in 671 ms, budget 77.7 game minutes. Destination 51 ba:street_thirdstreet at (214.21, 0.09, -157.96), drop-off 2322 at (221.39, 0.00, -164.94).
+Player-windowed.log:370: [Mod:DrivenRides] Departed (NWH): 613 waypoints, 3138 m, top 320 km/h, light cycle 8 s.
+Player-windowed.log:373: [Mod:DrivenRides] Bridge: skipping 1418 m to waypoint 17679.
+Player-windowed.log:514: [Mod:DrivenRides] Ride ending: Complete (arrived), 78.6 game minutes so far.
+Player-windowed.log:515: [Mod:DrivenRides] Ride done, the player inside the car: 78.6 game minutes in all.
+Player-background.log:23: [Mod:DrivenRides] Version 0.4.2 loading.
+Player-background.log:187: [Mod:Roadster] Version 0.0.3 loading.
+Player-background.log:188: [Mod:Roadster] Vehicle registered: roadster:vehicletype_roadster (price 250000).
+Player-background.log:190: [Mod:Roadster] Active: VehicleContractSettings.SetListOfVehiclesForSale.

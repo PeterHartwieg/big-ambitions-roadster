@@ -1,0 +1,21 @@
+{
+  "archive": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-release\\Roadster-0.0.3-preview.zip",
+  "sha256": "05a27e4271cccc408914367a7aadd4059c9c00bb6709bc33c88c8ca5b5439ccd",
+  "bytes": 17918517,
+  "source_record": "docs/release-0.0.3.json",
+  "build_source_commit": "unverified (as recorded)",
+  "zip_crc": "passed",
+  "members": {
+    "Roadster/AssetBundles/Mac/roadster.unity3d": "75285c1872ae687e4697e640c3a24e66e7d09f85041180cd16272484dd36b841",
+    "Roadster/AssetBundles/Mac/roadster.unity3d.manifest": "fb768c5dfeff2c9085e25f491573dd49c6eb6d811fb28a8d9ca9db5299295f7b",
+    "Roadster/AssetBundles/Windows/roadster.unity3d": "09421297873ddc427718483b0f30b8b708db0d76918ee54f62c1a71f2dc0bcd3",
+    "Roadster/AssetBundles/Windows/roadster.unity3d.manifest": "ae0758b0176e2a9fe9440b30050ecd9154dd0c6a62922061313fa102c691397c",
+    "Roadster/Dependencies/0Harmony.dll": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+    "Roadster/Dependencies/Harmony-LICENSE.txt": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+    "Roadster/INSTALL.txt": "dda23404fe099bf8374eb0a1f0376955cb69494f339a4f82b6b1d4d736e2ab4e",
+    "Roadster/Locales/en.json": "72ec2aa5b7d05d50aa9d1291608607b477fb49428d9b6d19319d087eccc7d2fe",
+    "Roadster/RELEASE-NOTES.txt": "00a1a6791c8587ca6fd6afdef3df745b9c78ae65ec54f78c6d411af793e5381b",
+    "Roadster/Roadster.dll": "8412918ca1d6f04ff61286d57e3822fe828d89ab7da413e702eeb61c0bc779b9",
+    "SHA256SUMS.txt": "2b7419bddf3b642dc6d1468af68ae9fca6ddd6839b35336affcdb6084254aa0f"
+  }
+}

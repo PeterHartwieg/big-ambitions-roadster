@@ -1,0 +1,329 @@
+[
+  {
+    "file": "images/left-2-before.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\left-2-before.png",
+    "source_sha256": "9babda42788dc3829163eef197b4eb5054b8ecec2be3dbb0f28704e06928de6a",
+    "source_size": [
+      1200,
+      750
+    ],
+    "published_size": [
+      800,
+      500
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "7844e5ff852150d332480e7a1dfbd5678c0a3948ccfccdeded0554c3b9020031"
+  },
+  {
+    "file": "images/left-2-air.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\left-2-air.png",
+    "source_sha256": "2cf58e91380ed8238ce9542b8baab9aee5c6cc90c3c8c09610662f2398434cc4",
+    "source_size": [
+      1200,
+      750
+    ],
+    "published_size": [
+      800,
+      500
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "7918a7cff6502cfdfe77d9ca205632bfb6647fa2779d5f8115cd188c513065ef"
+  },
+  {
+    "file": "images/left-2-landed.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\left-2-landed.png",
+    "source_sha256": "a3055023fd067dad8e8140264a4d490206de286b8c74ed0c9aa34f51768cdc52",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "32d0df13250ef804461feca5d57980f59bac596b448f49ffc17150277890c410"
+  },
+  {
+    "file": "images/J-before.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\J-before.png",
+    "source_sha256": "5d26b76979dea80b03907fdbb9b9965b8bf8ba4d5dc3323894f924a50658456b",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "a5e191b7b8c35d59eae9c62e98daf5aeea1368e197f8adbf2f795841e4dc05e5"
+  },
+  {
+    "file": "images/J-after-25s.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\J-after-25s.png",
+    "source_sha256": "45ae3c48aecf64eb01817b377976d57a0ca278088e97180bb62b0a6a5d5ac8e4",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "e4253eadb3e7898b7e1496bdb75b46447533f08b627598975c2a4402cad57db9"
+  },
+  {
+    "file": "images/roadster-baseline-clear.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\roadster-baseline-clear.png",
+    "source_sha256": "fd0242d50c51f38f42bfc35b9cbec7140a44cb1ae8542c69f9a627e7a8f57136",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "7e27eef3d0ad8590ea86360cbc2d8c7356dd9f476a00526f1c92a7f25cfe8c50"
+  },
+  {
+    "file": "images/roadster-rain-on-10s.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\roadster-rain-on-10s.png",
+    "source_sha256": "60c03d80e753ceb7e0192785ee2f1ea6914b22d3042dadebe0a1f855445e0950",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "fd4c91327e8f5b8b914ad0770e7bc643c51487c0d6c4a7cdf65e73dd477c44d6"
+  },
+  {
+    "file": "images/roadster-rain-reentry.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\roadster-rain-reentry.png",
+    "source_sha256": "cf15210b40807c9b2beda2215598bc83d2f659c4bf5295d41276123564003a7a",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "276c3183f2556bc5408805cd34652c52bb7834e703017ea4e8e14e09bfb37640"
+  },
+  {
+    "file": "images/roadster-rain-off-10s.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\roadster-rain-off-10s.png",
+    "source_sha256": "09a39044743d184436d5bc489a5c5ac754f4ff6cc038bef8e0d27a6739909cc3",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "30539c78ce9ebf3c61515c18a9670039b2d708ce53965f5fb1f95abfcebcb795"
+  },
+  {
+    "file": "images/vanilla-retest-baseline-clear.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\vanilla-retest-baseline-clear.png",
+    "source_sha256": "c539e225a58dfb4a46182e06b73d990d230e7a687d47a97efa4f51f4f8506b4f",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "7d1b1faefe200d740c704ba47dafe6928b9f415d5c7db38192f8f08ba50bf453"
+  },
+  {
+    "file": "images/vanilla-retest-rain-on-10s.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\vanilla-retest-rain-on-10s.png",
+    "source_sha256": "72b1ac8cd0e1c2a6ccb93802bcdf363b9b22a40e8a383d464325efda616906ba",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "df7d1df67ca297041862be9aa846ff52ced1636686d2ece66b5a04212bda8b6d"
+  },
+  {
+    "file": "images/vanilla-retest-rain-reentry.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\vanilla-retest-rain-reentry.png",
+    "source_sha256": "28f8955e1a167984ca503a5f5fb854c1490285660bda6e4f41c1fbf2e7756682",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "248aa68f1b3d0c1540a9a55b228ce4d1d08efbf95948620af46b0ee71e35a462"
+  },
+  {
+    "file": "images/vanilla-retest-rain-off-10s.png",
+    "kind": "running-game observer camera",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\vanilla-retest-rain-off-10s.png",
+    "source_sha256": "24ab475383968a521b0e483a5fb2720504de5923524cf20f3f511a01f8acf82f",
+    "source_size": [
+      1600,
+      900
+    ],
+    "published_size": [
+      800,
+      450
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "fc7b85cbcdf852e7d8e1a375385e6a98301bf325d36f274dc86067e0cf2d45c1"
+  },
+  {
+    "file": "images/native-hover-before.png",
+    "kind": "native game camera + UI, rig capture render_texture",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\native-hover-before.png",
+    "source_sha256": "b22faf7dddcaf742a4c034f83a34e05f3b190298a0ae7f70acbf34616f478118",
+    "source_size": [
+      2564,
+      1018
+    ],
+    "published_size": [
+      800,
+      318
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "61dfdbab43e9fb627e120892c16595225f4c7417e5c263e8697665237331327f"
+  },
+  {
+    "file": "images/native-hover-after.png",
+    "kind": "native game camera + UI, rig capture render_texture",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\native-hover-after.png",
+    "source_sha256": "bd7401295595c90b3488f1352e8dcf0f2a860807dd692fc89800fd1dcecc15da",
+    "source_size": [
+      2564,
+      1018
+    ],
+    "published_size": [
+      800,
+      318
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "4466dae305c2d9927fa1349ec435f8d7cffca2b3ccc2dd812bd183e0cf361c86"
+  },
+  {
+    "file": "images/native-zoom-near.png",
+    "kind": "native game camera + UI, rig capture render_texture",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\native-zoom-near.png",
+    "source_sha256": "5331c3b9eb2a5c74f35e524feed9cf84628980af6dd8dab379c4961b09fdcc0b",
+    "source_size": [
+      2564,
+      1018
+    ],
+    "published_size": [
+      800,
+      318
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "699147fd6203c4a2ff148edbc2eac98e942d7100ca00a2b66de9c231dcbaac2b"
+  },
+  {
+    "file": "images/native-zoom-far.png",
+    "kind": "native game camera + UI, rig capture render_texture",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\native-zoom-far.png",
+    "source_sha256": "b417b7b3a1959918b0e6ac695f49048127503d4551d511dc16a76755487cfa11",
+    "source_size": [
+      2564,
+      1018
+    ],
+    "published_size": [
+      800,
+      318
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "60008159c0d0e0d6d2d84ae70c3c51bddf1d6712d8aab7d2eaeb43f7fd42e955"
+  },
+  {
+    "file": "images/native-zoom-return.png",
+    "kind": "native game camera + UI, rig capture render_texture",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\native-zoom-return.png",
+    "source_sha256": "49289dcabf9f38d7be3e368a32918a63bba09384e47f5906427db7a0526d0e6f",
+    "source_size": [
+      2564,
+      1018
+    ],
+    "published_size": [
+      800,
+      318
+    ],
+    "transform": "Pillow thumbnail within 800x800, LANCZOS; PNG optimize",
+    "sha256": "c1580d06284cef77713e1c27c125a4188f1c16cc9a9cf56923c5892946a1ed45"
+  },
+  {
+    "file": "images/native-hover-detail.png",
+    "kind": "unscaled crop of native game camera capture",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\native-hover-after.png",
+    "source_sha256": "bd7401295595c90b3488f1352e8dcf0f2a860807dd692fc89800fd1dcecc15da",
+    "source_size": [
+      2564,
+      1018
+    ],
+    "published_size": [
+      410,
+      260
+    ],
+    "transform": {
+      "crop_top_left_box": [
+        990,
+        350,
+        1400,
+        610
+      ]
+    },
+    "sha256": "5b67fd71e81b58461ad4fbe06c7f22dcbe790406dfb7f6d2956be8afaf5e35fd"
+  },
+  {
+    "file": "images/windowed-native-black.png",
+    "kind": "failed windowed native capture (all black), not visual acceptance",
+    "source": "C:\\Users\\Peter\\HART-Builds\\rdstr-0.0.3-native-20261107\\screenshots\\ops-native.png",
+    "source_sha256": "3d317c56969b387a9f70888105a23235d7bf9a28ecaa8260e7222c8b98780871",
+    "source_size": [
+      1920,
+      1080
+    ],
+    "published_size": [
+      320,
+      180
+    ],
+    "transform": "thumbnail within 320x180",
+    "sha256": "9f0360de4c5577e6aeded8703ce75d3ec283deedcd80fd4cfb709521d5f0997c"
+  }
+]

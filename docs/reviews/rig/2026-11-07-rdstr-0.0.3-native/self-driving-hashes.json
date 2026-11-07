@@ -1,0 +1,38 @@
+{
+  "assembly": "DrivenRides, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "files": [
+    {
+      "sha256": "61d64f18347de2c57463a05449484297220a0a1d8162762e95454639b82e82ad",
+      "file": "CHANGELOG.md"
+    },
+    {
+      "sha256": "4c52d5d14867f84beee3b36ed97a3688370c8a48f21709fc55945b441bdc2d67",
+      "file": "DrivenRides.dll"
+    },
+    {
+      "sha256": "dfb53130398530b7569d6d2686991c0dba5f6e9785b4a83fa60fd51dc6ba1ba1",
+      "file": "LICENSE.txt"
+    },
+    {
+      "sha256": "28c1c64b0ff2728d4a553bdd4808a695ea900177eb7d40735bf8a53a96592039",
+      "file": "README.md"
+    },
+    {
+      "sha256": "7b9e756306fa3d7620e02a857c8927a6ab04973f9bd8a77d3866700a6deac55c",
+      "file": "Dependencies\\0Harmony.dll"
+    },
+    {
+      "sha256": "b2a3fcd3112b967b82d670144b1e29375c67c7ef966848864c7eaaff05793aab",
+      "file": "Dependencies\\DrivenRides.Core.dll"
+    },
+    {
+      "sha256": "407ddd98200c9f17f49942b5a7791e288a2bd553b59bf2f462db87dbb21c50bc",
+      "file": "Dependencies\\Harmony-LICENSE.txt"
+    },
+    {
+      "sha256": "76d8a78e852e6cb28ee19857f0185e4d4c4f38292901c73dc525f66a56972b26",
+      "file": "Locales\\en.json"
+    }
+  ],
+  "source": "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\1331550\\3819853552"
+}

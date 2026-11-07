@@ -1,0 +1,122 @@
+{
+  "left-2-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 329
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 330
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 331
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 333
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 336
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 338
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 339
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 341
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 342
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 343
+    }
+  ],
+  "J-stopped-departure-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 348
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 368
+    },
+    {
+      "log": "Player-windowed.log",
+      "line": 521
+    }
+  ],
+  "roadster-rain-on-10s-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 596
+    }
+  ],
+  "roadster-rain-reentry-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 599
+    }
+  ],
+  "roadster-rain-off-10s-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 605
+    }
+  ],
+  "vanilla-retest-rain-on-10s-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 647
+    }
+  ],
+  "vanilla-retest-rain-reentry-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 650
+    }
+  ],
+  "vanilla-retest-rain-off-10s-": [
+    {
+      "log": "Player-windowed.log",
+      "line": 659
+    }
+  ],
+  "native-hover-confirmed-state-": [
+    {
+      "log": "Player-background.log",
+      "line": 306
+    }
+  ],
+  "native-zoom-near-state-": [
+    {
+      "log": "Player-background.log",
+      "line": 308
+    }
+  ],
+  "native-zoom-far-state-": [
+    {
+      "log": "Player-background.log",
+      "line": 309
+    }
+  ],
+  "stunt-before-state-": [
+    {
+      "log": "Player-background.log",
+      "line": 314
+    },
+    {
+      "log": "Player-background.log",
+      "line": 326
+    }
+  ]
+}

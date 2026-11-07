@@ -1,0 +1,44 @@
+{
+  "status": "failed",
+  "items": [
+    {
+      "item": 1,
+      "status": "PASS",
+      "key_speed_mps": 10.2749653,
+      "direction": "left",
+      "rolled_deg": 360,
+      "peak_m": 6.3,
+      "touchdown_mps": 2.6,
+      "landing_off_level_deg": 2,
+      "airtime_s": 2.62,
+      "contacts": [],
+      "damage_before": 0.1728198,
+      "damage_after": 0.1728198
+    },
+    {
+      "item": 2,
+      "status": "PASS",
+      "start_speed_mps": 0.0,
+      "completed": "Departed (NWH), sustained driving, Complete (arrived)",
+      "roll_start_in_J_span": false,
+      "sampled_path_m": 788.5700110838512,
+      "bridge_jump_m": [
+        1418.920530566565
+      ]
+    },
+    {
+      "item": 3,
+      "status": "FAIL",
+      "finding": "Neither car refreshed lamps while controlled within the 10-second rain-on/off observation windows. Roadster matched vanilla. Re-entry refreshed both.",
+      "introduced_by_roadster": "not established"
+    },
+    {
+      "item": 4,
+      "status": "PARTIAL",
+      "hover_outline": "PASS",
+      "native_near_far_visual_LOD": "PASS within sampled native zoom range; no numerical LOD-index claim",
+      "stunt_camera": "SKIPPED: background native capture works but Keyboard.current is null, including during a virtual mouse interaction; windowed mode has keyboard but native captures are black.",
+      "subjective_camera_comfort": "unverified"
+    }
+  ]
+}

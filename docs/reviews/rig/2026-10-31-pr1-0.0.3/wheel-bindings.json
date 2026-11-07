@@ -1,0 +1,542 @@
+[
+  {
+    "id": "UIdMYNe9KEWVzR85nYlaUg==",
+    "savedColor": "Blue",
+    "wheels": [
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.03071344,
+          0.09989874,
+          0.332451582,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.03071344,
+          0.09989874,
+          0.332451582,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.03071344,
+          0.09989874,
+          0.332451582,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.03071344,
+          0.09989874,
+          0.332451582,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "NxohmOFpckKTLdSxo7UGdQ==",
+    "savedColor": "Red",
+    "wheels": [
+      {
+        "name": "FrontLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "FrontRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "RearLeft",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      {
+        "name": "RearRight",
+        "tint": [
+          0.371237785,
+          0.0116122449,
+          0.0109600937,
+          1.0
+        ],
+        "materials": [
+          {
+            "name": "M_Roadster_Rubber",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Metal",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Alloy",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_Black",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          },
+          {
+            "name": "M_Roadster_WheelPaint",
+            "shader": "HDRP/Lit",
+            "supported": true,
+            "emission": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
