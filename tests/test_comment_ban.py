@@ -68,13 +68,16 @@ class CommentBanTests(unittest.TestCase):
             'a.sh': 'value="$(\n    # new explanation\n    printf hello\n)"\n',
             'b.sh': 'x=`echo hi # explains`\ny="`echo hi # explains`"\n',
             'c.ps1': '$s = "$(\n# explains\nGet-Date)"\n',
+            'd.sh': 'value="$(case x in x)\n    # explanation\n    printf hello;;\nesac)"\n',
         }
-        self.assertEqual(check(files), [('a.sh', 2, 2), ('b.sh', 1, 1), ('b.sh', 2, 2), ('c.ps1', 2, 2)])
+        self.assertEqual(check(files), [('a.sh', 2, 2), ('b.sh', 1, 1), ('b.sh', 2, 2), ('c.ps1', 2, 2),
+                                        ('d.sh', 2, 2)])
 
     def test_literal_hashes_in_substitutions_and_lengths_pass(self):
         files = {
             'a.sh': 'echo "$(printf \'a # b\' "c # d") e # f"\necho ${#a[@]} "${#a[@]}" $(( 16#ff ))\n',
             'b.ps1': '$s = "$(\'a # b\') c # d"\n',
+            'c.sh': 'v="$(case x in (x) printf \'a # b\';; y) echo "#y";; esac) c # d"\n',
         }
         self.assertEqual(check(files), [])
 

@@ -161,6 +161,7 @@ def hash_spans(text, powershell):
 
     def code(i, stop):
         depth = 0
+        cases = 0
         while i < n:
             c = text[i]
             if c == '\n':
@@ -176,7 +177,11 @@ def hash_spans(text, powershell):
                 heredocs.clear()
                 continue
             prev = text[i - 1] if i else '\n'
-            if c == stop and (stop == '`' or depth == 0):
+            if not powershell and (prev.isspace() or prev in ';|&()') and re.match(r'(?:case|esac)(?=[\s;|&)]|$)', text[i:]):
+                cases += 1 if c == 'c' else -1
+                i += 4
+                continue
+            if c == stop and (stop == '`' or depth == 0) and not (stop == ')' and cases > 0):
                 return i + 1
             if powershell and text.startswith('<#', i):
                 end = text.find('#>', i + 2)
@@ -210,7 +215,7 @@ def hash_spans(text, powershell):
                 depth += 1
                 i += 1
             elif c == ')':
-                depth -= 1
+                depth -= 1 if depth or not cases else 0
                 i += 1
             elif not powershell and text.startswith('<<', i) and not text.startswith('<<<', i):
                 m = re.match(r'<<(-?)\s*([\'"]?)([A-Za-z_][A-Za-z0-9_]*)\2', text[i:])
