@@ -160,7 +160,11 @@ def hash_spans(text, powershell):
         return i + 1
 
     def command_start(i):
-        return re.search(r'(?:^|[\n;&|(`{!]|\b(?:then|do|else|elif|if|while|until))[ \t]*\Z', text[:i]) is not None
+        head = text[:i].rstrip(' \t')
+        if not head or head[-1] in '\n;&|(`':
+            return True
+        m = re.search(r'(?:^|(?<=[\s;&|(`]))(?:then|do|else|elif|if|while|until|!|\{)\Z', head)
+        return m is not None and command_start(m.start())
 
     def code(i, stop):
         depth = 0
