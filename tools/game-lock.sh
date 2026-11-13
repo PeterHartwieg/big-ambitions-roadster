@@ -1,7 +1,3 @@
-# The game PC's lock file, shared by every session that tests in game (sourced by run-remote.sh and install-remote.sh).
-# C:\Users\Peter\game-lock.txt: no file means free. The holder writes owner, since, until and what is running, and
-# deletes it when done. While someone else holds it: no install, start, stop, quit or save load.
-# This session's owner text comes from BA_LOCK_OWNER (default "Roadster session").
 
 LOCK_OWNER="${BA_LOCK_OWNER:-Roadster session}"
 
@@ -10,7 +6,6 @@ lock_text() {
     | { grep -v '^\*\*' || true; } | tr -d '\r'
 }
 
-# Refuses (exit 1) when someone else holds the lock.
 require_lock_free_or_ours() {
   local text owner
   text="$(lock_text)"
@@ -30,7 +25,7 @@ take_lock() {
   require_lock_free_or_ours
   local since until
   local q="'"
-  what="${what//$q/$q$q}"   # a quote doubled stays inside PowerShell's single-quoted string
+  what="${what//$q/$q$q}"
   since="$(date '+%Y-%m-%d %H:%M')"
   until="$(date -v+"${minutes}"M '+%H:%M')"
   ssh "$HOST" "Set-Content -Path \$env:USERPROFILE\\game-lock.txt -Value @('owner: $LOCK_OWNER', 'since: $since', 'until: about $until', 'game: $what', 'rules: no install, restart, load or quit while held; message the owner to ask for it')" < /dev/null

@@ -11,18 +11,12 @@ using Object = UnityEngine.Object;
 
 namespace Roadster.BuildEditor
 {
-    // Puts the Roadster model (art/roadster-free/Roadster-game.fbx and game-export.json, copied into Vehicles/RoadsterArt
-    // by tools/build-mod.sh) into the prefab copied from the SDK's example car. The FBX has seven objects:
-    // Roadster_Body, Roadster_Wheel_FL/FR/RL/RR (origins on the hubs), Roadster_Wing (origin on its hinge) and
-    // Roadster_Collision. The model is untextured: each FBX material becomes an HDRP/Lit material with the flat values
-    // from game-export.json.
     internal static class RoadsterModel
     {
         internal const string ArtFolder = ModAssets.ModFolder + "/Vehicles/RoadsterArt";
         internal const string FbxPath = ArtFolder + "/Roadster_Model.fbx";
         private const string ExportPath = ArtFolder + "/game-export.json";
 
-        // Blender (x, y, z), front −Y, left +X, to Unity (−x, z, −y): the mapping the FBX export settings produce.
         internal static Vector3 ToUnity(JToken v) => new Vector3(-(float)v[0]!, (float)v[2]!, -(float)v[1]!);
 
         private static readonly (string Prefab, string Fbx, string Key)[] Wheels =
@@ -33,26 +27,13 @@ namespace Roadster.BuildEditor
             ("RearRight", "Roadster_Wheel_RR", "RR"),
         };
 
-        // Suspension. The example car's springs (5,000 N over 0.6 m per wheel, dampers 5,000) suit a 120 kW city car; on
-        // the Roadster the loaded axle ran near the end of that travel and the body hit the road ("like driving into a
-        // wall", Peter, 17 October 2026). A short, stiff set-up sized for the fans (RoadsterDrive adds 2 g of suction
-        // whenever the car is on the road, so a wheel carries three times its share of the weight): 30,000 N over 0.25 m.
-        // The 10,300 N a wheel carries with the fans uses 34% of the travel, a hard corner's outer wheel at about 15,000 N
-        // half; only a hard landing reaches the stop. Dampers 12,700 N s/m, about critical for a 350 kg corner on that
-        // spring.
         private const float SpringMaxForce = 30000f;
         private const float SpringLength = 0.25f;
         private const float DamperRate = 12700f;
-        // The example's tyres are rated at 7,000 N and grip no more above it; with the fans a cornering wheel carries up
-        // to about 15,000 N.
         private const float TyreLoadRating = 20000f;
-        // What a wheel carries at rest with the fans on: its share of the weight, three times over.
         private const float FanLoadFactor = 3f;
         private const float CornerWeight = 1400f * 9.81f / 4f * FanLoadFactor;
-        // The controller sits the spring's resting length above the hub, so with the fans on the wheel rests where the
-        // model has it (the car stands about 6 cm higher while they are off, in the air).
         private const float ControllerLift = SpringLength * (1f - CornerWeight / SpringMaxForce);
-        // The example's wheel shadow casters are a unit shape scaled to the wheel: 1.213 x width, 0.471 x diameter.
 
         internal static bool Available => File.Exists(Path.Combine(ProjectRoot, FbxPath)) && File.Exists(Path.Combine(ProjectRoot, ExportPath));
 
@@ -62,7 +43,6 @@ namespace Roadster.BuildEditor
             public Vector3 BoundsMin, BoundsMax;
         }
 
-        // Fills root (the opened prefab contents) from the model. Returns the sizes the drivetrain needs.
         internal static Fit Apply(GameObject root)
         {
             var export = JObject.Parse(File.ReadAllText(Path.Combine(ProjectRoot, ExportPath)));
@@ -74,12 +54,10 @@ namespace Roadster.BuildEditor
             if (missing.Count > 0) throw new InvalidOperationException($"{FbxPath} lacks {string.Join(", ", missing)}.");
             var materials = Materials(export);
 
-            // Body: the example's body renderer takes the whole body mesh, one material per FBX submesh.
             var body = Find(root, "CarHolder/Body/CheapSaloon");
             body.GetComponent<MeshFilter>().sharedMesh = parts["Roadster_Body"].sharedMesh;
             body.GetComponent<MeshRenderer>().sharedMaterials = Remap(parts["Roadster_Body"], materials);
 
-            // Wing: a hinge transform on its axis, the mesh below it, so the runtime can rotate the hinge to deploy it.
             var wingExport = export["wing"] ?? throw new InvalidOperationException("game-export.json has no wing.");
             var hinge = new GameObject("WingHinge").transform;
             hinge.SetParent(body.transform.parent, false);
@@ -93,7 +71,6 @@ namespace Roadster.BuildEditor
             Append(root, "renderers", wingRenderer);
             Append(root, "bodyMeshes", wingRenderer);
 
-            // Wheels: visual on the hub, controller above it with the tyre's radius and width.
             var radius = 0f;
             foreach (var (prefabName, fbxName, key) in Wheels)
             {
@@ -128,7 +105,6 @@ namespace Roadster.BuildEditor
             collider.sharedMesh = parts["Roadster_Collision"].sharedMesh;
             collider.convex = true;
 
-            // Bounds in Unity axes (the Blender min and max swap on the mirrored axes).
             var b = export["bounds"] ?? throw new InvalidOperationException("game-export.json has no bounds.");
             var a = ToUnity(b["min"]!);
             var c = ToUnity(b["max"]!);
@@ -152,14 +128,12 @@ namespace Roadster.BuildEditor
         private static JToken WheelExport(JObject export, string key, string fbxName)
         {
             var wheels = export["wheels"] ?? throw new InvalidOperationException("game-export.json has no wheels.");
-            // Accept either an object keyed by FL/FR/RL/RR (or the object names) or a list of entries with a name.
             if (wheels is JObject keyed)
                 return keyed[key] ?? keyed[fbxName] ?? throw new InvalidOperationException($"game-export.json has no wheel {key}.");
             return wheels.FirstOrDefault(w => (string?)w["name"] == fbxName || (string?)w["name"] == key)
                    ?? throw new InvalidOperationException($"game-export.json has no wheel {key}.");
         }
 
-        // One material per export entry; paint and lamps use the SDK vehicle shader.
         private static Dictionary<string, Material> Materials(JObject export)
         {
             var list = export["materials"] ?? throw new InvalidOperationException("game-export.json has no materials.");
@@ -175,7 +149,6 @@ namespace Roadster.BuildEditor
             return result;
         }
 
-        // The FBX's imported materials, in submesh order, swapped for ours by name.
         private static Material[] Remap(MeshFilter part, Dictionary<string, Material> materials)
         {
             var imported = part.GetComponent<MeshRenderer>().sharedMaterials;
@@ -187,8 +160,6 @@ namespace Roadster.BuildEditor
             }).ToArray();
         }
 
-        // Normals from the FBX (creases and weighted normals carry the look), readable meshes for the game's damage
-        // deformation, and the materials imported only so their names tell us which submesh is which.
         private static void ConfigureImport()
         {
             var importer = (ModelImporter)AssetImporter.GetAtPath(FbxPath);
@@ -205,7 +176,6 @@ namespace Roadster.BuildEditor
             importer.SaveAndReimport();
         }
 
-        // Every renderer leaves HDRP's default decal layer, so street dirt never projects onto it (the game's vehicles do the same).
         private static void NoStreetDecals(GameObject root)
         {
             foreach (var renderer in root.GetComponentsInChildren<Renderer>(true))

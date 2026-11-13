@@ -9,8 +9,6 @@ using Object = UnityEngine.Object;
 
 namespace Roadster.BuildEditor
 {
-    // CarFeatures and NWH LightSource write renderer property blocks for SH_Vehicle, not HDRP/Lit.
-    // Use that same SDK shader for paint and lamps so the existing vehicle lifecycle owns their state.
     internal static class RoadsterMaterials
     {
         internal const string ShaderPath = "Assets/_BaDependencies/Shaders/Vehicles/SH_Vehicle.shadergraph";
@@ -28,7 +26,6 @@ namespace Roadster.BuildEditor
             if (shader == null) throw new InvalidOperationException("Missing Roadster shader for " + name);
             var path = $"{RoadsterModel.ArtFolder}/M_Roadster_{Safe(name)}.mat";
             var material = AssetDatabase.LoadAssetAtPath<Material>(path);
-            // Reset old HDRP/Lit emission and keywords while preserving the asset GUID.
             var fresh = new Material(shader) { name = "M_Roadster_" + name };
             if (material == null)
             {
@@ -47,13 +44,11 @@ namespace Roadster.BuildEditor
             {
                 var paint = name == "Paint";
                 var diffuse = linear;
-                // SH_Vehicle's diffuse alpha is the paint mask: only Paint accepts the dealer tint/fresnel.
                 diffuse.a = paint ? 1f : 0f;
                 material.SetTexture(Diffuse, Solid(name + "_Diffuse", diffuse));
                 material.SetTexture(Surface, Solid(name + "_Surface", new Color(metallic, 1f, 0f, smoothness)));
                 var normal = Solid("FlatNormal", new Color(0.5f, 0.5f, 1f, 1f));
                 material.SetTexture(Normal, normal);
-                // Explicit neutral inputs avoid inheriting the example car's UV-mapped textures.
                 material.SetTexture("_DirtNormal", normal);
                 material.SetTexture("_DirtDiffuse", Solid("NoDirt", Color.clear));
                 material.SetTexture("_Dirt_Met_AO_Smooth", Solid("NeutralSurface", new Color(0f, 1f, 0f, 0f)));

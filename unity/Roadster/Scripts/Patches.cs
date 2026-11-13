@@ -7,7 +7,6 @@ using HarmonyLib;
 
 namespace Roadster
 {
-    // Harmony patches. Each one logs an Active or Not active line at startup.
     internal static class Patches
     {
         private const string HarmonyId = "roadster.mod";
@@ -18,7 +17,6 @@ namespace Roadster
             if (harmony != null) return;
             harmony = new Harmony(HarmonyId);
             Log.Info($"Harmony {typeof(Harmony).Assembly.GetName().Version}.");
-            // Dealer: list the Roadster next to the vanilla stock at one dealer with a spawn point.
             Patch(typeof(VehicleContractSettings), "SetListOfVehiclesForSale", nameof(DealerStock));
         }
 

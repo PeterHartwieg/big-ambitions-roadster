@@ -11,8 +11,6 @@ using Vehicles.VehicleTypes;
 
 namespace Roadster.BuildEditor
 {
-    // Generates the mod's Unity assets from code so they can be rebuilt and reviewed as text.
-    // Entry point for `Unity -batchmode -executeMethod Roadster.BuildEditor.ModAssets.Generate`.
     public static class ModAssets
     {
         public const string ModFolder = "Assets/Mods/Roadster";
@@ -25,18 +23,12 @@ namespace Roadster.BuildEditor
         // The SDK's example car, with the Roadster model from art/ (RoadsterModel) when tools/build-mod.sh has copied it
         // in, and the example's body as a placeholder otherwise.
         private const float Price = 250000f; // the Thrust trim's quoted figure; placeholder until a balance pass
-        // The game gives every car a 1,400 kg rigidbody; the Roadster keeps it.
-        // Power and gearing: the example car has 120 kW and a final drive of 8.51 on 0.305 m wheels, which tops out at
-        // about 64 km/h on its 2.108 top gear at the 10,000 rpm limiter. The final drive is set from the wheel radius so
-        // the limiter falls at TopSpeed (1.70 on the example's wheels, about 2.0 on the model's 0.36 m tyres). 600 kW is
-        // far more than four tyres can put down below 100 km/h; the launch to 60 mph comes from the thrusters
-        // (RoadsterDrive), the engine carries on from there.
-        private const float EnginePower = 600f; // kW
+        private const float EnginePower = 600f;
         private const float ExampleWheelRadius = 0.3053877f;
         private const float TopGear = 2.108f;
         private const float LimiterRadPerSecond = 10000f * 2f * Mathf.PI / 60f;
-        private const int TopSpeed = 320; // km/h, for the showroom; the gearing sets the real one
-        private const float BrakeTorque = 5000f; // N m on each wheel, double the example's for 320 km/h
+        private const int TopSpeed = 320;
+        private const float BrakeTorque = 5000f;
 
         [MenuItem("Big Ambitions/Roadster/Generate assets")]
         public static void GenerateFromMenu() => Run(exitWhenDone: false);
@@ -102,7 +94,6 @@ namespace Roadster.BuildEditor
                 }
 
                 var body = root.GetComponent<Rigidbody>();
-                // At 320 km/h the car moves 3 m per physics step; discrete checks would let it pass through walls.
                 body.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
                 Set(root, "powertrain.engine.maxPower", EnginePower);
                 var finalGear = LimiterRadPerSecond * wheelRadius / (TopGear * TopSpeed / 3.6f);
@@ -142,7 +133,6 @@ namespace Roadster.BuildEditor
             manifest.AssetBundleName = "roadster.unity3d";
             manifest.ModAssembly = AssetDatabase.LoadAssetAtPath<AssemblyDefinitionAsset>(ModFolder + "/Roadster.asmdef");
             manifest.LocalesFolder = AssetDatabase.LoadAssetAtPath<DefaultAsset>(ModFolder + "/Locales");
-            // Dependencies/ is found by convention; the folder is recreated by the build script.
             manifest.DependenciesFolder = null!;
             manifest.TargetPlatforms = ModTargetPlatforms.Windows | ModTargetPlatforms.Mac;
             if (manifest.ModAssembly == null) throw new InvalidOperationException("Roadster.asmdef not found.");
@@ -161,7 +151,7 @@ namespace Roadster.BuildEditor
         // The example car drives all four wheels (engine, clutch, transmission, centre differential, then a front and a
         // rear differential) through open differentials: with 600 kW the inside wheels spun up in corners. All three
         // become NWH limited-slip differentials; the centre one sends 40% to the front (output A) and 60% to the rear.
-        private const int LimitedSlipType = 2; // NWH DifferentialComponent.Type: Open, Locked, LimitedSlip
+        private const int LimitedSlipType = 2;
         private const float DifferentialStiffness = 0.5f;
         private const float CentreFrontShare = 0.4f;
 

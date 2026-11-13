@@ -57,7 +57,6 @@ def main(argv=None):
     out.mkdir(parents=True, exist_ok=True)
     suffix = '-preview' if args.preview else ''
     archive = out / f'Roadster-{version}{suffix}.zip'
-    # Exclusive creation preserves earlier deliverables.
     if archive.exists():
         raise SystemExit(f'Already exists: {archive}. Move it aside before packaging another build.')
     with zipfile.ZipFile(archive, 'x', zipfile.ZIP_DEFLATED) as z:

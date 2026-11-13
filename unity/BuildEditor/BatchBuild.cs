@@ -9,8 +9,6 @@ using UnityEngine.Rendering;
 
 namespace Roadster.BuildEditor
 {
-    // Entry point for `Unity -batchmode -executeMethod Roadster.BuildEditor.BatchBuild.Build -modId <id>`.
-    // Runs the SDK's own validator and packager, then exits with 0 on success and 1 on failure.
     public static class BatchBuild
     {
         private static readonly TimeSpan Timeout = TimeSpan.FromMinutes(20);
