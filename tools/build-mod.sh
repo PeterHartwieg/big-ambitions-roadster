@@ -52,7 +52,7 @@ if [ ! -f "$DEPS/0Harmony.dll" ] || [ ! -f "$REPO/build/Harmony-LICENSE.txt" ]; 
 fi
 echo "$HARMONY_DLL_SHA256  $DEPS/0Harmony.dll" | shasum -a 256 -c - >/dev/null || { echo "Cached 0Harmony.dll does not match the pinned hash; delete it and rebuild" >&2; exit 1; }
 
-# The model's game export from art/roadster-free (tools: art/roadster-free/feedback-4-game-export.md), copied in so the
+# The model's game export from art/roadster-free, copied in so the
 # generator can build the prefab. Only the .meta files are committed (stable GUIDs for the prefab). The FBX goes in as
 # Roadster_Model.fbx: the game finds a vehicle's prefab by file name in any bundle, so no model may share the prefab's name.
 ART="$REPO/art/roadster-free"
