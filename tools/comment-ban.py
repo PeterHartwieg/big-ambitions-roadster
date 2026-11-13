@@ -145,6 +145,7 @@ def hash_spans(text, powershell):
     spans = []
     n = len(text)
     heredocs = []
+    pattern_ends = set()
     escape = '`' if powershell else '\\'
 
     def double_quoted(i):
@@ -161,7 +162,7 @@ def hash_spans(text, powershell):
 
     def command_start(i):
         head = text[:i].rstrip(' \t')
-        if not head or head[-1] in '\n;&|(`':
+        if not head or head[-1] in '\n;&|(`' or len(head) - 1 in pattern_ends:
             return True
         m = re.search(r'(?:^|(?<=[\s;&|(`]))(?:then|do|else|elif|if|while|until|!|\{)\Z', head)
         return m is not None and command_start(m.start())
@@ -207,7 +208,9 @@ def hash_spans(text, powershell):
                 i += 2
                 continue
             if not powershell and state == 2 and c in '()':
-                state = 0 if c == ')' else 2
+                if c == ')':
+                    state = 0
+                    pattern_ends.add(i)
                 i += 1
                 continue
             if c == stop and (stop == '`' or depth == 0) and not (stop == ')' and cases > 0):

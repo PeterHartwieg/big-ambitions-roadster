@@ -83,9 +83,12 @@ class CommentBanTests(unittest.TestCase):
             'f.sh': 'value="$(printf "%s" then case)"\n# explanation\n',
             'g.sh': 'value="$(echo ! { do case)"\n# explanation\n',
             'h.sh': 'v="$(if ! { case x in a) :;; esac; }; then :; fi)"\n# explanation\n',
+            'i.sh': 'v="$(case x in a) ! case y in b) :;; esac;; c)\n# explanation\n:;; esac)"\n',
+            'j.sh': 'v="$(case x in a) case y in b) :;; esac;; c)\n# explanation\n:;; esac)"\n',
         }
         self.assertEqual(check(files), [('a.sh', 2, 2), ('b.sh', 2, 2), ('c.sh', 5, 5), ('d.sh', 2, 2),
-                                        ('e.sh', 2, 2), ('f.sh', 2, 2), ('g.sh', 2, 2), ('h.sh', 2, 2)])
+                                        ('e.sh', 2, 2), ('f.sh', 2, 2), ('g.sh', 2, 2), ('h.sh', 2, 2),
+                                        ('i.sh', 2, 2), ('j.sh', 2, 2)])
 
     def test_literal_hashes_in_substitutions_and_lengths_pass(self):
         files = {
