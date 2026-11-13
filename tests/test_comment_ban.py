@@ -73,6 +73,15 @@ class CommentBanTests(unittest.TestCase):
         self.assertEqual(check(files), [('a.sh', 2, 2), ('b.sh', 1, 1), ('b.sh', 2, 2), ('c.ps1', 2, 2),
                                         ('d.sh', 2, 2)])
 
+    def test_case_words_outside_keyword_positions_keep_scanning(self):
+        files = {
+            'a.sh': 'value="$(echo case)"\n# explanation\n',
+            'b.sh': 'value="$(case x in case) echo case esac;; esac)"\n# explanation\n',
+            'c.sh': 'value="$(case x in\n  x|esac|case) echo in;;\n  y) z;;\nesac)"\n# explanation\n',
+            'd.sh': 'v="$(if true; then case x in a) case y in b) :;; esac;; esac; fi)"\n# explanation\n',
+        }
+        self.assertEqual(check(files), [('a.sh', 2, 2), ('b.sh', 2, 2), ('c.sh', 5, 5), ('d.sh', 2, 2)])
+
     def test_literal_hashes_in_substitutions_and_lengths_pass(self):
         files = {
             'a.sh': 'echo "$(printf \'a # b\' "c # d") e # f"\necho ${#a[@]} "${#a[@]}" $(( 16#ff ))\n',

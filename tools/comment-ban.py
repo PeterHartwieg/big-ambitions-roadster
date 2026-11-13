@@ -159,9 +159,13 @@ def hash_spans(text, powershell):
                 i += 1
         return i + 1
 
+    def command_start(i):
+        return re.search(r'(?:^|[\n;&|(`{!]|\b(?:then|do|else|elif|if|while|until))[ \t]*\Z', text[:i]) is not None
+
     def code(i, stop):
         depth = 0
         cases = 0
+        state = 0
         while i < n:
             c = text[i]
             if c == '\n':
@@ -177,9 +181,30 @@ def hash_spans(text, powershell):
                 heredocs.clear()
                 continue
             prev = text[i - 1] if i else '\n'
-            if not powershell and (prev.isspace() or prev in ';|&()') and re.match(r'(?:case|esac)(?=[\s;|&)]|$)', text[i:]):
-                cases += 1 if c == 'c' else -1
-                i += 4
+            if not powershell and (prev.isspace() or prev in ';|&()`{'):
+                word = re.match(r'(case|esac|in)(?=[\s;|&()]|$)', text[i:])
+                word = word.group(1) if word else None
+                if word == 'case' and state == 0 and command_start(i):
+                    cases += 1
+                    state = 1
+                    i += 4
+                    continue
+                if word == 'in' and state == 1:
+                    state = 2
+                    i += 2
+                    continue
+                if word == 'esac' and cases and ((state == 2 and prev != '|') or (state == 0 and command_start(i))):
+                    cases -= 1
+                    state = 0
+                    i += 4
+                    continue
+            if not powershell and cases and state == 0 and text.startswith((';;', ';&'), i):
+                state = 2
+                i += 2
+                continue
+            if not powershell and state == 2 and c in '()':
+                state = 0 if c == ')' else 2
+                i += 1
                 continue
             if c == stop and (stop == '`' or depth == 0) and not (stop == ')' and cases > 0):
                 return i + 1
