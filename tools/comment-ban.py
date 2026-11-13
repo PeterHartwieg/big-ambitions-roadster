@@ -3,11 +3,15 @@
 
 Scope: tracked .cs, .py, .sh, .ps1, .cmd/.bat files and .gitignore/.gitattributes,
 outside art/ and docs/. A unit is a run of consecutive own-line comments, one trailing
-comment, or one block comment. Directives that pass: shebangs, Python coding/noqa/type
-pragmas, shellcheck directives, PowerShell #Requires. C# preprocessor lines are code,
+comment, or one block comment. Directives pass only when the whole comment matches
+DIRECTIVE_PATTERNS: a shebang on line 1, a Python coding line, bare `noqa[: codes]`,
+`type: ignore[...]` or `pragma: no cover|branch`, `shellcheck key=value...`, or
+PowerShell `#Requires -Flag value...`. A directive with appended text is an ordinary
+unit and needs its own excuse entry. C# preprocessor lines are code,
 not comments. An excuse passes when docs/comment-excuses.md has a list item starting
 with `path:line` (single-line unit) or `path:start-end` (multi-line unit) matching the
-unit exactly. Python docstrings are string literals and are not scanned.
+unit exactly. Shell and PowerShell `$(...)` (and shell backticks) are scanned as code,
+also inside double quotes. Python docstrings are string literals and are not scanned.
 """
 import io
 import re
@@ -22,9 +26,11 @@ EXCLUDED_DIRS = ('art/', 'docs/')
 CODE_SUFFIXES = {'.cs': 'cs', '.py': 'py', '.sh': 'sh', '.ps1': 'ps', '.psm1': 'ps', '.cmd': 'cmd', '.bat': 'cmd'}
 CONFIG_NAMES = {'.gitignore', '.gitattributes'}
 DIRECTIVE_PATTERNS = {
-    'py': re.compile(r'#!|#\s*-\*-\s*coding|#\s*(noqa|type:|pragma)'),
-    'sh': re.compile(r'#!|#\s*shellcheck\s'),
-    'ps': re.compile(r'#requires\s', re.I),
+    'py': re.compile(r'#!.*|#\s*-\*-\s*coding:\s*[-\w.]+\s*-\*-\s*|#\s*coding[:=]\s*[-\w.]+\s*|#\s*noqa(?::\s*[A-Z]+\d+(?:\s*,\s*[A-Z]+\d+)*)?\s*'
+                     r'|#\s*type:\s*ignore(?:\[[\w-]+(?:\s*,\s*[\w-]+)*\])?\s*|#\s*pragma:\s*no\s+(?:cover|branch)\s*'),
+    'sh': re.compile(r'#!.*|#\s*shellcheck(?:\s+(?:disable|enable|source|source-path|shell|external-sources)=[\w,./:-]+)+\s*'),
+    'ps': re.compile(r'#requires(?:\s+-(?:Version|Modules|PSEdition|RunAsAdministrator|ShellId|Assembly)'
+                     r'(?:\s+[^\s#-][^\s,#]*(?:\s*,\s*[^\s#-][^\s,#]*)*)?)+\s*', re.I),
 }
 
 
@@ -138,65 +144,86 @@ def py_spans(text):
 def hash_spans(text, powershell):
     spans = []
     n = len(text)
-    i = 0
     heredocs = []
-    while i < n:
-        c = text[i]
-        if c == '\n':
-            i += 1
-            for word, strip_tabs in heredocs:
-                while i < n:
-                    end = text.find('\n', i)
-                    end = n if end < 0 else end
-                    body = text[i:end]
-                    i = end + 1
-                    if (body.lstrip('\t') if strip_tabs else body) == word:
-                        break
-            heredocs = []
-            continue
-        prev = text[i - 1] if i else '\n'
-        if powershell and text.startswith('<#', i):
-            end = text.find('#>', i + 2)
-            end = n if end < 0 else end + 2
-            spans.append((i, end))
-            i = end
-        elif c == '#' and (prev.isspace() or prev in ';|&(){}'):
-            end = text.find('\n', i)
-            end = n if end < 0 else end
-            spans.append((i, end))
-            i = end
-        elif powershell and text.startswith(('@"\n', "@'\n", '@"\r\n', "@'\r\n"), i):
-            close = '\n' + text[i + 1] + '@'
-            end = text.find(close, i)
-            i = n if end < 0 else end + len(close)
-        elif c == "'":
-            while True:
-                end = text.find("'", i + 1)
-                i = n if end < 0 else end + 1
-                if not (powershell and text.startswith("'", i)):
-                    break
-        elif c == '"':
-            i += 1
-            escape = '`' if powershell else '\\'
-            while i < n and text[i] != '"':
-                i += 2 if text[i] == escape else 1
-            i += 1
-        elif c == '`' and powershell:
-            i += 2
-        elif c == '`':
-            end = text.find('`', i + 1)
-            i = n if end < 0 else end + 1
-        elif c == '\\':
-            i += 2
-        elif not powershell and text.startswith('<<', i) and not text.startswith('<<<', i):
-            m = re.match(r'<<(-?)\s*([\'"]?)([A-Za-z_][A-Za-z0-9_]*)\2', text[i:])
-            if m:
-                heredocs.append((m.group(3), bool(m.group(1))))
-                i += m.end()
-            else:
+    escape = '`' if powershell else '\\'
+
+    def double_quoted(i):
+        while i < n and text[i] != '"':
+            if text[i] == escape:
                 i += 2
-        else:
-            i += 1
+            elif text.startswith('$(', i):
+                i = code(i + 2, ')')
+            elif text[i] == '`':
+                i = code(i + 1, '`')
+            else:
+                i += 1
+        return i + 1
+
+    def code(i, stop):
+        depth = 0
+        while i < n:
+            c = text[i]
+            if c == '\n':
+                i += 1
+                for word, strip_tabs in heredocs:
+                    while i < n:
+                        end = text.find('\n', i)
+                        end = n if end < 0 else end
+                        body = text[i:end]
+                        i = end + 1
+                        if (body.lstrip('\t') if strip_tabs else body) == word:
+                            break
+                heredocs.clear()
+                continue
+            prev = text[i - 1] if i else '\n'
+            if c == stop and (stop == '`' or depth == 0):
+                return i + 1
+            if powershell and text.startswith('<#', i):
+                end = text.find('#>', i + 2)
+                end = n if end < 0 else end + 2
+                spans.append((i, end))
+                i = end
+            elif c == '#' and (prev.isspace() or prev in ';|&(){}') and not text.startswith('${#', i - 2):
+                end = text.find('\n', i)
+                end = n if end < 0 else end
+                spans.append((i, end))
+                i = end
+            elif powershell and text.startswith(('@"\n', "@'\n", '@"\r\n', "@'\r\n"), i):
+                close = '\n' + text[i + 1] + '@'
+                end = text.find(close, i)
+                i = n if end < 0 else end + len(close)
+            elif c == "'":
+                while True:
+                    end = text.find("'", i + 1)
+                    i = n if end < 0 else end + 1
+                    if not (powershell and text.startswith("'", i)):
+                        break
+            elif c == '"':
+                i = double_quoted(i + 1)
+            elif c == '`' and powershell:
+                i += 2
+            elif c == '`':
+                i = code(i + 1, '`')
+            elif c == '\\':
+                i += 2
+            elif c == '(':
+                depth += 1
+                i += 1
+            elif c == ')':
+                depth -= 1
+                i += 1
+            elif not powershell and text.startswith('<<', i) and not text.startswith('<<<', i):
+                m = re.match(r'<<(-?)\s*([\'"]?)([A-Za-z_][A-Za-z0-9_]*)\2', text[i:])
+                if m:
+                    heredocs.append((m.group(3), bool(m.group(1))))
+                    i += m.end()
+                else:
+                    i += 2
+            else:
+                i += 1
+        return i
+
+    code(0, None)
     return spans
 
 
@@ -235,7 +262,7 @@ def units(path, text):
         first, last = line_of(text, start), line_of(text, end)
         body = text[start:end]
         pattern = DIRECTIVE_PATTERNS.get(lang)
-        directive = bool(pattern and pattern.match(body) and (not body.startswith('#!') or start == 0))
+        directive = bool(pattern and pattern.fullmatch(body) and (not body.startswith('#!') or start == 0))
         prev = result[-1] if result else None
         line_comment = lang != 'cs' or body.startswith('//')
         prev_line_comment = prev and (lang != 'cs' or text.startswith('//', prev[2]))

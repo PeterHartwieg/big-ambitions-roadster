@@ -52,6 +52,32 @@ class CommentBanTests(unittest.TestCase):
         }
         self.assertEqual(check(files), [])
 
+    def test_directive_lookalikes_and_appended_text_fail(self):
+        files = {
+            'a.py': '# pragmatic explanation\nx = 1  # noqa because reasons\ny = 2  # type: ignore  kept for now\n',
+            'b.sh': '#!/bin/sh\n# shellcheck disable=SC2086 because quoting\n# shellchecked by hand\n',
+            'c.ps1': '#Requires -Version 5 because old hosts\n#requiresfoo\n',
+        }
+        self.assertEqual(check(files), [('a.py', 1, 1), ('a.py', 2, 2), ('a.py', 3, 3), ('b.sh', 2, 3),
+                                        ('c.ps1', 1, 2)])
+        excuses = '- `a.py:2`: workaround\n- `b.sh:2-3`: workaround\n'
+        self.assertEqual(check(files, excuses), [('a.py', 1, 1), ('a.py', 3, 3), ('c.ps1', 1, 2)])
+
+    def test_comments_inside_command_substitutions_fail(self):
+        files = {
+            'a.sh': 'value="$(\n    # new explanation\n    printf hello\n)"\n',
+            'b.sh': 'x=`echo hi # explains`\ny="`echo hi # explains`"\n',
+            'c.ps1': '$s = "$(\n# explains\nGet-Date)"\n',
+        }
+        self.assertEqual(check(files), [('a.sh', 2, 2), ('b.sh', 1, 1), ('b.sh', 2, 2), ('c.ps1', 2, 2)])
+
+    def test_literal_hashes_in_substitutions_and_lengths_pass(self):
+        files = {
+            'a.sh': 'echo "$(printf \'a # b\' "c # d") e # f"\necho ${#a[@]} "${#a[@]}" $(( 16#ff ))\n',
+            'b.ps1': '$s = "$(\'a # b\') c # d"\n',
+        }
+        self.assertEqual(check(files), [])
+
 
 if __name__ == '__main__':
     unittest.main()
