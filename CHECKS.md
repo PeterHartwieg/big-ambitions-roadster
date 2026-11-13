@@ -22,13 +22,9 @@ Use a throwaway save. The mod changes every save it loads.
 - `Corner:` lines: no wheel `UP`, loads under 14,000 N, compression under about 70%.
 - No `ERROR` lines from `[Mod:Roadster]`.
 
-## 0.0.3 manual acceptance — all pending
+## 0.0.3 manual acceptance
 
-PC rig preflight on 30 October 2026 was [blocked before launch](docs/rig-test-0.0.3.md). No in-game box below was checked; before/red and after/green proof remains missing.
-
-The recorded `8448179` preview in `docs/release-0.0.3.json` is **stale**, superseded by the issue #2 source fix commit on top of `3579e2c` (`Fix barrel-roll key clash and require movement (Refs #2)`). It has the old J binding and no speed guard. A fresh build from the superseding source commit must be identified and tested by the scheduled Codex Sol/high PC rig session after 6 November, with before/red and after/green proof on PR #1 before merge/upload. This fix run does not rebuild or use the rig.
-
-Issue #2 key selection (31 October, **source review only; in-game compatibility pending**): Backslash is absent from the Mod Pack key matrix in `hart-group/docs/research/modpack-review-2026-10-07/world.md` at `01a6146`. That matrix covers Hyperreal, Camera Tools, HART Free Camera and Campaign Objectives. Also checked the current pack member list (`big-ambitions-modpack/modpack.json` at `2152955`), Self Driving's J/K/L defaults and destination key choices (`hart-self-driving` at `8b9547a`), RLO's bindings/game defaults (`RLO/Assets/Mods/RealLifeOverhaul/Scripts/Core/Keys.cs` at `850e278`), and HART tool sources for Backslash bindings. RDSTR has no configuration support: the new Backslash binding remains a constant, and N remains launch mode.
+Results for each item below are in `docs/rig-test-0.0.3.md`. Still open there: stunt camera, subjective feel, night re-entry repeat and two-car lamp independence.
 
 Use a disposable save and compare against a vanilla car under the same conditions.
 
@@ -54,6 +50,3 @@ Use a disposable save and compare against a vanilla car under the same condition
    giant glow, daylight emission, unexpected dirt texture or decal projection.
 7. Run the existing launch, nitrogen plume and barrel-roll checklist above. Check
    startup says 0.0.3 and the dealer patch is Active; no new mod/asset/shader errors.
-
-Offline evidence is documented separately in `docs/appearance-0.0.3.md`. These
-manual boxes stay pending until Peter observes them in game on the target platform.
