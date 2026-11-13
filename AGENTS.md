@@ -17,3 +17,4 @@ A mod that adds a Roadster with a thruster launch, hops and flips. Read `docs/pl
 - Mark evidence as checked (seen in game), pending or unverified. Code reading is not a check.
 - Neutral names in shipped files: no references to any YouTube series or personal saves.
 - No code comments. Fix the problem or open an issue instead of leaving an excuse in the code. `tools/comment-ban.py` (run by the tests) allows only tool directives and the existing excuses listed in `docs/comment-excuses.md`.
+- No new markdown files unless Peter explicitly asks for one (a plan or a review); put status in the PR description or the issue. `tools/md-ban.py` (run by the tests) enforces this.
