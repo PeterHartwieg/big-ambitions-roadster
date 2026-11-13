@@ -1,5 +1,3 @@
-# Apply the prepared folder only after the current game session is finished.
-# This script does not start the game or upload/publish anything.
 $ErrorActionPreference = 'Stop'
 $stage = $PSScriptRoot
 $source = Join-Path $stage 'Roadster'
@@ -29,7 +27,6 @@ Confirm-Package $source $receipt.publicationFiles
 if (!(Test-Path $target)) { throw 'The original Roadster installation is missing. Recheck the setup before proceeding.' }
 Confirm-Package $target $receipt.originalInstalledFiles
 
-# Atomically claim the shared lock, then recheck before touching the installation.
 $claim = [System.IO.File]::Open($lock, [System.IO.FileMode]::CreateNew, [System.IO.FileAccess]::Write, [System.IO.FileShare]::Read)
 $writer = New-Object System.IO.StreamWriter($claim)
 $writer.WriteLine('owner: Roadster publication preparation')

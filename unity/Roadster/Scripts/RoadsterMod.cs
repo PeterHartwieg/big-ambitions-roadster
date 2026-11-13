@@ -9,7 +9,6 @@ using Vehicles.VehicleTypes;
 
 namespace Roadster
 {
-    // Loads once at game start: the vehicle type, the dealer patch and the driving controller.
     [ModEntryOnInitializationLoad]
     public sealed class RoadsterMod : IModBigAmbitions
     {
@@ -68,7 +67,6 @@ namespace Roadster
 
         public static void Init(IModLogger modLogger) => logger = modLogger;
 
-        // The game's mod logger adds its own "[Mod:Roadster]" prefix.
         public static void Info(string message)
         {
             if (logger != null) logger.Info(message);

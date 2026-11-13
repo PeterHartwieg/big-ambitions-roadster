@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Builds the Roadster mod package with the official SDK in Unity batch mode.
-# Usage: tools/build-mod.sh [--generate] [--check]   (--generate re-creates the generated Unity assets first)
-# Output: build/Roadster/ (the folder that goes into the game's ModsLocal).
-# Same pipeline as the Food Trucks mod (big-ambitions-food-trucks/tools/build-mod.sh), cut down to one vehicle.
 set -euo pipefail
 GENERATE=0
 CHECK=0
@@ -15,7 +11,6 @@ for arg in "$@"; do
 done
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
-# A dedicated SDK clone, so other mods in a personal SDK project cannot break this build.
 SDK="${BA_SDK:-$REPO/build/sdk}"
 SDK_URL="https://github.com/hovgaardgames/bigambitions.git"
 SDK_COMMIT="1e03ddd5071b77a32cfd8bba89f0c130ba6c7d73"
@@ -46,7 +41,6 @@ fi
 rsync -a --checksum "$GAME_DLLS/" "$SDK/Assets/_BaDependencies/GameDlls/" --include='*.dll' --exclude='*'
 python3 "$REPO/tools/write-dll-metas.py" "$SDK/Assets/_BaDependencies/GameDlls"
 
-# Harmony and its required notice, recovered together from the checksum-pinned package. Never committed.
 if [ ! -f "$DEPS/0Harmony.dll" ] || [ ! -f "$REPO/build/Harmony-LICENSE.txt" ]; then
   tmp="$(mktemp -d)"
   curl -fsSL "$HARMONY_URL" -o "$tmp/harmony.nupkg"
@@ -71,7 +65,7 @@ else
   echo "No game export in $ART; the prefab keeps the example car's body." >&2
 fi
 
-link() { # link <target> <link path>
+link() {
   if [ -L "$2" ]; then [ "$(readlink "$2")" = "$1" ] || { rm "$2"; ln -s "$1" "$2"; }
   elif [ -e "$2" ]; then echo "$2 exists and is not a symlink; refusing to replace it" >&2; exit 1
   else ln -s "$1" "$2"; fi
@@ -79,7 +73,7 @@ link() { # link <target> <link path>
 link "$MOD_DIR" "$SDK/Assets/Mods/Roadster"
 link "$REPO/unity/BuildEditor" "$SDK/Assets/Editor/RoadsterBuild"
 
-run_unity() { # run_unity <method> <log name>
+run_unity() {
   local method="$1" log="$LOG_DIR/$2.log" ok=1
   shift 2
   "$UNITY" -batchmode -nographics -projectPath "$SDK" -buildTarget Win64 \

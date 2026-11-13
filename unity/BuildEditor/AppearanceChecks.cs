@@ -12,8 +12,6 @@ using Object = UnityEngine.Object;
 
 namespace Roadster.BuildEditor
 {
-    // Offline Unity checks against the real CarFeatures/LightSource implementations in the supplied DLLs.
-    // Empty editor scene only: never boots Big Ambitions, connects to a rig or loads a save.
     [InitializeOnLoad]
     public static class AppearanceChecks
     {
@@ -186,7 +184,7 @@ namespace Roadster.BuildEditor
                 AssertColour(first, blue);
                 brake.TurnOn();
                 AssertLights(first, 50000f, 40000f, "braking at night");
-                brake.TurnOff(); rear.TurnOff(); rear.TurnOn(); // NWH's brake-release ordering.
+                brake.TurnOff(); rear.TurnOff(); rear.TurnOn();
                 AssertLights(first, 50000f, 20000f, "brake release restores tail");
                 low.TurnOff(); rear.TurnOff();
                 AssertLights(first, 0f, 0f, "daylight/exit switches emission off");

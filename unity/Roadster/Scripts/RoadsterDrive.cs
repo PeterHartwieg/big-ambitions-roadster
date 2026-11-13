@@ -7,21 +7,16 @@ using UnityEngine.InputSystem;
 
 namespace Roadster
 {
-    // The Roadster's fans and thrusters while the player drives one: the launch to 60 mph, the fans' suction, and the
-    // barrel roll on Backslash while moving. One instance for the whole game; it does nothing in any other vehicle.
     internal sealed class RoadsterDrive : MonoBehaviour
     {
-        // Launch, two modes switched with N (Peter, 17 October 2026): the motors alone, 0-60 mph in 1.6 s, and the
-        // nitrogen thrusters, 0.6 s with the rear plumes firing. The push follows a straight speed line from the moment
-        // the throttle goes down, minus whatever the wheels already add.
-        private const float SixtyMph = 26.8224f; // m/s
+        private const float SixtyMph = 26.8224f;
         private const float MotorSeconds = 1.6f;
         private const float NitrogenSeconds = 0.6f;
         private const Key ModeKey = Key.N;
         private bool nitrogen;
         private float LaunchSeconds => nitrogen ? NitrogenSeconds : MotorSeconds;
-        private float LaunchAcceleration => SixtyMph / LaunchSeconds; // 16.8 or 44.7 m/s²
-        private const float LaunchGain = 4f; // 1/s, pulls the speed back onto the line
+        private float LaunchAcceleration => SixtyMph / LaunchSeconds;
+        private const float LaunchGain = 4f;
         // The launch is for a straight run. A launch started at full steering lock pushed the car on while it turned,
         // and the catch-up term pushed harder still as it scrubbed speed (Player.log, 17 October 2026). It now starts
         // only with the wheels near straight, ends when the steering goes past LaunchSteerLimit, and its push never
@@ -36,11 +31,8 @@ namespace Roadster
         private const float StartThrottle = 0.7f;
         private const float HoldThrottle = 0.4f;
 
-        // Fans: the reveal claims up to 2 g of downforce at a standstill. While three or more wheels are on the road the
-        // fans pull the car down with an extra 2 g along its own down axis, so it grips in corners at any speed; the
-        // springs are sized for it (RoadsterModel). Off in the air, and faded back in over FanRamp after a landing.
-        private const float FanDownforce = 2f; // in g
-        private const float FanRamp = 0.3f; // s
+        private const float FanDownforce = 2f;
+        private const float FanRamp = 0.3f;
 
         // Barrel roll (Backslash), as the reveal rolled over the Tesla lineup, in one motion (Peter, 17 October 2026): the
         // down thrusters lift the car over ThrustTime while it already starts to roll, it rolls once about its own
@@ -49,21 +41,21 @@ namespace Roadster
         // eases to nothing at RollEnd (rate ~ 1 - x squared), so it leaves the ground already turning and settles level.
         // Keep J free for HART. Self Driving; ignore stopped/creeping starts (issue #2).
         private const Key RollKey = Key.Backslash;
-        private const float RollMinSpeed = 2f; // m/s, about 4.5 mph; must be exceeded before requesting a roll
-        private const float JumpHeight = 6f; // m, top of the climb
-        private const float ThrustTime = 0.35f; // s the lift takes
-        private const float JumpCooldown = 2f; // s
-        private const float RollEnd = 1.4f; // s after take-off; about 5.5 m up on the way down
-        private const float AttitudeGain = 60f; // 1/s²
-        private const float AttitudeDamping = 15f; // 1/s, near critical for the gain
+        private const float RollMinSpeed = 2f;
+        private const float JumpHeight = 6f;
+        private const float ThrustTime = 0.35f;
+        private const float JumpCooldown = 2f;
+        private const float RollEnd = 1.4f;
+        private const float AttitudeGain = 60f;
+        private const float AttitudeDamping = 15f;
         // Braking the fall from 6 m to 3 m/s kept the car 3.5 s in the air ("the fall back to the road is a bit too
         // slow", Peter, 17 October 2026): the thrusters now only catch it over the last 2.5 m, down to 5 m/s.
-        private const float LandingSpeed = 5f; // m/s
-        private const float LandingBrakeHeight = 2.5f; // m
-        private const float MaxThrust = 40f; // m/s², about 4 g
-        private const float LevelGain = 12f; // 1/s²
-        private const float LevelDamping = 4f; // 1/s
-        private const float MinAirTime = 0.3f; // s before a touchdown counts
+        private const float LandingSpeed = 5f;
+        private const float LandingBrakeHeight = 2.5f;
+        private const float MaxThrust = 40f;
+        private const float LevelGain = 12f;
+        private const float LevelDamping = 4f;
+        private const float MinAirTime = 0.3f;
 
         private CarController? car;
         private Rigidbody? body;
@@ -82,19 +74,16 @@ namespace Roadster
         private float jumpPeak;
         private Quaternion rollBase;
         private float rollSign;
-        private float rolled; // degrees reached, for the log
+        private float rolled;
         private float lastLanding = -10f;
 
-        // Cornering telemetry: one line every half second while turning at speed, for tuning from Player.log.
-        private const float TelemetrySpeed = 4.5f; // m/s, about 10 mph
+        private const float TelemetrySpeed = 4.5f;
         private const float TelemetrySteer = 0.2f;
         private float nextTelemetry;
         private Vector3 lastVelocity;
         private CarController? described;
 
-        // Plumes on the car (RoadsterPlume adds them to the prefab hidden): the rear ones fire with a nitrogen launch,
-        // the down ones with the lift and the landing brake.
-        private const float PlumeLength = 1.6f; // m at full thrust
+        private const float PlumeLength = 1.6f;
         private CarController? plumesOf;
         private MeshRenderer[] rearPlumes = Array.Empty<MeshRenderer>();
         private MeshRenderer[] downPlumes = Array.Empty<MeshRenderer>();
@@ -160,7 +149,6 @@ namespace Roadster
             var t = now - launchStart;
             if (speed >= SixtyMph)
             {
-                // The crossing falls between two physics steps; interpolate back from this one.
                 var measured = (speed - lastSpeed) / dt;
                 var crossed = measured > 0f ? t - (speed - SixtyMph) / measured : t;
                 Log.Info($"Launch ({(nitrogen ? "nitrogen" : "motors")}): 0-60 mph in {crossed:F2} s (target {LaunchSeconds:F2} s).");
@@ -175,7 +163,6 @@ namespace Roadster
                 return;
             }
 
-            // What the wheels added over the last step, without our own push.
             var wheels = t > 0f ? Mathf.Max(0f, (speed - lastSpeed) / dt - lastPush) : 0f;
             var target = LaunchAcceleration * t;
             var push = Mathf.Clamp(LaunchAcceleration - wheels + LaunchGain * (target - speed), 0f, LaunchMaxPush * LaunchAcceleration);
@@ -209,8 +196,6 @@ namespace Roadster
                 nextJump = Time.time + JumpCooldown;
                 var heading = Vector3.ProjectOnPlane(b.transform.forward, Vector3.up);
                 rollBase = Quaternion.LookRotation(heading.sqrMagnitude > 1e-4f ? heading.normalized : Vector3.forward, Vector3.up);
-                // Positive roll about the car's forward axis lifts its right side in Unity's left-handed frame, so a roll
-                // to the right is the negative direction.
                 rollSign = jumpSteer < -0.2f ? 1f : -1f;
                 rolled = 0f;
                 b.maxAngularVelocity = Mathf.Max(b.maxAngularVelocity, 20f);
@@ -234,9 +219,6 @@ namespace Roadster
 
             if (t < ThrustTime)
             {
-                // Lift: the down thrusters push the car up evenly over ThrustTime to the speed that tops out at JumpHeight.
-                // The climb speed at the end of the lift that tops out at JumpHeight: the lift itself covers 0.5 v T, the
-                // coast v^2 / 2g, so v = g (sqrt(T^2/4 + 2H/g) - T/2), 9.3 m/s for 6 m.
                 var climb = gravity * (Mathf.Sqrt(ThrustTime * ThrustTime / 4f + 2f * JumpHeight / gravity) - ThrustTime / 2f);
                 var lift = Mathf.Max(0f, (climb - vy) / Mathf.Max(ThrustTime - t, Time.fixedDeltaTime)) + gravity;
                 b.AddForce(Vector3.up * Mathf.Min(lift, 3f * MaxThrust), ForceMode.Acceleration);
@@ -245,8 +227,6 @@ namespace Roadster
 
             if (t <= RollEnd)
             {
-                // Follow the roll: angle 360 * (1.5 x - 0.5 x^3) for x = t / RollEnd, so the rate starts at 1.5 times its
-                // mean and eases to zero.
                 var x = Mathf.Clamp01(t / RollEnd);
                 var angle = 360f * (1.5f * x - 0.5f * x * x * x) * rollSign;
                 rolled = Mathf.Max(rolled, Mathf.Abs(angle));
@@ -262,13 +242,11 @@ namespace Roadster
             }
             else
             {
-                // Level: turn the car's up towards the world's up, and damp the tumble but not the yaw.
                 var tilt = Vector3.Cross(b.transform.up, Vector3.up);
                 var tumble = Vector3.ProjectOnPlane(b.angularVelocity, Vector3.up);
                 b.AddTorque(tilt * LevelGain - tumble * LevelDamping, ForceMode.Acceleration);
             }
 
-            // Landing: hold the fall at LandingSpeed near the ground.
             if (vy < -LandingSpeed && GroundDistance(b) < LandingBrakeHeight)
             {
                 var thrust = Mathf.Clamp((-LandingSpeed - vy) / Time.fixedDeltaTime + gravity, 0f, MaxThrust);
@@ -290,7 +268,6 @@ namespace Roadster
             catch (Exception ex) { Log.Error("Launch mode notice: " + ex); }
         }
 
-        // Shows, stretches and flickers the plumes from the thrust the physics step set.
         private void ShowPlumes()
         {
             if (plumesOf != car)

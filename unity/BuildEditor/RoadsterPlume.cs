@@ -6,10 +6,6 @@ using UnityEngine;
 
 namespace Roadster.BuildEditor
 {
-    // The cold-gas plumes: a soft white streak at each thruster nozzle, three crossed planes that widen away from the
-    // nozzle, with a generated gradient texture on an HDRP/Unlit transparent material. The material is a copy of the
-    // SDK's GroundIndicatorSmall (HDRP/Unlit, transparent), which the game renders. The emitters are added to the prefab
-    // hidden; RoadsterDrive shows and stretches them while the thrusters fire.
     internal static class RoadsterPlume
     {
         private const string TemplateMaterial = "Assets/_BaDependencies/Shared/Materials/GroundIndicator/GroundIndicatorSmall.mat";
@@ -17,9 +13,6 @@ namespace Roadster.BuildEditor
         private const string MaterialPath = RoadsterModel.ArtFolder + "/M_Roadster_Plume.mat";
         private const string MeshPath = RoadsterModel.ArtFolder + "/Plume.asset";
 
-        // The bronze nozzle mouths on the model (art/roadster-free/Roadster-game.blend, material Bronze), in Blender
-        // coordinates, and the way each one blows. Four rear thrusters in the diffuser blow backwards (+Y in Blender);
-        // two behind the rear wheels blow straight down.
         private static readonly (string Name, Vector3 Mouth, Vector3 Direction)[] Nozzles =
         {
             ("Plume_Rear_1", new Vector3(-0.396f, 2.286f, 0.416f), new Vector3(0f, 1f, 0f)),
@@ -44,7 +37,7 @@ namespace Roadster.BuildEditor
                 plume.transform.localPosition = ToUnity(mouth);
                 var along = ToUnity(direction);
                 plume.transform.localRotation = Quaternion.LookRotation(along, Mathf.Abs(along.y) > 0.9f ? Vector3.forward : Vector3.up);
-                plume.transform.localScale = new Vector3(0.35f, 0.35f, 1.6f); // RoadsterDrive sets the length while firing
+                plume.transform.localScale = new Vector3(0.35f, 0.35f, 1.6f);
                 plume.AddComponent<MeshFilter>().sharedMesh = mesh;
                 var renderer = plume.AddComponent<MeshRenderer>();
                 renderer.sharedMaterial = material;
@@ -65,10 +58,8 @@ namespace Roadster.BuildEditor
             material.SetTexture("_UnlitColorMap", texture);
             material.SetTextureScale("_UnlitColorMap", Vector2.one);
             material.SetColor("_UnlitColor", new Color(0.92f, 0.96f, 1f, 0.8f));
-            // Soft edges, no cut-out: blend only.
             material.SetFloat("_AlphaCutoffEnable", 0f);
             material.DisableKeyword("_ALPHATEST_ON");
-            // Seen from both sides, the crossed planes read as a volume.
             material.SetFloat("_DoubleSidedEnable", 1f);
             material.SetFloat("_CullMode", 0f);
             material.SetFloat("_CullModeForward", 0f);
@@ -77,7 +68,6 @@ namespace Roadster.BuildEditor
             return material;
         }
 
-        // 64 x 256, RGBA: white, alpha falling off across the width (sine) and along the length, with streaks.
         private static void Texture()
         {
             const int w = 64, h = 256;
@@ -89,7 +79,7 @@ namespace Roadster.BuildEditor
             for (var x = 0; x < w; x++)
             {
                 var u = (x + 0.5f) / w;
-                var v = (y + 0.5f) / h; // 0 at the nozzle, 1 at the far end
+                var v = (y + 0.5f) / h;
                 var across = Mathf.Pow(Mathf.Sin(Mathf.PI * u), 1.6f);
                 var along = Mathf.SmoothStep(0f, 1f, v / 0.06f) * Mathf.Pow(1f - v, 1.4f);
                 var streak = Mathf.Lerp(streaks[x], 1f, v);
@@ -108,7 +98,6 @@ namespace Roadster.BuildEditor
             importer.SaveAndReimport();
         }
 
-        // Three planes crossed at 60 degrees about the local +Z axis, 1 long; 0.25 wide at the nozzle and 1 wide at the end.
         private static Mesh Mesh()
         {
             var mesh = AssetDatabase.LoadAssetAtPath<Mesh>(MeshPath);

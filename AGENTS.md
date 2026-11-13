@@ -16,3 +16,4 @@ A mod that adds a Roadster with a thruster launch, hops and flips. Read `docs/pl
 - Every stunt logs its measured numbers (0-60 time, hop height, touchdown speed) so checks read the log, not a stopwatch.
 - Mark evidence as checked (seen in game), pending or unverified. Code reading is not a check.
 - Neutral names in shipped files: no references to any YouTube series or personal saves.
+- No code comments. Fix the problem or open an issue instead of leaving an excuse in the code. `tools/comment-ban.py` (run by the tests) allows only tool directives and the existing excuses listed in `docs/comment-excuses.md`.

@@ -3,20 +3,16 @@ using UnityEngine;
 
 namespace Roadster
 {
-    // Logs what the Roadster's body runs into: the other collider, the impact speed and where on the car it touched,
-    // so a stop that "feels like a wall" can be read from Player.log. RoadsterDrive adds it to the driven Roadster's
-    // rigidbody object. At most one line every half second, and only for impacts above 0.5 m/s.
     internal sealed class RoadsterContacts : MonoBehaviour
     {
-        private const float MinImpact = 0.5f; // m/s
-        private const float Interval = 0.5f; // s
+        private const float MinImpact = 0.5f;
+        private const float Interval = 0.5f;
         private float nextLog;
 
         private void OnCollisionEnter(Collision collision) => Report("hit", collision);
 
         private void OnCollisionStay(Collision collision)
         {
-            // A body resting on the road stays in contact without a new enter; log it too, slower.
             if (collision.collider != null && collision.contactCount > 0) Report("touching", collision);
         }
 
@@ -27,7 +23,6 @@ namespace Roadster
             if (kind == "hit" && impact < MinImpact) return;
             nextLog = Time.time + (kind == "hit" ? Interval : 5f);
             var point = collision.contactCount > 0 ? transform.InverseTransformPoint(collision.GetContact(0).point) : Vector3.zero;
-            // Which of the car's own colliders touched: the body hull, or a wheel's collider (NWH adds its own).
             var ours = collision.contactCount > 0 ? collision.GetContact(0).thisCollider : null;
             var other = collision.collider;
             var body = GetComponent<Rigidbody>();
