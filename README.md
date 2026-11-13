@@ -24,4 +24,4 @@ Then run `python3 tools/package-release.py` to create the checksum-verified rele
 ZIP `Roadster-<version>.zip` under `build/releases` (existing archives are never overwritten).
 Add `--preview` for `Roadster-<version>-preview.zip`.
 
-Implementation and verification limits: `docs/appearance-0.0.3.md`.
+In-game results for 0.0.3: `docs/rig-test-0.0.3.md`.

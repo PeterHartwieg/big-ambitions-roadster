@@ -20,6 +20,7 @@ Sources: [The Drive](https://www.thedrive.com/news/tesla-roadster-reveal-updates
 - **Flip-over module.** NWH's `FlipOverModule` only rights a car that is nearly stopped (below 0.6 m/s) and tilted past 70°. It never acts mid-air, so it stays on as the safety net for a roof landing.
 - **Input.** `Keyboard.current`, guarded by `GameManager.ShouldBlockKeyboardShortcuts()` and `CityMap.IsOpen`, as the other HART mods do.
 - **Dealer.** A Harmony postfix on `VehicleContractSettings.SetListOfVehiclesForSale`, the Food Trucks mod's method.
+- **Paint and lamps (0.0.3).** HDRP/Lit ignores the game's vehicle-shader properties, so the dealer colour (`CarFeatures.SetColor` on `bodyMeshes`) and NWH `LightSource` writes (`_FrontLightStrength`, `_BackLightStrength`; strengths front 50,000, tail 20,000, brake 40,000) did nothing, and the old lamps glowed from a fixed `_EmissiveColor`. Paint and lamp materials therefore use the SDK's `SH_Vehicle` shader. `CarController` drives the lamps from `ShouldLightsBeOn` on entry and outdoor-light changes and turns them off on exit; it does not refresh on a rain toggle while driving, same as vanilla. Wheel details use a separate WheelPaint material so body tint does not recolour them.
 - **Name.** The game uses parody names for real cars (Anselmo AF90, Mersaidi, Vord, Petrolls Fanton). A public release should follow that pattern. Tesla's name and its likeness are trademarks.
 
 ## Risks
@@ -46,4 +47,4 @@ Total: about 10 to 15 working days. Ramp driving upside down with fan suction is
 
 ## Status
 
-Phase 0 is written and builds. Phase 2's model is in the build (17 October 2026): a free Sol modelling session from reference images only, four rounds of Peter's feedback, then a game export (`art/roadster-free/Roadster-game.fbx`, about 142,000 triangles, 12 flat materials). The earlier spec-and-scorer passes (`art/roadster`, `roadster-v3` to `v9`) drifted further from the car and are kept only as history. Nothing has been checked in game yet.
+0.0.3 is released and rig-tested (`docs/rig-test-0.0.3.md`). The model in the build is `art/roadster-free` (about 142,000 triangles); the spec-and-scorer passes in `art/roadster` and `art/roadster-v3` to `v9` drifted from the car and are not used. Phase 3 is partly done: the launch modes, plumes and barrel roll ship; the air tank, hop, glide and flips do not. Phase 4 has not started.
